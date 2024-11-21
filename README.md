@@ -1,4 +1,4 @@
 # AZ Digital Services Company
-@ Author ZiadELsayed
-@ Author AbdelrahmanMustafa
+@ Author Ziad ELsayed
+@ Author Abdelrahman Mustafa
 
