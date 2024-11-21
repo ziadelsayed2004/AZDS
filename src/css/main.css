@@ -1,5 +1,4 @@
 .greanBackground{
-    background:url('imgs/texture.jpg');
-    background-color:#0d3642;
+    background:url('imgs/texture.jpg'),#0d3642;
     background-blend-mode:overlay;
 }
