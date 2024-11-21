@@ -1,4 +1,5 @@
 .greanBackground{
-    background: url('depositphotos_2055479-stock-photo-white-filter-material-texture.jpg'), #0d3642; /* Background color and noise image */
+    background-image: url('depositphotos_2055479-stock-photo-white-filter-material-texture.jpg');
+    background-color:#0d3642;
     background-blend-mode:overlay;
 }
