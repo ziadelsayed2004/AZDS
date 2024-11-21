@@ -1,8 +1,36 @@
-.test-color{
-    background:url('imgs/texture.jpg'),#0d3642;
-    background-blend-mode:saturation
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth !important;
 }
+
+.test-color{
+    background-image:url('../imgs/texture.jpg');
+    background-color: #0d3642;
+    background-blend-mode:overlay;
+}
+
+nav{
+    max-height: 85px;
+    border-radius: 0px 0px 20px 20px;
+    list-style-type: none;
+    text-align: center;
+     margin: 0;
+    padding: 0;
+    display: flex;
+}
+
 .logo{
     background-repeat: no-repeat;
+padding: 10px 10px 10px 120px;
+text-align: left !important;
 
+display: inline-block;
+}
+
+.logo-text{
+    color:white;
+    font-size: 25px;
+    display:inline-block;
+    padding: 30px 0px !important;
+    text-transform: capitalize;
 }
