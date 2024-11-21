@@ -2,3 +2,7 @@
     background:url('imgs/texture.jpg'),#0d3642;
     background-blend-mode:saturation
 }
+.logo{
+    background-image: url(../imgs/logo.png);
+    
+}
