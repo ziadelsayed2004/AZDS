@@ -39,10 +39,10 @@ nav div ul{
     padding-left: 550px !important;
 }
 nav div li{
-    color: white;
-    font-size: 17px;
-    font-weight: bold;
+    color: white !important;
+    font-size: 17px !important;
+    font-weight: bold !important;
     padding: 18px 15px 34px 0px;
-    display: inline-block;
-    list-style:none;
+    display: inline-block !important;
+    list-style:none !important;
 }
