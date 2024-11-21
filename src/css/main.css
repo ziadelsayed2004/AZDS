@@ -3,6 +3,6 @@
     background-blend-mode:saturation
 }
 .logo{
-    background-image: url(../imgs/logo.png);
-    
+    background-repeat: no-repeat;
+
 }
