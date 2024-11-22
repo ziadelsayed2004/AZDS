@@ -135,7 +135,7 @@ body{
 .overlay .closebtn {
   position: absolute;
   top: 12px;
-  right: 2.2%;
+  right: 7.1%;
   font-size: 60px;
 }
 @media screen and (max-height: 450px) {
@@ -184,7 +184,7 @@ nav{
 nav div ul{
     position: absolute;
     right:10%;
-    margin-top: 2.25%;
+    margin-top: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
