@@ -6,9 +6,16 @@
     <title>AZ Digital Services</title>
     <link rel="icon" href="src/imgs/logo.png">
     <link rel="stylesheet" href="src/css/main.css">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' rel='stylesheet' />
 </head>
 <body>
-    
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+    <div class="float-navbar">
     <nav class="bg-spotted">
     <div class="logo">
         <img src="src/imgs/logo.png" width="65px" height="65px" alt="">
@@ -22,7 +29,20 @@
         <li><a>Contact Us</a></li>
     </ul>
     </div>
+    <div id="myNav" class="toggel-menu overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a style="display: none;" href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Contact Us</a>
+        </div>
+    </div>
+    <span class="toggle-open" onclick="openNav()">&#9776;</span>
     </nav>
+    </div>
 
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src="src/js/main.js"></script>
 </body>
 </html>
