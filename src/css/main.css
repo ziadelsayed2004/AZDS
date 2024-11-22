@@ -35,10 +35,6 @@ nav{
     display: inline-block;
 }
 
-.logo img {
-  scale: 100%;
-}
-
 .logo-text{
     color:white;
     font-size: 25px;
@@ -67,7 +63,7 @@ nav div li{
 }
 
 nav div li :hover{
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(183,207,129, 0.6);
     cursor: pointer;
 }
 
@@ -129,7 +125,7 @@ nav div li :hover{
   }
 }
 
-@media (max-width: 967px){
+@media (min-width: 967px){
   nav{
     width: 100%;
     max-height: 10vh;
@@ -154,3 +150,35 @@ nav div li :hover{
     display: none;
   }
 }
+
+@media (min-width: 967px){
+  nav{
+    width: 100%;
+    max-height: 12vh;
+  }
+  .logo{
+    width: 15%;
+    padding-left: 3.5% !important;
+  } 
+  .logo img {
+    margin-top: 0.4vh;
+    scale: 100%;
+  }
+  .logo-text {
+    font-size: 24px !important;
+    margin-top: 0vh;
+    margin-left: -8%;
+  }
+  .nav-items{
+    display:contents;
+  }
+  nav div ul{
+    padding-left: 450px; 
+    margin-top: 2.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+}
+
