@@ -130,7 +130,7 @@ body{
   transition: 0.3s;
 }
 .overlay a:hover ,.toggle-open:hover, .overlay a:focus {
-  color: #b7cf81;
+  color: rgb(0,0,0);
 }
 .overlay .closebtn {
   position: absolute;
