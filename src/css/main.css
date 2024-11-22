@@ -4,11 +4,6 @@ body{
 }
 
 .test-color{
-<<<<<<< HEAD
-    background:url('imgs/texture.jpg'),#0d3642;
-    background-blend-mode:saturation;
-    color: white;
-=======
     background-image:url('../imgs/texture.jpg');
     background-color: #0d3642;
     background-blend-mode:overlay;
@@ -16,11 +11,11 @@ body{
 
 nav{
     max-height: 85px;
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 20px 20px 20px 20px;
     list-style-type: none;
     text-align: center;
     width: 100%;
-    height: 10%;
+    height: 15vh;
     margin: 0;
     padding: 0;
     display: flex !important;
@@ -28,10 +23,9 @@ nav{
 
 .logo{
     background-repeat: no-repeat;
-padding: 10px 10px 10px 120px;
-text-align: left !important;
-
-display: inline-block;
+    padding: 10px 10px 10px 120px;
+    text-align: left !important;
+    display: inline-block;
 }
 
 .logo-text{
@@ -47,11 +41,14 @@ nav div ul{
 }
 nav div li{
     color: #ffffff !important;
-    font-size: 18px !important;
+    font-size: 17px !important;
     font-weight: bold !important;
-    padding: 10px 8px;
-    margin-top:2% !important;
+    padding: 10px;
+    margin-top: 1vh !important;
+    margin-right: 5px;
     display: inline-block !important;
     list-style:none !important;
->>>>>>> 8fd8b00ee3e629d8b1f1d4f4527fb9b458482462
+    width: 100px;
+    border-radius: 12.5px;
+    background-color: rgba(150, 150, 150, 0.5);
 }
