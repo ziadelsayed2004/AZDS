@@ -130,7 +130,7 @@ body{
   transition: 0.3s;
 }
 .overlay a:hover ,.toggle-open:hover, .overlay a:focus {
-  color: #b7cf81;
+  color: rgb(0,0,0);
 }
 .overlay .closebtn {
   position: absolute;
@@ -198,7 +198,7 @@ nav div li{
     background-color: rgba(150, 150, 150, 0);
 }
 nav div li :hover{
-    background-color: rgba(183,207,129, 0.6);
+    background-color: rgba(0,0,0, 0.6);
     cursor: pointer;
 }
  nav div li a {
