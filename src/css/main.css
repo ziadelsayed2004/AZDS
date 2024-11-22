@@ -1,3 +1,4 @@
+/* Root and themes itemes */
 a{
     text-decoration: none;
 }
@@ -14,30 +15,7 @@ body{
     background-blend-mode:overlay;
 }
 
-@media (max-width:767px) {
-    .logo{
-      width: 15%;
-      padding-left: 2.5% !important;
-    } 
-    .logo img {
-      scale: 70%;
-    }
-    .logo-text {
-      font-size: 18px !important;
-      margin-top: 0.25vh;
-      margin-left: 2.5%;
-    }
-    .nav-items{
-      display: none;
-    }
-    nav{
-        width: 100%;
-      }
-      nav div ul{
-        padding: 0;
-      }
-}
-
+/* Header and nav */
 nav{
     max-height: 85px;
     border-radius: 20px 20px 20px 20px;
@@ -96,3 +74,28 @@ nav div li :hover{
     padding: 5px 10px 5px 10px;
     border-radius: 12.5px;
  }
+
+ /* @meadia header and nav */
+@media (max-width:767px) {
+    .logo{
+      width: 15%;
+      padding-left: 2.5% !important;
+    } 
+    .logo img {
+      scale: 70%;
+    }
+    .logo-text {
+      font-size: 18px !important;
+      margin-top: 0.25vh;
+      margin-left: 2.5%;
+    }
+    .nav-items{
+      display: none;
+    }
+    nav{
+        width: 100%;
+      }
+      nav div ul{
+        padding: 0;
+      }
+}
