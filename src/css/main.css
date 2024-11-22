@@ -67,7 +67,8 @@ nav div li{
 }
 
 nav div li :hover{
-    background-color: rgba(183,207,129,0.5)
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
 }
 
  nav div li a {
