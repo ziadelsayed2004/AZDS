@@ -99,3 +99,53 @@ nav div li :hover{
         padding: 0;
       }
 }
+
+@media (min-width: 768px){
+  nav{
+    width: 100%;
+  }
+  nav div ul{
+    padding: 0;
+  }
+  .logo{
+    width: 15%;
+    padding-left: 1.5% !important;
+  } 
+  .logo img {
+    scale: 90%;
+  }
+  .logo-text {
+    font-size: 22.5px !important;
+    margin-top: 0vh;
+    margin-left: 0%;
+  }
+  .nav-items{
+    display: none;
+  }
+}
+
+@media (min-width: 967px){
+  nav{
+    width: 100%;
+    max-height: 10vh;
+  }
+  nav div ul{
+    padding: 0;
+  }
+  .logo{
+    width: 15%;
+    padding-left: 3.5% !important;
+  } 
+  .logo img {
+    margin-top: 2vh;
+    scale: 150%;
+  }
+  .logo-text {
+    font-size: 30px !important;
+    margin-top: 1.75vh;
+    margin-left: 0%;
+  }
+  .nav-items{
+    display: none;
+  }
+}
