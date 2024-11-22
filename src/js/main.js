@@ -45,3 +45,6 @@ function openNav() {
 function closeNav() {
         document.getElementById("myNav").style.width = "0%";
   }
+  document.querySelector('.overlay').addEventListener('wheel', function(event) {
+    event.preventDefault();
+  }, { passive: false });

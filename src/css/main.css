@@ -104,6 +104,8 @@ body{
   transition: 0.3s;
 }
 .overlay {
+  overflow-y: hidden;
+  touch-action: none;
   height: 100%;
   width: 0;
   position: fixed;
