@@ -27,16 +27,17 @@ body{
       margin-top: 0.25vh;
       margin-left: 2.5%;
     }
-    nav{
-      width: 100%;
-    }
-    nav div ul{
-      padding: 0;
-    }
     .nav-items{
       display: none;
     }
+    nav{
+        width: 100%;
+      }
+      nav div ul{
+        padding: 0;
+      }
 }
+
 nav{
     max-height: 85px;
     border-radius: 20px 20px 20px 20px;
