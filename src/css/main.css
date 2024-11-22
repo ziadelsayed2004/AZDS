@@ -8,12 +8,35 @@ body{
     user-select: none;
 }
 
-.test-color{
+.bg-spotted{
     background-image:url('../imgs/texture.jpg');
     background-color: #0d3642;
     background-blend-mode:overlay;
 }
 
+@media (max-width:767px) {
+    .logo{
+      width: 15%;
+      padding-left: 2.5% !important;
+    } 
+    .logo img {
+      scale: 70%;
+    }
+    .logo-text {
+      font-size: 18px !important;
+      margin-top: 0.25vh;
+      margin-left: 2.5%;
+    }
+    nav{
+      width: 100%;
+    }
+    nav div ul{
+      padding: 0;
+    }
+    .nav-items{
+      display: none;
+    }
+}
 nav{
     max-height: 85px;
     border-radius: 20px 20px 20px 20px;
