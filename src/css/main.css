@@ -49,3 +49,6 @@ nav div li{
     display: inline-block !important;
     list-style:none !important;
 }
+.sec-dark{
+    background-color: aliceblue;
+}
