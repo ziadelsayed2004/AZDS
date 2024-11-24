@@ -211,6 +211,9 @@ nav div li a {
   padding: 5px 10px 5px 10px;
   border-radius: 12.5px;
 }
+.sec1{
+  background-color: rgb(192, 192, 192);height:(100vh-100px);
+}
 
 /* @meadia header and nav */
 @media (max-width:767px) /* @meadia phone */ {
