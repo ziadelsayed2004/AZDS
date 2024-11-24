@@ -223,16 +223,27 @@ footer{
   border-radius: 25px;
 }
 .footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .footer-head{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+.footer-right{
+  position: absolute;
+  right: 10%;
+  margin-top: -20px;
+}
+.footer-left{
+  position: absolute;
+  left: 10%;
+  margin-top: -20px;
+}
+
 .footer-brand{
   display: flex;
   justify-content: center;
@@ -268,11 +279,10 @@ footer{
 }
 .footer-copyright {
   color: white;
-  position: absolute;
-  bottom: -40vh;
+  text-align: center;  
   font-size: 10px;
-  width: 100%;
-  text-align: center;
+  margin-top: 100px;
+  margin-bottom: -20px;
 }
 
 
