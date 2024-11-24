@@ -211,8 +211,25 @@ nav div li a {
   padding: 5px 10px 5px 10px;
   border-radius: 12.5px;
 }
-.sec1{
-  background-color: rgb(192, 192, 192);height:(100vh-100px);
+
+/*footer logo&logo text*/
+
+.footer-text{
+  color:white;
+  font-size: 25px;
+  font-weight: bold;
+  display:inline-block;
+  text-transform: capitalize;
+  margin-left: -10%;
+  margin-top: -30%;
+}
+
+.footer-logo{
+    background-repeat: no-repeat;
+    padding: 10px 12.5% 12.5% 5%;
+    text-align: left;
+    display: inline-block;
+    margin-top: 50px;
 }
 
 /* @meadia header and nav */
