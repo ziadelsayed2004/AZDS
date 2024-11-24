@@ -10,7 +10,6 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
   user-select: none;
-  height:1000vh;
 }
 
 .bg-spotted{
@@ -215,43 +214,51 @@ nav div li a {
   border-radius: 12.5px;
 }
 
-/*footer logo&logo text*/
-
-.footer_inner {
-  display:inline-flex;
-  backdrop-filter: blur(50px);
-  width: 90%;
-  border: 0.1px solid rgba(233, 232, 232, 0.208);
+/*footer logo & logo text*/
+footer{
+  position: static;
+  margin-top: 7.5px;
+  height: 25vh;
+  min-height: 85px;
   border-radius: 25px;
-  padding: 2rem;
-  margin :5%;
 }
 .footer {
-  position: relative;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  max-height: 85vh;
-  border-radius: 25px;
-  flex-direction: column;
 }
-
-.footer-logo-text{
+.footer-head{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer-brand{
+  display: flex;
+  justify-content: center;
+  margin-left: 7.5px;
+}
+.footer-brand img {
   display: block;
-  color:white;
-  font-size: 25px;
-  font-weight: bold;
-  padding: 30px 0px;
-  margin-left: -10%;
-  text-transform: capitalize;
+  width: 50px;
+  height: 50px;
 }
-.footer_copyright {
-  color: rgb(0, 0, 0);
-
-}
-.footer_copyright {
+.footer-lable{
   color: white;
-  margin-top: 30%;
-  margin-left: 10% !important;
+  align-self: center;
+  font-weight: 600;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+
+.footer-copyright {
+  color: white;
+  position: fixed;
+  bottom: 12px;
+  font-size: 10px;
+  width: 100%;
+  text-align: center;
 }
 
 
