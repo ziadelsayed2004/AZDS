@@ -246,7 +246,6 @@ footer{
   left: 10%;
   margin-top: -20px;
 }
-
 .footer-brand{
   display: flex;
   justify-content: center;
@@ -287,9 +286,6 @@ footer{
   margin-top: 100px;
   margin-bottom: -20px;
 }
-
-
-
 
 /* @meadia header and nav */
 @media (max-width:767px) /* @meadia phone */ {
