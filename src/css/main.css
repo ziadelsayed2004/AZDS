@@ -31,7 +31,7 @@ border-radius: 48px;
 box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2);
 background-color:#b7cf81;
 padding: 1PX;
-z-index: 10000;
+z-index: 10;
 opacity: 0;
 visibility: hidden;
 transform: translateY(15px);
@@ -114,7 +114,7 @@ touch-action: none;
 height: 100%;
 width: 0;
 position: fixed;
-z-index: 1;
+z-index: 1000;
 top: 0;
 left: 0;
 background-color: rgba(20, 85, 100, 0.9);
@@ -226,30 +226,32 @@ footer{
   border-radius: 25px;
 }
 .footer {
-  display: grid;
-  justify-content: center;
+  display: grid;    
   align-items: center;
-  width: 100%;
+  justify-content: stretch;
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .footer-head{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 .footer-right{
-  position: absolute;
-  right: 10%;
-  margin-top: -20px;
+  margin-left: 10%;
+  position: inherit;
 }
 .footer-left{
-  position: absolute;
-  left: 10%;
-  margin-top: -20px;
+  margin-right: 10%;
+  position: inherit;
 }
 .footer-brand{
   display: flex;
   justify-content: center;
-  margin-left: 7.5px;
 }
 .footer-brand img {
   display: block;
@@ -282,13 +284,13 @@ footer{
 .footer-copyright {
   color: white;
   text-align: center;  
-  font-size: 10px;
-  margin-top: 100px;
+  font-size: 16px;
+  margin-top: 40px;
   margin-bottom: -20px;
 }
 
-/* @meadia header and nav */
-@media (max-width:767px) /* @meadia phone */ {
+/* @meadia header & nav and footer */
+@media (min-width:290px) and (max-width:767px) /* @meadia phone */ {
   nav{
     width: 100%;
   }
@@ -321,8 +323,41 @@ footer{
     right: 7.5%;
     display: flex;
   }
+  .footer {
+    display: grid;
+    align-items: center;
+    justify-content: stretch;
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .footer-right{
+    margin-left: 0%;
+    margin-right: -2.5%;
+    position: inherit;
+  }
+  .footer-left{
+    margin-right: 0%;
+    margin-left: -2.5%;
+    position: inherit;
+  }
+  .footer-brand img{
+    width: 40px;
+    height: 40px;
+  }
+  .footer-lable{
+    font-size: 12.5px;
+  }
+  .footer-social svg{
+    width: 12.5px;
+    margin-left: -2.5%;
+    margin-top: 1.5vh;
+  }
+  .footer-copyright {
+    font-size: 10px;
+  }
 }
-@media (max-width:1024px) /* @meadia mid screen */ {
+@media (max-width:1024px) and (min-width:768px) /* @meadia mid screen */ {
   nav{
     width: 100%;
   }
@@ -351,9 +386,33 @@ footer{
     right: 7.5%;
     display: flex;
   }
+  .footer {
+    display: grid;
+    align-items: center;
+    justify-content: stretch;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .footer-right{
+    margin-left: 0%;
+    margin-right: -2.5%;
+    position: inherit;
+  }
+  .footer-left{
+    margin-right: 0%;
+    margin-left: -2.5%;
+    position: inherit;
+  }
+  .footer-copyright {
+    font-size: 12px;
+  }
 }
 @media (max-width:290px){
 .logo-text{
   display: none;
+}
+.footer-copyright {
+  font-size: 8px;
 }
 }
