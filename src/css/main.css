@@ -408,16 +408,16 @@ nav div ul{
   display: none;
 }
 .toggle-open{
-  font-size:35px;
-  cursor:pointer;
-  font-weight: bold;
-  color: white;  
-  margin-top: 18px !important;
-  margin-right: 0%;
-  position: absolute;
-  right: 7.5%;
-  display: flex;
-}
+    font-size:35px;
+    cursor:pointer;
+    font-weight: bold;
+    color: white;  
+    margin-top: 18px !important;
+    margin-right: 0%;
+    position: absolute;
+    right: 7.5%;
+    display: flex;
+  }
 .footer-copyright {
   font-size: 8px;
 }
