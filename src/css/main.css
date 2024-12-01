@@ -75,6 +75,7 @@ font-weight: 900;
 content: '\f062';
 text-align: center;
 line-height: 48px;
+border-radius: 48px;
 font-size: 18px;
 opacity: 0;
 background-color: rgba(255, 255, 255, 0.5);
@@ -235,19 +236,11 @@ footer{
 }
 .footer-head{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   padding: 0;
   margin: 0;
   width: 100%;
-}
-.footer-right{
-  margin-left: 10%;
-  position: inherit;
-}
-.footer-left{
-  margin-right: 10%;
-  position: inherit;
 }
 .footer-brand{
   display: flex;
@@ -255,15 +248,15 @@ footer{
 }
 .footer-brand img {
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
 }
 .footer-lable{
   color: white;
   align-self:first baseline;
   font-weight: 600;
-  font-size: 12px;
-  margin-top: 8px;
+  font-size: 25px;
+  margin-top: 5px;
   margin-left: 10px;
   transition-duration: 0.5s;
 }
@@ -271,8 +264,8 @@ footer{
   color: #b7cf81;
 }
 .ul-social {
-  margin-left: 67.5px;
-  margin-top: -25px;
+  margin-left: 47%;
+  margin-top: -40px;
 }
 .social-icon {
  fill: #ffffff;
@@ -331,33 +324,28 @@ footer{
     padding-left: 2%;
     padding-right: 2%;
   }
-  .footer-right{
-    margin-left: 0%;
-    margin-right: -2.5%;
-    position: inherit;
-  }
-  .footer-left{
-    margin-right: 0%;
-    margin-left: -2.5%;
-    position: inherit;
-  }
   .footer-brand img{
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
   }
   .footer-lable{
-    font-size: 12.5px;
+    font-size: 16px;
+  }
+  .footer-social {
+    align-self: center;
+  }
+  .ul-social{
+    margin-left: 60px;
   }
   .footer-social svg{
-    width: 12.5px;
-    margin-left: -2.5%;
-    margin-top: 1.5vh;
+    width: 18px;
+    margin-top: 12px;
   }
   .footer-copyright {
     font-size: 10px;
   }
 }
-@media (max-width:1024px) and (min-width:768px) /* @meadia mid screen */ {
+@media (max-width:1023px) and (min-width:768px) /* @meadia mid screen */ {
   nav{
     width: 100%;
   }
@@ -394,23 +382,41 @@ footer{
     padding-left: 5%;
     padding-right: 5%;
   }
-  .footer-right{
-    margin-left: 0%;
-    margin-right: -2.5%;
-    position: inherit;
+  .ul-social{
+    margin-left: 45.5%;
   }
-  .footer-left{
-    margin-right: 0%;
-    margin-left: -2.5%;
-    position: inherit;
+  .footer-lable{
+    font-size: 22.5px;
   }
   .footer-copyright {
     font-size: 12px;
   }
 }
+@media (width:1024px){
+  .ul-social{
+    margin-left: 45.5%;
+  } 
+  .footer-lable{
+    font-size: 22.5px;
+  }
+}
 @media (max-width:290px){
 .logo-text{
   display: none;
+}
+nav div ul{
+  display: none;
+}
+.toggle-open{
+  font-size:35px;
+  cursor:pointer;
+  font-weight: bold;
+  color: white;  
+  margin-top: 18px !important;
+  margin-right: 0%;
+  position: absolute;
+  right: 7.5%;
+  display: flex;
 }
 .footer-copyright {
   font-size: 8px;
