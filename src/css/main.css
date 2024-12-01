@@ -162,6 +162,7 @@ top: 0;
 overflow: hidden;
 padding-top: 7.5px;
 margin-top: -7.5px;
+z-index: 1000;
 }
 nav{
   max-height: 85px;
