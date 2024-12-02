@@ -1,0 +1,135 @@
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  #scene {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+  }
+  
+  #left-zone {
+    background: #fff;
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-right: 2px solid #eee;
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .list li {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .list li input[type="radio"] {
+    display: none;
+  }
+  
+  .list li input[type="radio"] + label {
+    display: block;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+  }
+  
+  .list li input[type="radio"] + label:hover {
+    opacity: 0.8;
+  }
+  
+  .list li input[type="radio"]:checked + label {
+    background: #cfeef7;
+    border-left: 5px solid #0d3642;
+    opacity: 1;
+  }
+  
+  .list li .content {
+    display: none;
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+  }
+  
+  .list li input[type="radio"]:checked ~ .content {
+    display: block;
+    animation: fadeIn 0.75s forwards ease-in-out;
+  }
+  
+  .list li input[type="radio"]:not(:checked) ~ .content {
+    animation: fadeOut 0.5s forwards ease-in-out;
+  }
+  
+  .list li .content h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .list li .content p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    #scene {
+      flex-direction: column;
+    }
+  
+    #left-zone {
+      flex: 1 1 100%;
+      border-right: none;
+      border-bottom: 2px solid #eee;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .list li input[type="radio"] + label {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .list li .content h3 {
+      font-size: 20px;
+    }
+  
+    .list li .content p {
+      font-size: 14px;
+    }
+  }
+  
