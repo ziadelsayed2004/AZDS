@@ -50,3 +50,4 @@ function closeNav() {
   document.querySelector('.overlay').addEventListener('wheel', function(event) {
     event.preventDefault();
   }, { passive: false });
+  
