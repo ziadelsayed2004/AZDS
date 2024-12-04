@@ -48,17 +48,44 @@
     position: relative;
     margin-bottom: 10px;
   }
-  
+  .service-icon{
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+    background-color: #0d3642;
+    border-radius: 12.5px;
+    padding: 5px;
+  }
+  .services-btn{
+    background-color: #0d364200;
+    width: 7.5%;
+    min-width: 75px;
+    min-height: 40px;
+    border-radius: 15px;
+    border-color: #0d3642;
+    border-style: solid;
+    color: #0d3642;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .5s;
+  }
+  .services-btn:hover{
+    background-color: #0d3642;
+    color: #fafafa;
+  }
   .list li input[type="radio"] {
     display: none;
   }
   
   .list li input[type="radio"] + label {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 12.5px;
     background: #e0e0e0;
     border-radius: 7.5px;
-    font-size: 16px;
+    font-size: 22.5px;
+    font-weight: 500;
     text-align: center;
     cursor: pointer;
     opacity: 0.5;
@@ -70,10 +97,13 @@
   }
   
   .list li input[type="radio"]:checked + label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #cfeef7;
     border-left: 7.5px solid #0d3642;
     opacity: 1;
-  }
+}
   
   .list li .content {
     display: none;
@@ -95,12 +125,12 @@
   
   .list li .content h3 {
     margin: 10px 0;
-    font-size: 24px;
+    font-size: 20px;
     color: #333;
   }
   
   .list li .content p {
-    font-size: 16px;
+    font-size: 17.5px;
     color: #666;
   }
   
@@ -118,16 +148,17 @@
   
   @media (max-width: 480px) {
     .list li input[type="radio"] + label {
-      font-size: 14px;
+      font-size: 17.5px;
+      font-weight: 400;
       padding: 10px;
     }
   
     .list li .content h3 {
-      font-size: 20px;
+      font-size: 15px;
     }
   
     .list li .content p {
-      font-size: 12px;
+      font-size: 12.5px;
     }
   }
   
