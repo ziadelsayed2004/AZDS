@@ -71,6 +71,7 @@
   }
   .services-btn:hover{
     background-color: #0d3642;
+    border-radius: 15px;
     color: #fafafa;
   }
   .list li input[type="radio"] {
