@@ -25,7 +25,8 @@
     margin: 0px;
     background-color: #fff;
     border-radius: 25px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    border-color: #0d364250;
+    border-style: solid;
     overflow: hidden;
   }
   
@@ -66,7 +67,7 @@
     color: #0d3642;
     font-weight: 600;
     cursor: pointer;
-    transition: .5s;
+    transition: 0.25s;
   }
   .services-btn:hover{
     background-color: #0d3642;
