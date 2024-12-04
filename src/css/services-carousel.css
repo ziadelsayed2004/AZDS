@@ -145,6 +145,14 @@
       flex: 1 1 100%;
       border: none;
     }
+    .service-icon {
+      height: auto;
+      width: 12.5%;
+      margin-top: 10px;
+      background-color: #0d3642;
+      border-radius: 3vw;
+      padding: 0.75vw;
+    }
   }
   
   @media (max-width: 480px) {
@@ -160,5 +168,13 @@
   
     .list li .content p {
       font-size: 12.5px;
+    }
+    .service-icon {
+      height: auto;
+      width: 12.5%;
+      margin-top: 10px;
+      background-color: #0d3642;
+      border-radius: 3vw;
+      padding: 0.75vw;
     }
   }
