@@ -47,13 +47,13 @@
     position: relative;
     margin-bottom: 10px;
   }
-  .service-icon{
-    height: 40px;
-    width: 40px;
+  .service-icon {
+    height: auto;
+    width: 7.5%;
     margin-top: 10px;
     background-color: #0d3642;
-    border-radius: 12.5px;
-    padding: 5px;
+    border-radius: 2.25vw;
+    padding: 0.5vw;
   }
   .services-btn{
     background-color: #0d364200;
