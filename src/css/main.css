@@ -8,6 +8,7 @@
 --dark-bg : black;
 --icon-color : #FFDE59;
 --nav-hover : rgba(0,0,0, 0.6);
+--content-container : #E7EEEF;
 }
 a{
   text-decoration: none;
@@ -238,6 +239,9 @@ nav div li a {
   border-radius: 12.5px;
 }
 
+.content-container{
+  background-color: var(--content-container);
+}
 /*footer logo & logo text*/
 footer{
   position: static;

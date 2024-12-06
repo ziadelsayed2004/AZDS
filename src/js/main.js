@@ -92,6 +92,7 @@ function toggleMode() {
     document.documentElement.style.setProperty('--dark-bg', '#fff');
     document.documentElement.style.setProperty('--icon-color', '#FFDE59');
     document.documentElement.style.setProperty('--nav-hover', 'rgba(255,255,255, 0.6)');
+    document.documentElement.style.setProperty('--content-container', '#5A5E5EFF');
   } else {
     // Set light mode variables
     document.documentElement.style.setProperty('--bg-color', '#0d3642');
@@ -101,6 +102,7 @@ function toggleMode() {
     document.documentElement.style.setProperty('--dark-bg', '#000');
     document.documentElement.style.setProperty('--icon-color', '#FFDE59');
     document.documentElement.style.setProperty('--nav-hover', 'rgba(0,0,0, 0.6)');
+    document.documentElement.style.setProperty('--content-container', '#E7EEEF');
   }
 }
 
