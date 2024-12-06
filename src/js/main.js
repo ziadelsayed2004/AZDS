@@ -50,3 +50,82 @@ function closeNav() {
   document.querySelector('.overlay').addEventListener('wheel', function(event) {
     event.preventDefault();
   }, { passive: false });
+
+
+
+
+const body = document.querySelector('body');
+const btn = document.querySelector('.btn');
+const icon = document.querySelector('.btn__icon');
+
+// Store the mode in local storage
+function store(value) {
+  localStorage.setItem('darkmode', value);
+}
+
+// Load the stored mode
+function load() {
+  const darkmode = localStorage.getItem('darkmode');
+
+  // Default to light mode if no preference is stored
+  if (!darkmode) {
+    store(false);
+    icon.classList.add('fa-sun');
+  } else if (darkmode === 'true') {
+    body.classList.add('darkmode');
+    icon.classList.add('fa-moon');
+  } else {
+    icon.classList.add('fa-sun');
+  }
+}
+
+// Change the CSS Variables based on the mode
+function toggleMode() {
+  const isDarkMode = body.classList.contains('darkmode');
+  
+  if (isDarkMode) {
+    // Set dark mode variables
+    document.documentElement.style.setProperty('--bg-color', '#0d3642');
+    document.documentElement.style.setProperty('--bg-color-2nd', '#145564');
+    document.documentElement.style.setProperty('--alternate-color', '#b7cf81');
+    document.documentElement.style.setProperty('--light-bg', '#000');
+    document.documentElement.style.setProperty('--dark-bg', '#fff');
+    document.documentElement.style.setProperty('--icon-color', '#FFDE59');
+    document.documentElement.style.setProperty('--nav-hover', 'rgba(255,255,255, 0.6)');
+  } else {
+    // Set light mode variables
+    document.documentElement.style.setProperty('--bg-color', '#0d3642');
+    document.documentElement.style.setProperty('--bg-color-2nd', '#145564');
+    document.documentElement.style.setProperty('--alternate-color', '#b7cf81');
+    document.documentElement.style.setProperty('--light-bg', '#fff');
+    document.documentElement.style.setProperty('--dark-bg', '#000');
+    document.documentElement.style.setProperty('--icon-color', '#FFDE59');
+    document.documentElement.style.setProperty('--nav-hover', 'rgba(0,0,0, 0.6)');
+  }
+}
+
+load();
+
+btn.addEventListener('click', () => {
+  body.classList.toggle('darkmode');
+  icon.classList.add('animated');
+
+  // Save the current mode
+  store(body.classList.contains('darkmode'));
+
+  // Toggle the mode and update the icon
+  toggleMode();
+
+  if (body.classList.contains('darkmode')) {
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
+  } else {
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+  }
+
+  // Remove animation after 500ms
+  setTimeout(() => {
+    icon.classList.remove('animated');
+  }, 500);
+});

@@ -6,9 +6,14 @@
 --alternate-color : #b7cf81;
 --light-bg : white;
 --dark-bg : black;
+--icon-color : #FFDE59;
+--nav-hover : rgba(0,0,0, 0.6);
 }
 a{
   text-decoration: none;
+}
+html{
+  background-color: var(--light-bg);
 }
 body{
   font-family: Arial, Helvetica, sans-serif;
@@ -174,6 +179,9 @@ margin-top: -7.5px;
 padding-bottom: 0px !important;
 z-index: 1000;
 }
+.container-top{
+  background-color: rgba(20, 85, 100, 0.1) !important;
+}
 nav{
   max-height: 85px;
   min-height: 75px;
@@ -217,7 +225,7 @@ nav div li{
   background-color: rgba(150, 150, 150, 0);
 }
 nav div li :hover{
-  background-color: rgba(0,0,0, 0.6);
+  background-color: var(--nav-hover);
   cursor: pointer;
 }
 nav div li a {
@@ -432,4 +440,58 @@ nav div ul{
 .footer-copyright {
   font-size: 8px;
 }
+}
+
+.btn {
+  background-color: #fff;
+  width: 50px;
+  height: 25px;
+  border-radius: 12.5px;
+  padding: 0 2.5px;
+  box-shadow: inset 0 8px 60px rgba(0,0,0, .1),
+  inset 0 8px 8px rgba(0,0,0, .1),
+  inset 0 -4px 4px rgba(0,0,0, .1);
+  position: relative;
+  top: 32.5px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn__indicator {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 8px 40px rgba(0,0,0, .2);
+  transition: transform .3s ease;
+}
+
+.btn__icon-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn__icon {
+  color: var(--icon-color);
+  font-size: 15px;
+}
+
+.darkmode {
+  background-color: var(--dark-bg);
+  color: #fff;
+}
+
+.darkmode .btn__indicator {
+  transform: translateX(30px);
+  background-color: var(--bg-color);
+}
+
+.darkmode .btn__icon {
+  color: var(--alternate-color);
 }
