@@ -60,7 +60,7 @@ const icon = document.querySelector('.btn__icon');
 
 // Store the mode in local storage
 function store(value) {
-  localStorage.setItem('darkmode', value);
+  localStorage.setItem('lightmod', value);
 }
 
 // Load the stored mode
