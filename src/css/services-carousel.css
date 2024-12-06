@@ -14,6 +14,13 @@
       opacity: 0;
     }
   }
+  :root{
+    --bg-color : #0d3642;
+    --bg-color-2nd : #145564;
+    --alternate-color : #b7cf81;
+    --light-bg : white;
+    --dark-bg : black;
+    }
   #services-carousel {
     display: flex;
     flex-wrap: wrap;
@@ -21,14 +28,14 @@
     justify-content: center;
     padding: 10px;
     margin: 0px;
-    background-color: #fff;
+    background-color: var(--light-bg);
     border-radius: 25px;
     border-color: #0d364250;
     border-style: solid;
     overflow: hidden;
   }
   #countainer-zone {
-    background: #fff;
+    background: var(--light-bg);
     flex: 1 1 300px;
     display: flex;
     flex-direction: column;
@@ -47,7 +54,7 @@
     height: auto;
     width: 7.5%;
     margin-top: 10px;
-    background-color: #0d3642;
+    background-color: var(--bg-color);
     border-radius: 2.25vw;
     padding: 0.5vw;
   }
@@ -57,15 +64,15 @@
     min-width: 75px;
     min-height: 40px;
     border-radius: 15px;
-    border-color: #0d3642;
+    border-color: var(--bg-color);
     border-style: solid;
-    color: #0d3642;
+    color: var(--bg-color);
     font-weight: 600;
     cursor: pointer;
     transition: 0.25s;
   }
   .services-btn:hover{
-    background-color: #0d3642;
+    background-color: var(--bg-color);
     border-radius: 15px;
     color: #fafafa;
   }
@@ -94,13 +101,13 @@
     justify-content: center;
     align-items: center;
     background: #cfeef7;
-    border-left: 7.5px solid #0d3642;
+    border-left: 7.5px solid var(--bg-color);
     opacity: 1;
   }
   .list li .content {
     display: none;
     position: relative;
-    background: #fff;
+    background: var(--light-bg);
     padding: 10px;
     text-align: center;
     opacity: 0;
@@ -136,7 +143,7 @@
       height: auto;
       width: 15%;
       margin-top: 10px;
-      background-color: #0d3642;
+      background-color: var(--bg-color);
       border-radius: 3.75vw;
       padding: 1vw;
     }
@@ -159,7 +166,7 @@
       height: auto;
       width: 15%;
       margin-top: 10px;
-      background-color: #0d3642;
+      background-color: var(--bg-color);
       border-radius: 3.75vw;
       padding: 1vw;
     }
