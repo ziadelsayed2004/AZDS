@@ -1,4 +1,4 @@
-@keyframes fadeIn {
+  @keyframes fadeIn {
     0% {
       opacity: 0;
     }
@@ -6,7 +6,6 @@
       opacity: 1;
     }
   }
-  
   @keyframes fadeOut {
     0% {
       opacity: 1;
@@ -15,7 +14,6 @@
       opacity: 0;
     }
   }
-  
   #services-carousel {
     display: flex;
     flex-wrap: wrap;
@@ -29,7 +27,6 @@
     border-style: solid;
     overflow: hidden;
   }
-  
   #countainer-zone {
     background: #fff;
     flex: 1 1 300px;
@@ -37,13 +34,11 @@
     flex-direction: column;
     padding: 10px;
   }
-  
   .list {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  
   .list li {
     position: relative;
     margin-bottom: 10px;
@@ -77,7 +72,6 @@
   .list li input[type="radio"] {
     display: none;
   }
-  
   .list li input[type="radio"] + label {
     display: flex;
     justify-content: center;
@@ -91,12 +85,10 @@
     cursor: pointer;
     opacity: 0.5;
     transition: all 0.0005ms ease;
-  }
-  
+  } 
   .list li input[type="radio"] + label:hover {
     opacity: 0.8;
   }
-  
   .list li input[type="radio"]:checked + label {
     display: flex;
     justify-content: center;
@@ -104,8 +96,7 @@
     background: #cfeef7;
     border-left: 7.5px solid #0d3642;
     opacity: 1;
-}
-  
+  }
   .list li .content {
     display: none;
     position: relative;
@@ -114,22 +105,18 @@
     text-align: center;
     opacity: 0;
   }
-  
   .list li input[type="radio"]:checked ~ .content {
     display: block;
     animation: fadeIn 0.5s forwards ease-in-out;
   }
-  
   .list li input[type="radio"]:not(:checked) ~ .content {
     animation: fadeOut 0.5s forwards ease-in-out;
   }
-  
   .list li .content h3 {
     margin: 10px 0;
     font-size: 20px;
     color: #333;
   }
-  
   .list li .content p {
     font-size: 17.5px;
     color: #666;
@@ -147,14 +134,13 @@
     }
     .service-icon {
       height: auto;
-      width: 12.5%;
+      width: 15%;
       margin-top: 10px;
       background-color: #0d3642;
-      border-radius: 3vw;
-      padding: 0.75vw;
+      border-radius: 3.75vw;
+      padding: 1vw;
     }
   }
-  
   @media (max-width: 480px) {
     .list li input[type="radio"] + label {
       font-size: 17.5px;
@@ -171,10 +157,10 @@
     }
     .service-icon {
       height: auto;
-      width: 12.5%;
+      width: 15%;
       margin-top: 10px;
       background-color: #0d3642;
-      border-radius: 3vw;
-      padding: 0.75vw;
+      border-radius: 3.75vw;
+      padding: 1vw;
     }
   }
