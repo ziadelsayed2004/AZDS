@@ -59,7 +59,7 @@ const btn = document.querySelector('.btn');
 const icon = document.querySelector('.btn__icon');
 // Store the mode in local storage
 function store(value) {
-  localStorage.setItem('lightmod', value);
+  localStorage.setItem('darkmode', value);
 }
 // Load the stored mode
 function load() {
@@ -75,11 +75,14 @@ function load() {
   } else {
     icon.classList.add('fa-sun');
   }
+
+  // Update CSS variables to reflect the stored mode
+  toggleMode();
 }
 // Change the CSS Variables based on the mode
 function toggleMode() {
   const isDarkMode = body.classList.contains('darkmode');
-  
+
   if (isDarkMode) {
     // Set dark mode variables
     document.documentElement.style.setProperty('--bg-color', '#0d3642');
@@ -102,6 +105,7 @@ function toggleMode() {
     document.documentElement.style.setProperty('--content-container', '#E7EEEF');
   }
 }
+// Load the mode when the page loads
 load();
 btn.addEventListener('click', () => {
   body.classList.toggle('darkmode');
