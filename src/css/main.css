@@ -28,6 +28,7 @@ body:focus{
   outline: none;
 }
 .bg-spotted{
+  align-items: center;
   background-image:url('../imgs/texture.jpg');
   background-color: var(--bg-color);
   background-blend-mode:overlay;
@@ -186,7 +187,7 @@ z-index: 1000;
 }
 nav{
   max-height: 85px;
-  min-height: 75px;
+  min-height: 85px;
   border-radius: 20px 20px 20px 20px;
   list-style-type: none;
   text-align: center;
@@ -197,7 +198,8 @@ nav{
 }
 .logo{
   background-repeat: no-repeat;
-  padding: 10px 12.5% 12.5% 5%;
+  padding: 0% 12.5% 0% 5%;
+  margin-bottom: -3.5px;
   text-align: left;
   display: inline-block;
 }
@@ -206,14 +208,14 @@ nav{
   font-size: 22.5px;
   font-weight: bold;
   display:inline-block;
-  padding: 30px 0px;
+  padding: 0px;
   margin-left: -10%;
   text-transform: capitalize;
 }
 nav div ul{
   position: absolute;
-  right:10%;
-  margin-top: 35px;
+  right: 10%;
+  top: 3.5vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -307,7 +309,7 @@ footer{
 }
 
 /* @meadia header & nav and footer */
-@media (min-width:290px) and (max-width:767px) /* @meadia phone */ {
+@media (min-width:300px) and (max-width:767px) /* @meadia phone */ {
   nav{
     width: 100%;
   }
@@ -323,8 +325,8 @@ footer{
   }
   .logo-text {
     font-size: 17.5px;
-    margin-left: -1%;
-    margin-top: 0px !important;
+    margin-left: -5%;
+    margin-top: 0px;
   }
   .nav-items{
     display: none;
@@ -334,11 +336,27 @@ footer{
     cursor:pointer;
     font-weight: bold;
     color: var(--light-bg);  
-    margin-top: 18px !important;
+    margin-top: 0px;
     margin-right: 0%;
     position: absolute;
     right: 7.5%;
     display: flex;
+  }
+  .btn{
+    margin-left: 1% !important;
+    width: 25px !important;
+    height: 12.5px !important;
+  }
+  .darkmode .btn__indicator {
+    transform: translateX(15px) !important;
+  }
+  .btn__indicator {
+    width: 10px !important;
+    height: 10px !important;
+  }
+  .btn__icon {
+    font-size: 7.5px !important;
+    padding-right: 1px;
   }
   .footer {
     display: grid;
@@ -382,7 +400,7 @@ footer{
   }
   .logo-text {
     font-size: 20px;
-    margin-top: 0px !important;
+    margin-top: 0px;
   }
   .nav-items{
     display: none;
@@ -392,7 +410,7 @@ footer{
     cursor:pointer;
     font-weight: bold;
     color: var(--light-bg);  
-    margin-top: 18px !important;
+    margin-top: 0px;
     margin-right: 0%;
     position: absolute;
     right: 7.5%;
@@ -424,19 +442,22 @@ footer{
     font-size: 22.5px;
   }
 }
-@media (max-width:290px){
+@media (max-width:300px){
 .logo-text{
   display: none;
 }
 nav div ul{
   display: none;
 }
+.btn{
+  margin-left: -7.5% !important;
+}
 .toggle-open{
     font-size:35px;
     cursor:pointer;
     font-weight: bold;
     color: var(--light-bg);  
-    margin-top: 18px !important;
+    margin-top: 0px;
     margin-right: 0%;
     position: absolute;
     right: 7.5%;
@@ -457,7 +478,6 @@ nav div ul{
   inset 0 8px 8px rgba(0,0,0, .1),
   inset 0 -4px 4px rgba(0,0,0, .1);
   position: relative;
-  top: 30px;
   margin-left: 10px;
   display: flex;
   align-items: center;
