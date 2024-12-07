@@ -212,6 +212,49 @@ nav{
   margin-left: -10%;
   text-transform: capitalize;
 }
+.btn {
+  background-color: #fff;
+  width: 50px;
+  height: 25px;
+  border-radius: 12.5px;
+  padding: 0 2.5px;
+  box-shadow: inset 0 8px 60px rgba(0, 0, 0, .1), inset 0 8px 8px rgba(0, 0, 0, .1), inset 0 -4px 4px rgba(0, 0, 0, .1);
+  position: absolute;
+  right: 62.5%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.btn__indicator {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 8px 40px rgba(0,0,0, .2);
+  transition: transform .3s ease;
+}
+.btn__icon-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn__icon {
+  color: var(--icon-color);
+  font-size: 15px;
+}
+.darkmode {
+  color: #fff;
+}
+.darkmode .btn__indicator {
+  transform: translateX(30px);
+  background-color: var(--bg-color);
+}
+.darkmode .btn__icon {
+  color: var(--alternate-color);
+}
 nav div ul{
   position: absolute;
   right: 10%;
@@ -241,10 +284,12 @@ nav div li a {
   border-radius: 12.5px;
 }
 
+/* Container & Content */
 .content-container{
   background-color: var(--content-container);
 }
-/*footer logo & logo text*/
+
+/*footer logo & lable text*/
 footer{
   position: static;
   margin-top: 7.5px;
@@ -308,8 +353,38 @@ footer{
   margin-bottom: -20px;
 }
 
-/* @meadia header & nav and footer */
-@media (min-width:300px) and (max-width:767px) /* @meadia phone */ {
+/* @meadia Quiery */
+@media (max-width: 220px){
+  .btn{
+    display: none !important;
+  }
+}
+@media (max-width:330px){
+  .logo-text{
+    display: none;
+  }
+  nav div ul{
+    display: none;
+  }
+  .btn{
+    right: 30% !important;
+  }
+  .toggle-open{
+      font-size:35px;
+      cursor:pointer;
+      font-weight: bold;
+      color: var(--light-bg);  
+      margin-top: 0px;
+      margin-right: 0%;
+      position: absolute;
+      right: 7.5%;
+      display: flex;
+    }
+  .footer-copyright {
+    font-size: 8px;
+  }
+  }
+@media (min-width:330px) and (max-width:767px) /* @meadia phone */ {
   nav{
     width: 100%;
   }
@@ -324,7 +399,7 @@ footer{
     scale: 70%;
   }
   .logo-text {
-    font-size: 17.5px;
+    font-size: 15px;
     margin-left: -5%;
     margin-top: 0px;
   }
@@ -343,20 +418,7 @@ footer{
     display: flex;
   }
   .btn{
-    margin-left: 1% !important;
-    width: 25px !important;
-    height: 12.5px !important;
-  }
-  .darkmode .btn__indicator {
-    transform: translateX(15px) !important;
-  }
-  .btn__indicator {
-    width: 10px !important;
-    height: 10px !important;
-  }
-  .btn__icon {
-    font-size: 7.5px !important;
-    padding-right: 1px;
+    right: 20% !important;
   }
   .footer {
     display: grid;
@@ -416,6 +478,9 @@ footer{
     right: 7.5%;
     display: flex;
   }
+  .btn {
+    right: 25% !important;
+}
   .footer {
     display: grid;
     align-items: center;
@@ -441,81 +506,7 @@ footer{
   .footer-lable{
     font-size: 22.5px;
   }
+  .btn {
+    right: 65% !important;
 }
-@media (max-width:300px){
-.logo-text{
-  display: none;
-}
-nav div ul{
-  display: none;
-}
-.btn{
-  margin-left: -7.5% !important;
-}
-.toggle-open{
-    font-size:35px;
-    cursor:pointer;
-    font-weight: bold;
-    color: var(--light-bg);  
-    margin-top: 0px;
-    margin-right: 0%;
-    position: absolute;
-    right: 7.5%;
-    display: flex;
-  }
-.footer-copyright {
-  font-size: 8px;
-}
-}
-
-.btn {
-  background-color: #fff;
-  width: 50px;
-  height: 25px;
-  border-radius: 12.5px;
-  padding: 0 2.5px;
-  box-shadow: inset 0 8px 60px rgba(0,0,0, .1),
-  inset 0 8px 8px rgba(0,0,0, .1),
-  inset 0 -4px 4px rgba(0,0,0, .1);
-  position: relative;
-  margin-left: 10px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.btn__indicator {
-  background-color: #fff;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  position: absolute;
-  box-shadow: 0 8px 40px rgba(0,0,0, .2);
-  transition: transform .3s ease;
-}
-
-.btn__icon-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn__icon {
-  color: var(--icon-color);
-  font-size: 15px;
-}
-
-.darkmode {
-  color: #fff;
-}
-
-.darkmode .btn__indicator {
-  transform: translateX(30px);
-  background-color: var(--bg-color);
-}
-
-.darkmode .btn__icon {
-  color: var(--alternate-color);
 }
