@@ -43,17 +43,19 @@
 // Navigation - Overlay
 function openNav() {
         document.getElementById("myNav").style.width = "calc(100% - 15px)";
-        document.getElementById("progress-wrap").style.visibility = "hidden";        
+        document.getElementById("progress-wrap").style.visibility = "hidden"; 
+        document.getElementById("toggle-open").style.visibility = "hidden"; 
   }
 function closeNav() {
         document.getElementById("myNav").style.width = "0%";
-        document.getElementById("progress-wrap").style.visibility = "visible";        
+        document.getElementById("progress-wrap").style.visibility = "visible";  
+        document.getElementById("toggle-open").style.visibility = "visible";  
   }
   document.querySelector('.overlay').addEventListener('wheel', function(event) {
     event.preventDefault();
   }, { passive: false });
 
-  
+
 // Theme Items - Switch  
   const body = document.querySelector('body');
   const btn = document.querySelector('.btn');
