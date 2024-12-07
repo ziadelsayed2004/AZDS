@@ -42,7 +42,7 @@
 
 // Navigation - Overlay
 function openNav() {
-        document.getElementById("myNav").style.width = "calc(100% - 20px)";
+        document.getElementById("myNav").style.width = "calc(100% - 15px)";
         document.getElementById("progress-wrap").style.visibility = "hidden";        
   }
 function closeNav() {
