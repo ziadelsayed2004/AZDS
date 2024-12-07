@@ -88,21 +88,28 @@ function toggleMode() {
     document.documentElement.style.setProperty('--bg-color', '#0d3642');
     document.documentElement.style.setProperty('--bg-color-2nd', '#145564');
     document.documentElement.style.setProperty('--alternate-color', '#b7cf81');
-    document.documentElement.style.setProperty('--light-bg', '#000');
+    document.documentElement.style.setProperty('--light-bg', '#202020');
     document.documentElement.style.setProperty('--dark-bg', '#fff');
     document.documentElement.style.setProperty('--icon-color', '#FFDE59');
     document.documentElement.style.setProperty('--nav-hover', 'rgba(255,255,255, 0.6)');
-    document.documentElement.style.setProperty('--content-container', '#5A5E5EFF');
+    document.documentElement.style.setProperty('--content-container', '#3B3B3B');
+    document.documentElement.style.setProperty('--carousel-bg', '#939FA7');
+    document.documentElement.style.setProperty('--carousel-header', '#ddd');
+    document.documentElement.style.setProperty('--carousel-content', '#eee');
+
   } else {
     // Set light mode variables
     document.documentElement.style.setProperty('--bg-color', '#0d3642');
     document.documentElement.style.setProperty('--bg-color-2nd', '#145564');
     document.documentElement.style.setProperty('--alternate-color', '#b7cf81');
     document.documentElement.style.setProperty('--light-bg', '#fff');
-    document.documentElement.style.setProperty('--dark-bg', '#000');
+    document.documentElement.style.setProperty('--dark-bg', '#202020');
     document.documentElement.style.setProperty('--icon-color', '#FFDE59');
     document.documentElement.style.setProperty('--nav-hover', 'rgba(0,0,0, 0.6)');
     document.documentElement.style.setProperty('--content-container', '#E7EEEF');
+    document.documentElement.style.setProperty('--carousel-bg', '#fff');
+    document.documentElement.style.setProperty('--carousel-header', '#333');
+    document.documentElement.style.setProperty('--carousel-content', '#666');
   }
 }
 // Load the mode when the page loads
