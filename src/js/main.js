@@ -1,3 +1,4 @@
+//Swipe Up Btn
 (function($) { "use strict";
 
     $(document).ready(function(){"use strict";
@@ -39,6 +40,7 @@
     
     })(jQuery);
 
+// Navigation - Overlay
 function openNav() {
         document.getElementById("myNav").style.width = "100%";
         document.getElementById("progress-wrap").style.visibility = "hidden";        
@@ -51,18 +53,14 @@ function closeNav() {
     event.preventDefault();
   }, { passive: false });
 
-
-
-
+// Theme Items - Switch  
 const body = document.querySelector('body');
 const btn = document.querySelector('.btn');
 const icon = document.querySelector('.btn__icon');
-
 // Store the mode in local storage
 function store(value) {
   localStorage.setItem('lightmod', value);
 }
-
 // Load the stored mode
 function load() {
   const darkmode = localStorage.getItem('darkmode');
@@ -78,7 +76,6 @@ function load() {
     icon.classList.add('fa-sun');
   }
 }
-
 // Change the CSS Variables based on the mode
 function toggleMode() {
   const isDarkMode = body.classList.contains('darkmode');
@@ -105,9 +102,7 @@ function toggleMode() {
     document.documentElement.style.setProperty('--content-container', '#E7EEEF');
   }
 }
-
 load();
-
 btn.addEventListener('click', () => {
   body.classList.toggle('darkmode');
   icon.classList.add('animated');
