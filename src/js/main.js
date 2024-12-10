@@ -41,19 +41,25 @@
     })(jQuery);
 
 // Navigation - Overlay
-function openNav() {
-        document.getElementById("myNav").style.height = "calc(100% - 7.5px)";
-        document.getElementById("progress-wrap").style.visibility = "hidden"; 
-        document.getElementById("toggle-open").style.visibility = "hidden"; 
-  }
-function closeNav() {
-        document.getElementById("myNav").style.height = "0%";
-        document.getElementById("progress-wrap").style.visibility = "visible";  
-        document.getElementById("toggle-open").style.visibility = "visible";  
-  }
-  document.querySelector('.overlay').addEventListener('wheel', function(event) {
-    event.preventDefault();
-  }, { passive: false });
+let isNavOpen = false;
+
+function toggleNav() {
+    const nav = document.getElementById("myNav");
+    const toggleButton = document.getElementById("toggle-button");
+
+    if (isNavOpen) {
+        // Close the navigation
+        nav.style.height = "0%";
+        toggleButton.classList.remove("open");
+    } else {
+        // Open the navigation
+        nav.style.height = "calc(100% - 7.5px)";
+        toggleButton.classList.add("open");
+    }
+
+    isNavOpen = !isNavOpen; // Toggle the state
+}
+
 
 
 // Theme Items - Switch  
