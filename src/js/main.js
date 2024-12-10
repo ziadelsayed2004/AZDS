@@ -51,10 +51,14 @@ function toggleNav() {
         // Close the navigation
         nav.style.height = "0%";
         toggleButton.classList.remove("open");
+        document.body.style.overflow = 'auto';
+        document.body.style.touchAction = 'auto';
     } else {
         // Open the navigation
         nav.style.height = "calc(100% - 7.5px)";
         toggleButton.classList.add("open");
+        document.body.style.overflow = 'hidden';
+        document.body.style.touchAction = 'none';
     }
 
     isNavOpen = !isNavOpen; // Toggle the state
@@ -145,3 +149,15 @@ function load() {
       icon.classList.remove('animated');
     }, 500);
   });
+
+  window.onload = function() {
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+        document.getElementById('preloader').style.display = 'none';
+        
+        document.body.style.overflow = 'auto';
+        document.body.style.touchAction = 'auto';
+    }, 2500);
+};
+
+ 
