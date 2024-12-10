@@ -194,6 +194,7 @@ transition: 0.3s;
 color: var(--dark-bg);
 }
 
+/* Preloader */
 #preloader {
   position: fixed;
   top: 0;
@@ -244,7 +245,6 @@ color: var(--dark-bg);
      width: 100%;
   }
 }
-
 
 /* Header and nav */
 .float-navbar{
