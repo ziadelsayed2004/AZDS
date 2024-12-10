@@ -173,7 +173,6 @@ transition: all 200ms linear;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
-
 .overlay-content {
 position: relative;
 top: 25%;
