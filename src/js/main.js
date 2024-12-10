@@ -60,8 +60,6 @@ function toggleNav() {
     isNavOpen = !isNavOpen; // Toggle the state
 }
 
-
-
 // Theme Items - Switch  
   const body = document.querySelector('body');
   const btn = document.querySelector('.btn');
