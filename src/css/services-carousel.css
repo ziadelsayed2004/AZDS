@@ -27,7 +27,7 @@
     --carousel-header : #333;
     --carousel-content : #666;
 
-    }
+  }
   #services-carousel {
     display: flex;
     flex-wrap: wrap;
