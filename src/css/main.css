@@ -237,6 +237,7 @@ color: var(--dark-bg);
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
   color: var(--alternate-color);
   opacity: 1;
   overflow: hidden;
@@ -244,6 +245,7 @@ color: var(--dark-bg);
   width: 0;
   animation: typing 1.75s steps(50, end) 0.75s forwards;
   margin-top: -5px;
+  margin-left: -11%;
 }
 @keyframes revealLogo {
   to {
