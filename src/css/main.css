@@ -236,7 +236,8 @@ color: var(--dark-bg);
 #tagline {
   font-size: 20px;
   font-weight: bold;
-  color: var(--bg-color);
+  text-transform: uppercase;
+  color: var(--alternate-color);
   opacity: 1;
   overflow: hidden;
   white-space: nowrap;
@@ -251,7 +252,7 @@ color: var(--dark-bg);
 }
 @keyframes typing {
   to {
-     width: 100%;
+     width: 150%;
   }
 }
 

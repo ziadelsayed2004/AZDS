@@ -124,7 +124,6 @@ function load() {
       document.documentElement.style.setProperty('--carousel-content', '#666');
     }
   }
-// Load the mode when the page loads
   load();
   btn.addEventListener('click', () => {
     body.classList.toggle('darkmode');
@@ -149,6 +148,8 @@ function load() {
       icon.classList.remove('animated');
     }, 500);
   });
+
+  // Load the mode when the page loads
   window.onload = function() {
     document.body.style.overflow = 'hidden';
     setTimeout(() => {
