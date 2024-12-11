@@ -245,7 +245,7 @@ color: var(--dark-bg);
   width: 0;
   animation: typing 1.75s steps(50, end) 0.75s forwards;
   margin-top: -5px;
-  margin-left: -11%;
+  margin-left: -11.25%;
 }
 @keyframes revealLogo {
   to {
