@@ -149,7 +149,6 @@ function load() {
       icon.classList.remove('animated');
     }, 500);
   });
-
   window.onload = function() {
     document.body.style.overflow = 'hidden';
     setTimeout(() => {
@@ -160,6 +159,7 @@ function load() {
     }, 2500);
 };
 
+// Animaton for Items
 document.addEventListener("scroll", () => {
   const elements = document.querySelectorAll(".content-style-preview");
 
