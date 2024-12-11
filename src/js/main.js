@@ -160,4 +160,17 @@ function load() {
     }, 2500);
 };
 
- 
+document.addEventListener("scroll", () => {
+  const elements = document.querySelectorAll(".content-style-preview");
+
+  elements.forEach((element) => {
+    const rect = element.getBoundingClientRect();
+    const isVisible =
+      rect.top < window.innerHeight - 75 && rect.bottom > 200;
+    if (isVisible) {
+      element.classList.add("active");
+    } else {
+      element.classList.remove("active");
+    }
+  });
+});

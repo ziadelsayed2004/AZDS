@@ -35,6 +35,15 @@ body:focus{
   background-color: var(--bg-color);
   background-blend-mode:overlay;
 }
+.content-style-preview{
+  transform: scale(0.8);
+  opacity: 0.8;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.content-style-preview.active{
+  transform: scale(1);
+  opacity: 1;
+}
 
 /* Scroll button */
 .progress-wrap {
