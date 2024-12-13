@@ -9,8 +9,13 @@
 --icon-color : #FFDE59;
 --nav-hover : rgba(0,0,0, 0.6);
 --content-container : #E7EEEF;
+--land-bg : #E7EEEF;
 }
 
+.landing-div{
+  background-color: var(--land-bg);
+  border-radius: 20px;
+}
 .landing{
   height: calc(100vh - 125px);
 }
@@ -32,9 +37,9 @@
 }
 .land-btn{
   background-color: #0d364200;
-  width: 10%;
+  width: 17.5%;
   height: 50px;
-  min-width: 75px;
+  min-width: 100px;
   min-height: 40px;
   border-radius: 15px;
   border-color: var(--bg-color);
@@ -45,7 +50,15 @@
   transition: 0.25s;
 }
 .land-btn:hover{
+  box-shadow: 1px 1px 10px #555;
   background-color: var(--bg-color);
   border-radius: 15px;
   color: #fafafa;  
+}
+
+@media (max-width: 400px){
+  .land-btns{
+    flex-wrap: wrap;
+    gap: 2vh;
+  }
 }

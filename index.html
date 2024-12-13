@@ -67,15 +67,17 @@
 
     <div class="content-container" style="padding: 0.5px 25px 25px 25px; margin-top: -0.5px; border-radius: 0px 0px 25px 25px; display: block; height: 500vh;">
         <div class="landing">
-            <div class="land-fig">
-            </div>
-            <div class="land-about">
-            </div>
-            <div class="land-links">
-            </div>
-            <div class="land-btns">
-                <button id="services-btn" class="land-btn">Services</button>                                        
-                <button class="land-btn" onclick="window.location.href='index.html';">Portofolio</button>                                        
+            <div class="landing-div">
+                <div class="land-fig">
+                </div>
+                <div class="land-about">
+                </div>
+                <div class="land-links">
+                </div>
+                <div class="land-btns">
+                    <button id="services-btn" class="land-btn">Services</button>                                        
+                    <button class="land-btn" onclick="window.location.href='index.html';">Portofolio</button>                                        
+                </div>
             </div>
         </div>
         <div id="services">
@@ -150,15 +152,7 @@
         </div>
     </footer>
 
-    <div class="js-script">
-        <script>
-            document.getElementById('services-btn').addEventListener('click', function() {
-              window.scrollBy({
-                top: window.innerHeight*0.8,
-                behavior: 'smooth'
-              });
-            });
-        </script>  
+    <div class="js-script">  
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
         <script src="src/js/main.js"></script>
