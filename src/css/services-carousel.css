@@ -28,6 +28,9 @@
     --carousel-content : #666;
 
   }
+  #services{
+    min-height: 100vh;
+  }
   #services-carousel {
     display: flex;
     flex-wrap: wrap;

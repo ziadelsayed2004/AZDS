@@ -14,3 +14,38 @@
 .landing{
   height: calc(100vh - 125px);
 }
+.land-fig{
+  height: calc(25vh - 125px);
+}
+.land-about{
+  height: 40vh;
+}
+.land-links{
+  height: 15vh;
+}
+.land-btns{
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  margin-bottom: 10vh;
+}
+.land-btn{
+  background-color: #0d364200;
+  width: 10%;
+  height: 50px;
+  min-width: 75px;
+  min-height: 40px;
+  border-radius: 15px;
+  border-color: var(--bg-color);
+  border-style: solid;
+  color: var(--bg-color);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.land-btn:hover{
+  background-color: var(--bg-color);
+  border-radius: 15px;
+  color: #fafafa;  
+}
