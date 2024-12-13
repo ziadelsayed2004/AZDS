@@ -1,0 +1,16 @@
+/* Root and themes itemes */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&family=Rubik:wght@400;500;700&display=swap");
+:root{
+--bg-color : #0d3642;
+--bg-color-2nd : #145564;
+--alternate-color : #b7cf81;
+--light-bg : white;
+--dark-bg : #202020;
+--icon-color : #FFDE59;
+--nav-hover : rgba(0,0,0, 0.6);
+--content-container : #E7EEEF;
+}
+
+.landing{
+  height: calc(100vh - 125px);
+}
