@@ -33,12 +33,12 @@
   height: 15vh;
   display: flex;
   justify-content: center;
-  gap: 2%;
+  gap: 2.5%;
   margin-bottom: 10vh;
 }
 .land-btn{
   background-color: #0d364200;
-  width: 17.5%;
+  width: 22.5%;
   height: 50px;
   min-width: 100px;
   min-height: 40px;
@@ -53,13 +53,20 @@
 .land-btn:hover{
   box-shadow: 1px 1px 10px #555;
   background-color: var(--bg-color);
-  border-radius: 15px;
+  border-radius: 20px;
   color: #fafafa;  
 }
 
 @media (max-width: 767px){
   .land-btns{
-    flex-wrap: wrap;
-    gap: 2vh;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5vh;
   }
+  .land-btn{
+    width: 70%;
+    margin-left: 15%;  
+}
 }
