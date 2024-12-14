@@ -29,6 +29,17 @@
 .land-links{
   height: 15vh;
 }
+.land-social{
+  text-align: center;
+}
+.land-social-icon{
+  position: relative;
+  bottom: -5vh;
+  fill: var(--bg-color);
+}
+.land-social-icon:hover{
+  fill: var(--alternate-color);
+}
 .land-btns{
   height: 15vh;
   display: flex;
@@ -70,6 +81,11 @@
   }
   .land-links{
     height: 12.5vh;
+  }
+  .land-social-icon{
+    position: relative;
+    bottom: -6.25vh;
+    fill: var(--bg-color);
   }
   .land-btns{
     height: calc(15vh + 50px);
