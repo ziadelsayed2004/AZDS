@@ -245,7 +245,7 @@ color: var(--dark-bg);
   width: 0;
   animation: typing 1.5s steps(50, end) 1s forwards;
   margin-top: -5px;
-  margin-left: -11.25%;
+  margin-left: -15%;
 }
 @keyframes revealLogo {
   to {
@@ -254,7 +254,7 @@ color: var(--dark-bg);
 }
 @keyframes typing {
   to {
-     width: 122.5%;
+     width: 130%;
   }
 }
 
