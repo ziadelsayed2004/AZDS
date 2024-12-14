@@ -56,7 +56,7 @@
   color: #fafafa;  
 }
 
-@media (max-width: 400px){
+@media (max-width: 767px){
   .land-btns{
     flex-wrap: wrap;
     gap: 2vh;
