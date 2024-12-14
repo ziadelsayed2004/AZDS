@@ -181,7 +181,7 @@ document.addEventListener("scroll", () => {
 // Services btn
 document.getElementById('services-btn').addEventListener('click', function() {
   window.scrollBy({
-    top: window.innerHeight*0.8,
+    top: window.innerHeight*0.82,
     behavior: 'smooth'
   });
 });
