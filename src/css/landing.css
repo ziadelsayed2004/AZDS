@@ -21,20 +21,19 @@
   height: calc(100vh - 125px);
 }
 .land-fig{
-  height: calc(25vh - 125px);
+  height: calc(35vh - 125px);
   display: flex;
-  align-items: baseline;
   justify-content: center;
+  padding-top: 2.5vh;
 }
 .land-fig img {
-  border-radius: 20px;
-  width: 337.5px;
-  height: 337.5px;
-  position: relative;
-  top: -7.5vh;
+  min-width: 230px;
+  width: 20vw;
+  object-fit: cover;
+  height: 22.5vh;
 }
 .land-about{
-  height: 47.5vh;
+  height: 40vh;
   margin-left: 10%;
   margin-right: 10%;
   width: 80%;
@@ -90,6 +89,7 @@
 }
 .land-links{
   height: 7.5vh;
+  margin-bottom: 1.5vh;
 }
 .land-social{
   text-align: center;
@@ -99,6 +99,9 @@
   bottom: -2.5vh;
   width: 1vw;
   fill: var(--bg-color);
+}
+.land-social-icon svg {
+  width: 1.5vw;
 }
 .land-social-icon:hover{
   fill: var(--alternate-color);
