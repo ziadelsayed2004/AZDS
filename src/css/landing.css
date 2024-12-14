@@ -15,6 +15,7 @@
 .landing-div{
   background-color: var(--land-bg);
   border-radius: 20px;
+  height: calc(100vh - 160px);
 }
 .landing{
   height: calc(100vh - 125px);
