@@ -41,7 +41,6 @@
   width: 22.5%;
   height: 50px;
   min-width: 100px;
-  min-height: 40px;
   border-radius: 15px;
   border-color: var(--bg-color);
   border-style: solid;
@@ -58,7 +57,23 @@
 }
 
 @media (max-width: 767px){
+  .landing-div{
+    height: calc(100vh - 160px);
+  }
+  .landing{
+    height: calc(100vh - 125px);
+  }
+  .land-fig{
+    height: calc(22.5vh - 125px);
+  }
+  .land-about{
+    height: 30vh;
+  }
+  .land-links{
+    height: 12.5vh;
+  }
   .land-btns{
+    height: 30vh;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;

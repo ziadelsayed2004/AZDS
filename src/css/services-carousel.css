@@ -141,10 +141,6 @@
   
   /* Media Queries */
   @media (max-width: 768px) {
-    #services-carousel {
-      flex-direction: column;
-    }
-  
     #countainer-zone {
       flex: 1 1 100%;
       border: none;
