@@ -27,12 +27,14 @@
   justify-content: center;
 }
 .land-fig img {
-  width: calc(100vw - 80px);
-  height: calc(100vh - 160px);
   border-radius: 20px;
+  width: 337.5px;
+  height: 337.5px;
+  position: relative;
+  top: -7.5vh;
 }
 .land-about{
-  height: 40vh;
+  height: 47.5vh;
   margin-left: 10%;
   margin-right: 10%;
   width: 80%;
@@ -87,14 +89,14 @@
   font-size: 1.25vw;
 }
 .land-links{
-  height: 15vh;
+  height: 7.5vh;
 }
 .land-social{
   text-align: center;
 }
 .land-social-icon{
   position: relative;
-  bottom: -5vh;
+  bottom: -2.5vh;
   width: 1vw;
   fill: var(--bg-color);
 }
@@ -138,14 +140,14 @@
     height: calc(22.5vh - 125px);
   }
   .land-about{
-    height: 30vh;
+    height: 37.5vh;
   }
   .land-links{
-    height: 12.5vh;
+    height: 5vh;
   }
   .land-social-icon{
     position: relative;
-    bottom: -6.25vh;
+    bottom: -1.67vh;
     fill: var(--bg-color);
   }
   .land-btns{
@@ -159,5 +161,57 @@
   .land-btn{
     width: 70%;
     margin-left: 15%;  
+  }
+  .land-social-icon svg{
+    width: 4vw !important;
+  }
 }
+@media (max-width:420px){
+  .land-welcome{
+    font-size: 7vw;
+    font-weight: bold;
+    color: var(--bg-color);
+    text-transform: uppercase;
+    font-family: cursive;
+  }
+  .land-2nd-line{
+    font-size: 4vw;
+    font-family: cursive;
+    color: var(--bg-color);
+  }
+  .A-litter,.Z-litter {
+    color: var(--alternate-color);
+    font-family: cursive;
+    font-size: 5vw;
+    -webkit-text-stroke-color: var(--bg-color);
+    -webkit-text-stroke-width: 0.2vw;
+    transition: 0.5s;
+  }
+  .A-litter:hover,.Z-litter:hover {
+    color: var(--bg-color);
+    font-family: cursive;
+    font-size: 5vw;
+    -webkit-text-stroke-color: var(--bg-color);
+    -webkit-text-stroke-width: 0.2vw;
+  }
+  .land-qu{
+    font-size: 4.5vw;
+    font-weight: bold;
+    color: var(--bg-color);
+    font-family: cursive;
+    transition: 0.5s;
+  }
+  .land-qu:hover{
+    font-size: 4.5vw;
+    font-weight: bold;
+    color: var(--alternate-color);
+    font-family: cursive;
+  }
+  .land-p{
+    font-family: cursive;
+    font-size: 2.5vw;
+  }
+  .land-social-icon svg{
+    width: 5vw !important;
+  }
 }
