@@ -34,7 +34,6 @@
   display: flex;
   justify-content: center;
   gap: 2.5%;
-  margin-bottom: 10vh;
 }
 .land-btn{
   background-color: #0d364200;
@@ -73,7 +72,7 @@
     height: 12.5vh;
   }
   .land-btns{
-    height: 30vh;
+    height: calc(15vh + 50px);
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
