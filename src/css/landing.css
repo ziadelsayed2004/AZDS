@@ -1,98 +1,118 @@
-/* Root and themes items */
+/* Root and themes itemes */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&family=Rubik:wght@400;500;700&display=swap");
-
-:root {
-  --bg-color: #0d3642;
-  --bg-color-2nd: #145564;
-  --alternate-color: #b7cf81;
-  --light-bg: white;
-  --dark-bg: #202020;
-  --icon-color: #FFDE59;
-  --nav-hover: rgba(0, 0, 0, 0.6);
-  --content-container: #e7eeef;
-  --land-bg: #e7eeef;
+:root{
+--bg-color : #0d3642;
+--bg-color-2nd : #145564;
+--alternate-color : #b7cf81;
+--light-bg : white;
+--dark-bg : #202020;
+--icon-color : #FFDE59;
+--nav-hover : rgba(0,0,0, 0.6);
+--content-container : #E7EEEF;
+--land-bg : #E7EEEF;
 }
 
-.landing-div {
+.landing-div{
   background-color: var(--land-bg);
   border-radius: 20px;
   height: calc(100vh - 160px);
 }
-.landing {
-  height: calc(100vh - 160px);
+.landing{
+  height: calc(100vh - 125px);
 }
-.land-fig {
-  height: calc(40vh - 125px);
+.land-fig{
+  height: calc(35vh - 125px);
   display: flex;
   justify-content: center;
-  align-items: center;
   padding-top: 2.5vh;
 }
 .land-fig img {
-  min-width: 150px;
-  width: 30vw;
-  padding-top: 5vh;
-  max-width: 100%;
+  min-width: 230px;
+  width: 20vw;
   object-fit: cover;
+  height: 22.5vh;
 }
-.land-about {
-  height: calc(38vh - 35px);
-  margin-top: 2vh;
-  width: 100%;
+.land-about{
+  height: 40vh;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
   text-align: center;
-  align-content: center;
+  align-content: end;
 }
-.land h3 {
+.land h3{
   color: var(--bg-color);
 }
-.land-welcome {
-  font-size: clamp(3vw, 1.5rem, 1.5vw);
-  margin-top: 3.5vh;
+.land-welcome{
+  font-size: 3.5vw;
   font-weight: bold;
   color: var(--bg-color);
   text-transform: uppercase;
   font-family: cursive;
 }
-.land-2nd-line {
-  font-size: clamp(2.5vw, 1.25rem, 1.25vw);
+.land-2nd-line{
+  font-size: 2vw;
   font-family: cursive;
   color: var(--bg-color);
 }
-.A-litter, .Z-litter {
+.A-litter,.Z-litter {
   color: var(--alternate-color);
   font-family: cursive;
+  font-size: 2.5vw;
   -webkit-text-stroke-color: var(--bg-color);
-  -webkit-text-stroke-width: 0.125vw;
+  -webkit-text-stroke-width: 0.1vw;
   transition: 0.5s;
 }
-.A-litter:hover, .Z-litter:hover {
+.A-litter:hover,.Z-litter:hover {
   color: var(--bg-color);
+  font-family: cursive;
+  font-size: 2.5vw;
   -webkit-text-stroke-color: var(--bg-color);
+  -webkit-text-stroke-width: 0.1vw;
 }
-.land-qu {
-  font-size: clamp(2.5vw, 1.25rem, 1.25vw);
+.land-qu{
+  font-size: 2.25vw;
   font-weight: bold;
   color: var(--bg-color);
   font-family: cursive;
   transition: 0.5s;
 }
-.land-qu:hover {
+.land-qu:hover{
+  font-size: 2.25vw;
+  font-weight: bold;
   color: var(--alternate-color);
-}
-.land-p {
   font-family: cursive;
-  margin: 0;
-  padding: 0;
-  font-size: clamp(1vw, 1.5rem, 2.5vw);
 }
-.land-btns {
-  padding-top: 5vh;
-  height: 20vh;
+.land-p{
+  font-family: cursive;
+  font-size: 1.25vw;
+}
+.land-links{
+  height: 7.5vh;
+  margin-bottom: 1.5vh;
+}
+.land-social{
+  text-align: center;
+}
+.land-social-icon{
+  position: relative;
+  bottom: -2.5vh;
+  width: 1vw;
+  fill: var(--bg-color);
+}
+.land-social-icon svg {
+  width: 1.5vw;
+}
+.land-social-icon:hover{
+  fill: var(--alternate-color);
+}
+.land-btns{
+  height: 15vh;
   display: flex;
   justify-content: center;
   gap: 2.5%;
 }
-.land-btn {
+.land-btn{
   background-color: #0d364200;
   width: 22.5%;
   height: 50px;
@@ -105,63 +125,96 @@
   cursor: pointer;
   transition: 0.25s;
 }
-.land-btn:hover {
+.land-btn:hover{
   box-shadow: 1px 1px 10px #555;
   background-color: var(--bg-color);
-  border-radius: 25px;
-  color: #fafafa;
+  border-radius: 20px;
+  color: #fafafa;  
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px){
+  .landing-div{
+    height: calc(100vh - 210px);
+  }
+  .landing{
+    height: calc(100vh - 125px);
+  }
+  .land-fig{
+    height: calc(22.5vh - 125px);
+  }
   .land-about{
-    align-content: start;    
-    height: calc(30vh - 35px);
+    height: 37.5vh;
   }
-  .land-btns {
-    height: 30vh;
-    padding: 0vh;
-    justify-content: start;
+  .land-links{
+    height: 5vh;
+  }
+  .land-social-icon{
+    position: relative;
+    bottom: -1.67vh;
+    fill: var(--bg-color);
+  }
+  .land-btns{
+    height: calc(15vh + 50px);
+    display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
+    justify-content: center;
+    gap: 2.5vh;
   }
-  .land-btn {
+  .land-btn{
     width: 70%;
-    gap: 1vh;
+    margin-left: 15%;  
   }
-  .land-welcome {
-    font-size: clamp(5vw, 1.25rem, 1.25vw);
-  }
-  .land-2nd-line {
-    font-size: clamp(4vw, 1.25rem, 1.25vw);
-  }
-  .land-qu {
-    font-size: clamp(4vw, 1.25rem, 1.25vw);
+  .land-social-icon svg{
+    width: 4vw !important;
   }
 }
-
-@media (max-width: 420px){
-  .land-fig img {
-    width: auto;
+@media (max-width:420px){
+  .land-welcome{
+    font-size: 10 vw;
+    font-weight: bold;
+    color: var(--bg-color);
+    text-transform: uppercase;
+    font-family: cursive;
+  }
+  .land-2nd-line{
+    font-size: 7.5vw;
+    font-family: cursive;
+    color: var(--bg-color);
+  }
+  .A-litter,.Z-litter {
+    color: var(--alternate-color);
+    font-family: cursive;
+    font-size: 7.5vw;
+    -webkit-text-stroke-color: var(--bg-color);
+    -webkit-text-stroke-width: 0.2vw;
+    transition: 0.5s;
+  }
+  .A-litter:hover,.Z-litter:hover {
+    color: var(--bg-color);
+    font-family: cursive;
+    font-size: 7.5vw;
+    -webkit-text-stroke-color: var(--bg-color);
+    -webkit-text-stroke-width: 0.2vw;
+  }
+  .land-qu{
+    font-size: 6.5vw;
+    font-weight: bold;
+    color: var(--bg-color);
+    font-family: cursive;
+    transition: 0.5s;
+  }
+  .land-qu:hover{
+    font-size: 6.5vw;
+    font-weight: bold;
+    color: var(--alternate-color);
+    font-family: cursive;
+  }
+  .land-p{
+    font-family: cursive;
+    font-size: 4vw;
+  }
+  .land-social-icon svg{
+    width: 5vw !important;
   }
 }
-@media (min-width: 420px) and (max-width:600px){
-  .land-fig img {
-    width: 50vw;
-  }
-} 
-@media (min-width: 600px) and (max-width:820px){
-  .land-fig img {
-    width: 47.5vw;
-  }
-} 
-@media (min-width: 820px) and (max-width:1000px){
-  .land-fig img {
-    width: 40vw;
-  }
-} 
-@media (min-width: 1000px) and (max-width:1180px){
-  .land-fig img {
-    width: 32.5vw;
-  }
-} 
