@@ -19,7 +19,7 @@
   height: calc(100vh - 160px);
 }
 .landing {
-  height: calc(100vh - 125px);
+  height: calc(100vh - 160px);
 }
 .land-fig {
   height: calc(40vh - 125px);
@@ -37,9 +37,8 @@
 }
 .land-about {
   height: calc(38vh - 35px);
-  margin: 0 10%;
   margin-top: 2vh;
-  width: 80%;
+  width: 100%;
   text-align: center;
   align-content: center;
 }
@@ -116,7 +115,7 @@
 @media (max-width: 767px) {
   .land-about{
     align-content: start;    
-    height: calc(28vh - 35px);
+    height: calc(30vh - 35px);
   }
   .land-btns {
     height: 30vh;
@@ -131,13 +130,13 @@
     gap: 1vh;
   }
   .land-welcome {
-    font-size: clamp(4vw, 1.25rem, 1.25vw);
+    font-size: clamp(5vw, 1.25rem, 1.25vw);
   }
   .land-2nd-line {
-    font-size: clamp(3vw, 1.25rem, 1.25vw);
+    font-size: clamp(4vw, 1.25rem, 1.25vw);
   }
   .land-qu {
-    font-size: clamp(3vw, 1.25rem, 1.25vw);
+    font-size: clamp(4vw, 1.25rem, 1.25vw);
   }
 }
 
