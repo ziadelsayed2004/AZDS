@@ -171,7 +171,7 @@
 }
 @media (max-width:420px){
   .land-welcome{
-    font-size: 10 vw;
+    font-size: 8vw;
     font-weight: bold;
     color: var(--bg-color);
     text-transform: uppercase;
