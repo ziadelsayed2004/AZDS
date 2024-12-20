@@ -181,13 +181,13 @@ document.addEventListener("scroll", () => {
 // Services btn
 document.getElementById('services-btn').addEventListener('click', function() {
   window.scrollBy({
-    top: window.innerHeight*0.89,
+    top: window.innerHeight*0.995,
     behavior: 'smooth'
   });
 });
 document.getElementById('portofolio-btn').addEventListener('click', function() {
   window.scrollBy({
-    top: window.innerHeight*1.79,
+    top: window.innerHeight*1.995,
     behavior: 'smooth'
   });
 });

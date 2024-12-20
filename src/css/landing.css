@@ -120,7 +120,7 @@
 
 @media (max-width: 767px){
   .landing-div{
-    height: calc(100vh - 210px);
+    height: calc(100vh - 160px);
   }
   .landing{
     height: calc(100vh - 125px);

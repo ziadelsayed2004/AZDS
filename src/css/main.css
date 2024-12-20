@@ -386,7 +386,7 @@ nav div li a {
   padding: 0.5px 25px 25px 25px;
   margin-top: -0.5px;
   border-radius: 0px 0px 25px 25px;
-  height: calc(280vh - 160px);
+  height: calc(300vh - 160px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -488,7 +488,7 @@ footer{
     font-size: 8px;
   }
 }
-@media (min-width:330px) and (max-width:767px) /* @meadia phone */ {
+@media (min-width:330px) and (max-width:767px) {
   nav{
     width: 100%;
   }
@@ -542,7 +542,7 @@ footer{
     font-size: 10px;
   }
 }
-@media (max-width:1024px) and (min-width:767px) /* @meadia mid screen */ {
+@media (max-width:1024px) and (min-width:767px) {
   nav{
     width: 100%;
   }
