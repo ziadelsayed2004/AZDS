@@ -200,3 +200,17 @@ function updateViewportHeight() {
 updateViewportHeight();
 window.addEventListener('resize', updateViewportHeight);
 window.addEventListener('scroll', updateViewportHeight);
+
+
+function goFullScreen() {
+  if (document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen();
+  } else if (document.documentElement.webkitRequestFullscreen) { // Safari
+    document.documentElement.webkitRequestFullscreen();
+  } else if (document.documentElement.msRequestFullscreen) { // IE11
+    document.documentElement.msRequestFullscreen();
+  }
+}
+
+// استدعاء الوظيفة عند النقر على زر أو حدث معين
+document.querySelector("#fullscreen-btn").addEventListener("click", goFullScreen);
