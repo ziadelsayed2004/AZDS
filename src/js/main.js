@@ -199,4 +199,3 @@ function updateViewportHeight() {
 }
 updateViewportHeight();
 window.addEventListener('resize', updateViewportHeight);
-window.addEventListener('scroll', updateViewportHeight);
