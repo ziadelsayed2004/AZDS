@@ -386,7 +386,7 @@ nav div li a {
   padding: 0.5px 25px 25px 25px;
   margin-top: -0.5px;
   border-radius: 0px 0px 25px 25px;
-  height: calc(300vh - 160px);
+  height: calc(var(--vh, 1vh)*300 - 160px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

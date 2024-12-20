@@ -97,6 +97,8 @@
   display: flex;
   justify-content: center;
   gap: 2.5%;
+  position: relative;
+  bottom: -7.5vh;
 }
 .land-btn{
   background-color: #0d364200;
@@ -120,7 +122,7 @@
 
 @media (max-width: 767px){
   .landing-div{
-    height: calc(100vh - 160px);
+    height: calc(var(--vh, 1vh)*100 - 160px);
   }
   .landing{
     height: calc(100vh - 125px);
@@ -140,6 +142,8 @@
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    bottom: -7.5vh;
     gap: 2.5vh;
   }
   .land-btn{

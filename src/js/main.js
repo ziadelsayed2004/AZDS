@@ -191,3 +191,12 @@ document.getElementById('portofolio-btn').addEventListener('click', function() {
     behavior: 'smooth'
   });
 });
+
+//adress bar fixing VH
+function updateViewportHeight() {
+  const viewportHeight = window.innerHeight;
+  document.documentElement.style.setProperty('--vh', `${viewportHeight * 0.01}px`);
+}
+updateViewportHeight();
+window.addEventListener('resize', updateViewportHeight);
+window.addEventListener('scroll', updateViewportHeight);

@@ -28,7 +28,7 @@
     --carousel-content : #666;
   }
   #services{
-    height: calc(100vh - 160px);
+    height: calc(var(--vh, 1vh)*100 - 160px);
   }
   #services-carousel {
     display: flex;
