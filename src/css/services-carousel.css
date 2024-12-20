@@ -148,33 +148,33 @@
     }
     .service-icon {
       height: auto;
-      width: 15%;
+      width: 25%;
       margin-top: 10px;
       background-color: var(--bg-color);
-      border-radius: 3.75vw;
+      border-radius: 5.25vw;
       padding: 1vw;
     }
   }
   @media (max-width: 480px) {
     .list li input[type="radio"] + label {
-      font-size: 17.5px;
-      font-weight: 400;
+      font-size: 20px;
+      font-weight: 500;
       padding: 10px;
     }
   
     .list li .content h3 {
-      font-size: 15px;
+      font-size: 17.5px;
     }
   
     .list li .content p {
-      font-size: 12.5px;
+      font-size: 15px;
     }
     .service-icon {
       height: auto;
-      width: 15%;
+      width: 25%;
       margin-top: 10px;
       background-color: var(--bg-color);
-      border-radius: 3.75vw;
+      border-radius: 5.25vw;
       padding: 1vw;
     }
   }
