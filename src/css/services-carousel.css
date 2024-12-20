@@ -28,8 +28,7 @@
     --carousel-content : #666;
   }
   #services{
-    padding-top: 10vh;
-    height: 90vh;
+    height: calc(100vh - 160px);
   }
   #services-carousel {
     display: flex;
@@ -148,10 +147,10 @@
     }
     .service-icon {
       height: auto;
-      width: 25%;
+      width: 15%;
       margin-top: 10px;
       background-color: var(--bg-color);
-      border-radius: 5.25vw;
+      border-radius: 4vw;
       padding: 1vw;
     }
   }

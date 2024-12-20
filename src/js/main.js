@@ -159,7 +159,7 @@ function load() {
         
         document.body.style.overflow = 'auto';
         document.body.style.touchAction = 'auto';
-    }, 2480);
+    }, 2450);
 };
 
 // Animaton for Items
@@ -181,13 +181,13 @@ document.addEventListener("scroll", () => {
 // Services btn
 document.getElementById('services-btn').addEventListener('click', function() {
   window.scrollBy({
-    top: window.innerHeight*0.92,
+    top: window.innerHeight*0.89,
     behavior: 'smooth'
   });
 });
 document.getElementById('portofolio-btn').addEventListener('click', function() {
   window.scrollBy({
-    top: window.innerHeight*1.82,
+    top: window.innerHeight*1.79,
     behavior: 'smooth'
   });
 });
