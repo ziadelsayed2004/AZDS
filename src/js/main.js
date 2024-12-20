@@ -177,6 +177,34 @@ document.addEventListener("scroll", () => {
     }
   });
 });
+document.addEventListener("scroll", () => {
+  const elements = document.querySelectorAll(".div-l-style-preview");
+
+  elements.forEach((element) => {
+    const rect = element.getBoundingClientRect();
+    const isVisible =
+      rect.top < window.innerHeight - 75 && rect.bottom > 200;
+    if (isVisible) {
+      element.classList.add("active");
+    } else {
+      element.classList.remove("active");
+    }
+  });
+});
+document.addEventListener("scroll", () => {
+  const elements = document.querySelectorAll(".div-r-style-preview");
+
+  elements.forEach((element) => {
+    const rect = element.getBoundingClientRect();
+    const isVisible =
+      rect.top < window.innerHeight - 75 && rect.bottom > 200;
+    if (isVisible) {
+      element.classList.add("active");
+    } else {
+      element.classList.remove("active");
+    }
+  });
+});
 
 // Services btn
 document.getElementById('services-btn').addEventListener('click', function() {

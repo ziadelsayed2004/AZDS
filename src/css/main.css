@@ -44,6 +44,26 @@ body:focus{
   transform: scale(1);
   opacity: 1;
 }
+.div-l-style-preview{
+  transform: scale(0.8);
+  opacity: 0.8;
+  border-radius: 50px 0px 0px 50px;
+  margin-right: 100vw;
+  transition: transform 1s ease, opacity 1s ease;
+}
+.div-r-style-preview{
+  transform: scale(0.8);
+  opacity: 0.8;
+  border-radius: 0px 50px 50px 0px;
+  margin-left: 100vw;
+  transition: transform 1s ease, opacity 1s ease;
+}
+.div-l-style-preview.active, .div-r-style-preview.active {
+  margin: 0vw;
+  transform: scale(1);
+  opacity: 1;
+}
+
 
 /* Scroll button */
 .progress-wrap {
@@ -393,15 +413,16 @@ nav div li a {
   justify-content: space-between;
   background-color: var(--content-container);
 }
+.divider-container{
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
 .divider{
   height: 1vh;
-  width: 100%;
-  border-radius: 50px;
+  width: 50%;
   background-color: var(--alternate-color);
   transition: 0.5s;
-}
-.divider:hover{
-  background-color: var(--bg-color);
 }
 
 /* footer logo & lable text */
