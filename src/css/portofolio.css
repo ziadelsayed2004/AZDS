@@ -16,6 +16,6 @@
 
   @media (max-width: 767px){
     #portofolio{
-      height: calc(100vh - 210px);
+      height: calc(100vh - 160px);
     }
   }
