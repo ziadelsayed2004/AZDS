@@ -7,9 +7,12 @@
     --dark-bg : black;
     --land-bg : #E7EEEF;
   }
-  #portofolio{
+  #portofolio-container{
     width: 100%;
     height: calc(var(--vh, 1vh)*100 - 160px);
+  }
+  .portofolio{
+    height: 100%;
     background-color: var(--land-bg);
     border-radius: 20px;  
   }
