@@ -16,6 +16,7 @@
   background-color: var(--land-bg);
   border-radius: 20px;
   height: calc(var(--vh, 1vh)*100 - 160px);
+  transition: height 0.3s ease;
 }
 .landing{
   height: calc(100vh - 125px);

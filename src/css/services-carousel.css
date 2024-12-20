@@ -29,6 +29,7 @@
   }
   #services{
     height: calc(var(--vh, 1vh)*100 - 160px);
+    transition: height 0.3s ease;
   }
   #services-carousel {
     display: flex;

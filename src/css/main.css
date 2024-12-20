@@ -387,6 +387,7 @@ nav div li a {
   margin-top: -0.5px;
   border-radius: 0px 0px 25px 25px;
   height: calc(var(--vh, 1vh)*300 - 160px);
+  transition: height 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
