@@ -99,7 +99,7 @@
   justify-content: center;
   gap: 2.5%;
   position: relative;
-  bottom: -7.5vh;
+  bottom: -5vh;
 }
 .land-btn{
   background-color: #0d364200;
@@ -196,5 +196,10 @@
   .land-p{
     font-family: cursive;
     font-size: 3vw;
+  }
+}
+@media (max-width: 230px){
+  .land-fig {
+    display: none;
   }
 }

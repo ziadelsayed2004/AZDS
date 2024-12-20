@@ -393,6 +393,16 @@ nav div li a {
   justify-content: space-between;
   background-color: var(--content-container);
 }
+.divider{
+  height: 1vh;
+  width: 100%;
+  border-radius: 50px;
+  background-color: var(--alternate-color);
+  transition: 0.5s;
+}
+.divider:hover{
+  background-color: var(--bg-color);
+}
 
 /* footer logo & lable text */
 footer{
