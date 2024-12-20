@@ -417,6 +417,7 @@ nav div li a {
   display: flex;
   flex-direction: row;
   gap: 0;
+  margin-bottom:5vh;
 }
 .divider{
   height: 1vh;
