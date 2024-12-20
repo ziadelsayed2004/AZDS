@@ -1,0 +1,21 @@
+  /* Root and carousel */
+  :root{
+    --bg-color : #0d3642;
+    --bg-color-2nd : #145564;
+    --alternate-color : #b7cf81;
+    --light-bg : white;
+    --dark-bg : black;
+    --land-bg : #E7EEEF;
+  }
+  #portofolio{
+    width: 100%;
+    height: calc(100vh - 160px);
+    background-color: var(--land-bg);
+    border-radius: 20px;  
+  }
+
+  @media (max-width: 767px){
+    #portofolio{
+      height: calc(100vh - 210px);
+    }
+  }

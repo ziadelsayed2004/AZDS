@@ -28,6 +28,7 @@
     --carousel-content : #666;
   }
   #services{
+    padding-top: 13vh;
     min-height: 100vh;
   }
   #services-carousel {
