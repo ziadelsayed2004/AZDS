@@ -91,22 +91,8 @@
   height: 7.5vh;
   margin-bottom: 1.5vh;
 }
-.land-social{
-  text-align: center;
-}
-.land-social-icon{
-  position: relative;
-  bottom: -2.5vh;
-  width: 1vw;
-  fill: var(--bg-color);
-}
-.land-social-icon svg {
-  width: 1.5vw;
-}
-.land-social-icon:hover{
-  fill: var(--alternate-color);
-}
 .land-btns{
+  justify-content: end;
   height: 15vh;
   display: flex;
   justify-content: center;
@@ -148,11 +134,6 @@
   .land-links{
     height: 5vh;
   }
-  .land-social-icon{
-    position: relative;
-    bottom: -1.67vh;
-    fill: var(--bg-color);
-  }
   .land-btns{
     height: calc(15vh + 50px);
     display: flex;
@@ -164,9 +145,6 @@
   .land-btn{
     width: 70%;
     margin-left: 15%;  
-  }
-  .land-social-icon svg{
-    width: 4vw !important;
   }
 }
 @media (max-width:420px){
@@ -213,8 +191,5 @@
   .land-p{
     font-family: cursive;
     font-size: 4vw;
-  }
-  .land-social-icon svg{
-    width: 5vw !important;
   }
 }
