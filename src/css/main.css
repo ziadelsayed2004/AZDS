@@ -72,9 +72,9 @@ body:focus{
 .section-title{
   text-transform: uppercase;
   font-weight: bold;
-  color: var(--bg-color);
+  color: var(--alternate-color);
   font-family: cursive;
-  -webkit-text-stroke-color: var(--baby-blue);
+  -webkit-text-stroke-color: var(--bg-color);
   -webkit-text-stroke-width: clamp(0.07vw,0.09vw,0.09vw);
   font-size: clamp(1.25rem, 5vw, 2.5rem);
   transition: 0.5s;
