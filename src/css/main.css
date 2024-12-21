@@ -9,6 +9,7 @@
 --icon-color : #FFDE59;
 --nav-hover : rgba(0,0,0, 0.6);
 --content-container : #E7EEEF;
+--baby-blue :#cfeef7;
 }
 a{
   text-decoration: none;
@@ -71,10 +72,10 @@ body:focus{
 .section-title{
   text-transform: uppercase;
   font-weight: bold;
-  color: var(--alternate-color);
+  color: var(--bg-color);
   font-family: cursive;
-  -webkit-text-stroke-color: var(--bg-color);
-  -webkit-text-stroke-width: clamp(0.1vw,0.125vw,0.15vw);
+  -webkit-text-stroke-color: var(--baby-blue);
+  -webkit-text-stroke-width: clamp(0.07vw,0.09vw,0.09vw);
   font-size: clamp(1.25rem, 5vw, 2.5rem);
   transition: 0.5s;
   text-align: start;
