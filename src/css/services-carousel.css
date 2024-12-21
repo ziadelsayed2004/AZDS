@@ -42,7 +42,7 @@
     border-radius: 25px;
     border-color: #0d3642;
     border-style: solid;
-    box-shadow: 5px 5px 5px #0d3642;
+    box-shadow: 5px 5px 5px 5px #0d3642;
     overflow: hidden;
   }
   #countainer-zone {
