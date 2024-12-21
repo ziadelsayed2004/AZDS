@@ -47,23 +47,27 @@ body:focus{
 .div-l-style-preview{
   transform: scale(0.8);
   opacity: 0.8;
-  border-radius: 50px 0px 0px 50px;
-  margin-right: 100vw;
+  border-radius: 50px 50px 50px 50px;
+  margin-right: 80vw;
   transition: transform 1s ease, opacity 1s ease;
 }
 .div-r-style-preview{
   transform: scale(0.8);
   opacity: 0.8;
-  border-radius: 0px 50px 50px 0px;
-  margin-left: 100vw;
+  border-radius: 50px 50px 50px 50px;
+  margin-left: 80vw;
   transition: transform 1s ease, opacity 1s ease;
 }
 .div-l-style-preview.active, .div-r-style-preview.active {
-  margin: 0vw;
   transform: scale(1);
   opacity: 1;
 }
-
+.div-r-style-preview.active{
+  margin-left: 20vw;
+}
+.div-l-style-preview.active{
+  margin-right: 10vw;
+}
 
 /* Scroll button */
 .progress-wrap {
@@ -421,7 +425,7 @@ nav div li a {
 }
 .divider{
   height: 1vh;
-  width: 50%;
+  width: 35vw;
   background-color: var(--alternate-color);
   transition: 0.5s;
 }
