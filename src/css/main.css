@@ -63,10 +63,22 @@ body:focus{
   opacity: 1;
 }
 .div-r-style-preview.active{
-  margin-left: 20vw;
+  margin-left: 10vw;
 }
 .div-l-style-preview.active{
   margin-right: 10vw;
+}
+.section-title{
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--alternate-color);
+  text-align: start;
+  opacity: 0;
+  transition: 0.5s;
+}
+.section-title.active{
+  text-align: center;
+  opacity: 1;
 }
 
 /* Scroll button */

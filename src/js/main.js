@@ -205,6 +205,20 @@ document.addEventListener("scroll", () => {
     }
   });
 });
+document.addEventListener("scroll", () => {
+  const elements = document.querySelectorAll(".section-title");
+
+  elements.forEach((element) => {
+    const rect = element.getBoundingClientRect();
+    const isVisible =
+      rect.top < window.innerHeight - 25 && rect.bottom > 165;
+    if (isVisible) {
+      element.classList.add("active");
+    } else {
+      element.classList.remove("active");
+    }
+  });
+});
 
 // Services btn
 document.getElementById('services-btn').addEventListener('click', function() {
