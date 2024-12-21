@@ -19,7 +19,7 @@
   transition: height 0.3s ease;
 }
 .landing{
-  height: calc(100vh - 125px);
+  height: calc(var(--vh, 1vh)*100 - 125px);
 }
 .land-fig{
   height: calc(35vh - 125px);
