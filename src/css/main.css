@@ -44,6 +44,18 @@ body:focus{
   transform: scale(1);
   opacity: 1;
 }
+.divider-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+}
+.divider{
+  height: 1vh;
+  width: 40vw;
+  background-color: var(--alternate-color);
+  transition: 0.5s;
+}
 .div-l-style-preview{
   transform: scale(0.8);
   opacity: 0.8;
@@ -433,18 +445,6 @@ nav div li a {
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--content-container);
-}
-.divider-container{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0;
-}
-.divider{
-  height: 1vh;
-  width: 40vw;
-  background-color: var(--alternate-color);
-  transition: 0.5s;
 }
 
 /* footer logo & lable text */
