@@ -98,7 +98,6 @@
   display: flex;
   justify-content: center;
   gap: 2.5%;
-  position: relative;
 }
 .land-btn{
   background-color: #0d364200;
