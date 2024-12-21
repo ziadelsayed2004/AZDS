@@ -75,6 +75,7 @@ body:focus{
   text-align: start;
   opacity: 0;
   transition: 0.5s;
+  margin-top: -0.5vh;
 }
 .section-title.active{
   text-align: center;
