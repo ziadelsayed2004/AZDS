@@ -5,22 +5,20 @@
     --alternate-color : #b7cf81;
     --light-bg : white;
     --dark-bg : black;
-    --land-bg : #E7EEEF;
   }
   #portofolio-container{
     width: 100%;
-    height: calc(var(--vh, 1vh)*100 - 160px);
+    height: calc(100vh - 160px);
     transition: height 0.3s ease;
   }
   .portofolio{
     height: 100%;
-    background-color: var(--land-bg);
     border-radius: 20px;  
   }
 
   @media (max-width: 767px){
     #portofolio-container{
-      height: calc(var(--vh, 1vh)*100 - 160px);
+      height: calc(100vh - 160px);
       transition: height 0.3s ease;
     }
   }

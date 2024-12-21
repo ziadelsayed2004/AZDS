@@ -28,7 +28,7 @@
     --carousel-content : #666;
   }
   #services{
-    height: calc(var(--vh, 1vh)*100 - 160px);
+    height: calc(100vh - 160px);
     transition: height 0.3s ease;
   }
   #services-carousel {
@@ -40,8 +40,9 @@
     margin: 0px;
     background-color: var(--carousel-bg);
     border-radius: 25px;
-    border-color: #0d364250;
+    border-color: #0d3642;
     border-style: solid;
+    box-shadow: 5px 5px 5px #0d3642;
     overflow: hidden;
   }
   #countainer-zone {

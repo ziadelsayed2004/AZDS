@@ -9,13 +9,12 @@
 --icon-color : #FFDE59;
 --nav-hover : rgba(0,0,0, 0.6);
 --content-container : #E7EEEF;
---land-bg : #E7EEEF;
 }
 
 .landing-div{
-  background-color: var(--land-bg);
+  background-color: var(--content-container);
   border-radius: 20px;
-  height: calc(var(--vh, 1vh)*100 - 160px);
+  height: calc(100vh - 160px);
   transition: height 0.3s ease;
 }
 .landing{
@@ -121,7 +120,7 @@
 
 @media (max-width: 767px){
   .landing-div{
-    height: calc(var(--vh, 1vh)*100 - 160px);
+    height: calc(100vh - 160px);
   }
   .landing{
     height: calc(100vh - 125px);

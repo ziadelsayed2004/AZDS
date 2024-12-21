@@ -9,8 +9,6 @@
 --icon-color : #FFDE59;
 --nav-hover : rgba(0,0,0, 0.6);
 --content-container : #E7EEEF;
---text-color : #145564;
---text-stroke : #b7cf81;
 }
 a{
   text-decoration: none;
@@ -73,9 +71,9 @@ body:focus{
 .section-title{
   text-transform: uppercase;
   font-weight: bold;
-  color: var(--text-color);
+  color: var(--alternate-color);
   font-family: cursive;
-  -webkit-text-stroke-color: var(--text-stroke);
+  -webkit-text-stroke-color: var(--bg-color);
   -webkit-text-stroke-width: clamp(0.1vw,0.125vw,0.15vw);
   font-size: clamp(1.25rem, 5vw, 2.5rem);
   transition: 0.5s;
@@ -429,7 +427,7 @@ nav div li a {
   padding: 0.5px 25px 25px 25px;
   margin-top: -0.5px;
   border-radius: 0px 0px 25px 25px;
-  height: calc(var(--vh, 1vh)*300 - 160px);
+  height: calc(300vh - 160px);
   transition: height 0.3s ease;
   display: flex;
   flex-direction: column;
