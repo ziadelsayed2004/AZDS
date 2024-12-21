@@ -42,7 +42,7 @@
     border-radius: 25px;
     border-color: #0d3642;
     border-style: solid;
-    box-shadow: 8px 8px 5px #154858c8;
+    box-shadow: 5px 5px 5px 5px #0d3642;
     overflow: hidden;
   }
   #countainer-zone {
@@ -95,7 +95,7 @@
     justify-content: center;
     align-items: center;
     padding: 12.5px;
-    background: #e0e0e0;
+    background: #cfeef7;
     color: #000;
     border-radius: 7.5px;
     font-size: 22.5px;
@@ -106,7 +106,7 @@
     transition: all 0.0005ms ease;
   } 
   .list li input[type="radio"] + label:hover {
-    opacity: 0.8;
+    opacity: 0.85;
   }
   .list li input[type="radio"]:checked + label {
     display: flex;
