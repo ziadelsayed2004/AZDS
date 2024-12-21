@@ -71,11 +71,16 @@ body:focus{
 .section-title{
   text-transform: uppercase;
   font-weight: bold;
-  color: var(--alternate-color);
+  color: var(--bg-color);
+  font-family: cursive;
+  -webkit-text-stroke-color: var(--alternate-color);
+  -webkit-text-stroke-width: 0.1vw;
+  font-size: 2.5vw;
+  transition: 0.5s;
   text-align: start;
   opacity: 0;
   transition: 0.5s;
-  margin-top: -0.5vh;
+  margin-top: -3vh;
 }
 .section-title.active{
   text-align: center;

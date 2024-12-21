@@ -211,7 +211,7 @@ document.addEventListener("scroll", () => {
   elements.forEach((element) => {
     const rect = element.getBoundingClientRect();
     const isVisible =
-      rect.top < window.innerHeight - 25 && rect.bottom > 165;
+      rect.top < window.innerHeight - 50 && rect.bottom > 175;
     if (isVisible) {
       element.classList.add("active");
     } else {
