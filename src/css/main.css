@@ -443,7 +443,7 @@ nav div li a {
 .divider{
   height: 1vh;
   width: 40vw;
-  background-color: var(--alternate-color);
+  background-color: var(--bg-color);
   transition: 0.5s;
 }
 
