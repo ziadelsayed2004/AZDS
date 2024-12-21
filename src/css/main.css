@@ -48,14 +48,14 @@ body:focus{
   transform: scale(0.8);
   opacity: 0.8;
   border-radius: 50px 50px 50px 50px;
-  margin-right: 70vw;
+  margin-right: 50vw;
   transition: transform 1s ease, opacity 1s ease;
 }
 .div-r-style-preview{
   transform: scale(0.8);
   opacity: 0.8;
   border-radius: 50px 50px 50px 50px;
-  margin-left: 70vw;
+  margin-left: 50vw;
   transition: transform 1s ease, opacity 1s ease;
 }
 .div-l-style-preview.active, .div-r-style-preview.active {
