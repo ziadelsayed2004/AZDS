@@ -9,6 +9,8 @@
 --icon-color : #FFDE59;
 --nav-hover : rgba(0,0,0, 0.6);
 --content-container : #E7EEEF;
+--text-color : #145564;
+--text-stroke : #b7cf81;
 }
 a{
   text-decoration: none;
@@ -71,9 +73,9 @@ body:focus{
 .section-title{
   text-transform: uppercase;
   font-weight: bold;
-  color: var(--bg-color);
+  color: var(--text-color);
   font-family: cursive;
-  -webkit-text-stroke-color: var(--alternate-color);
+  -webkit-text-stroke-color: var(--text-stroke);
   -webkit-text-stroke-width: clamp(0.1vw,0.125vw,0.15vw);
   font-size: clamp(1.25rem, 5vw, 2.5rem);
   transition: 0.5s;
