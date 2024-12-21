@@ -105,7 +105,7 @@ function load() {
       document.documentElement.style.setProperty('--dark-bg', '#fff');
       document.documentElement.style.setProperty('--icon-color', '#FFDE59');
       document.documentElement.style.setProperty('--nav-hover', 'rgba(255,255,255, 0.6)');
-      document.documentElement.style.setProperty('--content-container', '#3B3B3B');
+      document.documentElement.style.setProperty('--content-container', '#939FA7');
       document.documentElement.style.setProperty('--carousel-bg', '#939FA7');
       document.documentElement.style.setProperty('--carousel-header', '#ddd');
       document.documentElement.style.setProperty('--carousel-content', '#eee');
