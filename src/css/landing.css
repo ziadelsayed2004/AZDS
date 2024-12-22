@@ -186,12 +186,58 @@
   .land-about {
     height: calc(37.5vh - 60px);
     position: relative;
-    top: -10vh;
+    top: -5vh;
     padding-bottom: 0;
   }
   .land-btns {
     height: calc(25vh - 60px);
     gap: 2.5vh;
+  }
+  .land-welcome {
+    font-size: clamp(6vw, 7vw, 8vw);
+  }
+  .land-2nd-line {
+    font-size: clamp(5vw, 6.5vw, 7.5vw);
+  }
+  .A-litter, .Z-litter {
+    font-size: clamp(5vw, 6.5vw, 8vw);
+  }
+  .A-litter:hover, .Z-litter:hover {
+    font-size: clamp(5vw, 6.5vw, 8vw);
+  }
+  .land-info {
+    font-size: clamp(3.5vw, 4.5vw, 5.5vw);
+  }
+  .land-info:hover {
+    font-size: clamp(3.5vw, 4.5vw, 5.5vw);
+  }
+}
+@media (min-width:900px) and (max-height:1400px){
+  .landing {
+    height: calc(100vh - 175px);
+  }
+  .land-fig {
+    height: calc(37.5vh - 60px);
+    position: relative;
+  }
+  .land-fig img {
+    height: 40vh;
+    width: 40vh;
+  }
+  .land-about {
+    height: calc(37.5vh - 60px);
+    position: relative;
+    padding-bottom: 0;
+  }
+  .land-btns {
+    height: calc(25vh - 60px);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+  }
+  .land-btn{
+    width: 50vw;
+    font-size: large;
   }
   .land-welcome {
     font-size: clamp(6vw, 7vw, 8vw);
