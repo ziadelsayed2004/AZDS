@@ -513,9 +513,6 @@ footer{
 
 /* @meadia Queries */
 @media (max-width: 220px){
-  .divider-container{
-    display: none;
-  }
   .btn{
     display: none !important;
   }
@@ -541,6 +538,37 @@ footer{
       right: 7.5%;
       display: flex;
     }
+  #progress-wrap{
+    display: none;
+  }
+  .divider-container{
+    display: none;
+  }
+  .footer {
+    display: grid;
+    align-items: center;
+    justify-content: stretch;
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .footer-brand img{
+    width: 50px;
+    height: 50px;
+  }
+  .footer-lable{
+    font-size: 14px;
+  }
+  .footer-social {
+    align-self: center;
+  }
+  .ul-social{
+    margin-left: 55px;
+  }
+  .footer-social svg{
+    width: 16px;
+    margin-top: 14px;
+  }  
   .footer-copyright {
     font-size: 8px;
   }

@@ -70,6 +70,7 @@
 }
 .land-p{
   font-size: 1.25vw;
+  line-height: 1.25vw;
 }
 .land-links{
   height: 7.5vh;
@@ -80,7 +81,6 @@
   display: flex;
   justify-content: center;
   gap: 2.5%;
-  padding-top: 5vh;
 }
 .land-btn{
   background-color: #0d364200;
@@ -164,6 +164,7 @@
   }
   .land-p {
     font-size: clamp(1.5vw, 2.5vw, 3.5vw);
+    line-height: clamp(1.5vw, 2.5vw, 3.5vw)
   }
 }
 @media (max-width: 900px) and (min-height: 700px) {
@@ -209,10 +210,18 @@
   }
   .land-p {
     font-size: clamp(4vw, 5vw, 6vw);
+    line-height: clamp(4vw, 5vw, 6vw);
   }
 }
 @media (max-width: 275px){
   .land-fig {
     display: none;
   }
+  .land-about {
+    height: 42.5vh;
+  }
+  .land-btns{
+    height: 32.5vh;
+  }
+
 }
