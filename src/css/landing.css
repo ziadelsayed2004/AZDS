@@ -11,6 +11,9 @@
 --content-container : #E7EEEF;
 }
 .landing{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: calc(100vh - 125px);
 }
 .land-fig{
@@ -21,12 +24,12 @@
 .land-fig img {
   min-width: 275px;
   width: 30vw;
-  object-fit: cover;
   height: 30vh;
+  object-fit: cover;
 }
 .land-about{
   height: 30vh;
-  padding-bottom: 5vh;
+  padding-bottom: 2.5vh;
   width: 100%;
   text-align: center;
   align-content: end;
@@ -73,9 +76,10 @@
   margin-bottom: 1.5vh;
 }
 .land-btns{
-  height: 15vh;
+  height: calc(40vh - 125px);
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2.5%;
 }
 .land-btn{
@@ -117,6 +121,7 @@
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
+    align-items: baseline;
     position: relative;
     gap: 2.5vh;
   }
@@ -172,7 +177,7 @@
   .land-fig {
     height: calc(37.5vh - 60px);
     position: relative;
-    top: -10vh;
+    top: -5vh;
   }
   .land-fig img {
     height: 40vh;
