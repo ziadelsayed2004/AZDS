@@ -109,20 +109,20 @@
   color: #fafafa;  
 }
 
-@media (max-width: 767px){
-  .landing{
+@media (max-width: 767px) {
+  .landing {
     height: calc(100vh - 125px);
   }
-  .land-fig{
+  .land-fig {
     height: 25vh;
   }
-  .land-about{
+  .land-about {
     height: 30vh;
     position: relative;
     top: -2.5vh;
     padding-bottom: 5vh;
   }
-  .land-btns{
+  .land-btns {
     height: 15vh;
     display: flex;
     flex-wrap: nowrap;
@@ -131,23 +131,23 @@
     position: relative;
     gap: 2.5vh;
   }
-  .land-btn{
+  .land-btn {
     width: 70%;
     margin-left: 15%;  
   }
-  .land-welcome{
+  .land-welcome {
     font-size: clamp(4vw, 5vw, 6vw);
     font-weight: bold;
     color: var(--bg-color);
     text-transform: uppercase;
     font-family: cursive;
   }
-  .land-2nd-line{
+  .land-2nd-line {
     font-size: clamp(3.5vw, 4.5vw, 5.5vw);
     font-family: cursive;
     color: var(--bg-color);
   }
-  .A-litter,.Z-litter {
+  .A-litter, .Z-litter {
     color: var(--alternate-color);
     font-family: cursive;
     font-size: clamp(3.5vw, 4.5vw, 6vw);
@@ -155,29 +155,62 @@
     -webkit-text-stroke-width: 0.2vw;
     transition: 0.5s;
   }
-  .A-litter:hover,.Z-litter:hover {
+  .A-litter:hover, .Z-litter:hover {
     color: var(--bg-color);
     font-family: cursive;
     font-size: clamp(3.5vw, 4.5vw, 6vw);
     -webkit-text-stroke-color: var(--bg-color);
     -webkit-text-stroke-width: 0.2vw;
   }
-  .land-qu{
+  .land-qu {
     font-size: clamp(3vw, 4vw, 5vw);
     font-weight: bold;
     color: var(--bg-color);
     font-family: cursive;
     transition: 0.5s;
   }
-  .land-qu:hover{
+  .land-qu:hover {
     font-size: clamp(3vw, 4vw, 5vw);
     font-weight: bold;
     color: var(--alternate-color);
     font-family: cursive;
   }
-  .land-p{
+  .land-p {
     font-family: cursive;
     font-size: clamp(1.5vw, 2.5vw, 3.5vw);
+  }
+}
+@media (max-width: 900px) and (min-height: 700px) {
+  .landing {
+    height: calc(100vh - 125px);
+  }
+  .land-fig {
+    height: 30vh;
+  }
+  .land-about {
+    height: 35vh;
+    position: relative;
+    top: -3vh;
+    padding-bottom: 6vh;
+  }
+  .land-btns {
+    height: 18vh;
+    gap: 3vh;
+  }
+  .land-welcome {
+    font-size: clamp(5vw, 6vw, 7vw);
+  }
+  .land-2nd-line {
+    font-size: clamp(4vw, 5.5vw, 6.5vw);
+  }
+  .A-litter, .Z-litter {
+    font-size: clamp(4vw, 5.5vw, 7vw);
+  }
+  .land-qu {
+    font-size: clamp(3.5vw, 5vw, 6vw);
+  }
+  .land-p {
+    font-size: clamp(2vw, 3vw, 4vw);
   }
 }
 @media (max-width: 275px){
