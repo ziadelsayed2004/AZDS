@@ -185,17 +185,19 @@
     height: calc(100vh - 125px);
   }
   .land-fig {
-    height: 30vh;
+    height: 25vh;
+    position: relative;
+    top: -5vh;
   }
   .land-about {
-    height: 35vh;
+    height: 22.5vh;
     position: relative;
-    top: -3vh;
-    padding-bottom: 6vh;
+    top: -7.5vh;
+    padding-bottom: 0;
   }
   .land-btns {
-    height: 18vh;
-    gap: 3vh;
+    height: 12.5vh;
+    gap: 1vh;
   }
   .land-welcome {
     font-size: clamp(5vw, 6vw, 7vw);
