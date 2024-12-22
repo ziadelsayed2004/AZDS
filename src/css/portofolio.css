@@ -9,7 +9,7 @@
   #portofolio-container{
     width: 100%;
     padding-top: 10vh;
-    height: 100vh;
+    height: calc(100vh - 125px);
     transition: height 0.3s ease;
   }
   .portofolio{
@@ -21,5 +21,10 @@
   @media (max-width: 767px){
     #portofolio-container{
       transition: height 0.3s ease;
+    }
+  }
+  @media (max-width: 900px) and (min-height: 700px){
+    #portofolio-container{
+      height: calc(100vh - 170px);
     }
   }

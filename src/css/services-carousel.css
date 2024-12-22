@@ -28,7 +28,7 @@
     --carousel-content : #666;
   }
   #services{
-    height: auto;
+    height: calc(100vh - 125px);
     transition: height 0.3s ease;
   }
   #services-carousel {
@@ -175,5 +175,10 @@
       background-color: var(--bg-color);
       border-radius: 3vw;
       padding: 0.75vw;
+    }
+  }
+  @media (max-width: 900px) and (min-height: 700px){
+    #services{
+      height: calc(100vh - 170px);
     }
   }
