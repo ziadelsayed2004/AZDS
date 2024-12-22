@@ -573,6 +573,16 @@ footer{
     font-size: 8px;
   }
 }
+@media (max-height:667px){
+  .divider-container{
+    margin-top: 10vh;
+  }
+}
+@media (max-height:467px){
+  .divider-container{
+    display: none;  
+  }
+}
 @media (min-width:330px) and (max-width:767px) {
   nav{
     width: 100%;
