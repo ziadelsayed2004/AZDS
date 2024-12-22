@@ -76,11 +76,11 @@
   margin-bottom: 1.5vh;
 }
 .land-btns{
-  justify-content: end;
   height: 15vh;
   display: flex;
   justify-content: center;
   gap: 2.5%;
+  padding-top: 2.5vh;
 }
 .land-btn{
   background-color: #0d364200;
@@ -116,7 +116,7 @@
     padding-bottom: 5vh;
   }
   .land-btns {
-    height: 15vh;
+    height: 20vh;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -126,7 +126,7 @@
   }
   .land-btn {
     width: 70%;
-    margin-left: 15%;  
+    margin-left: 15%;    
   }
   .land-welcome {
     font-size: clamp(4vw, 5vw, 6vw);
@@ -188,8 +188,6 @@
   .land-btns {
     height: calc(25vh - 60px);
     gap: 2.5vh;
-    position: relative;
-    top: -2.5vh;
   }
   .land-welcome {
     font-size: clamp(6vw, 7vw, 8vw);
