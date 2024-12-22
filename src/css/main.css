@@ -428,7 +428,7 @@ nav div li a {
   padding: 0.5px 25px 25px 25px;
   margin-top: -0.5px;
   border-radius: 0px 0px 25px 25px;
-  height: calc(300vh - 160px);
+  height: auto;
   transition: height 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -511,80 +511,6 @@ footer{
   margin-top: 40px;
   margin-bottom: -20px;
 }
-
-/*---------------------------------------*/
-
-.content22 {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-
-.projects-card {
-  background-color: white;
-  border: 1px solid #FFFFFF;
-  min-height: 14em;
-  width: 32em;
-  overflow: hidden;
-  border-radius: 10px;
-  margin: 20px;
-  transition: 0.7s ease;
-}
-
-.projects-card:hover {
-  transform: scale(1.1);
-}
-
-.projects-card:hover .projects-image {
-  opacity: 0.8;
-}
-
-.projects-image img {
-  width: 100%;
-}
-
-.projects-info {
-  padding: 1em;
-}
-
-.projects-category {
-  font-size: 0.9em;
-  color: black;
-  text-align: center;
-}
-
-.projects-title {
-  display: flex;
-  justify-content: space-between;
-  text-transform: uppercase;
-  font-weight: 800;
-  margin: 10px;
-}
-
-.More-details {
-  font-weight: 700;
-  color: white;
-  background-color: #0047B6;
-  text-decoration: none;
-  font-size: 0.6em;
-  display: inline-block;
-  padding: 0.9375em 2.1857em;
-  letter-spacing: 1px;
-  border-radius: 15px;
-  margin-bottom: 40px;
-  transition: 0.8s ease;
-}
-
-.More-details:hover {
-  background-color: #00255F;
-  transform: scale(1.1);
-}
-
-
-
-/*---------------------------------------*/
 
 /* @meadia Queries */
 @media (max-width: 220px){

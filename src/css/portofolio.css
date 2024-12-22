@@ -8,17 +8,18 @@
   }
   #portofolio-container{
     width: 100%;
-    height: calc(100vh - 160px);
+    padding-top: 10vh;
+    height: 100vh;
     transition: height 0.3s ease;
   }
   .portofolio{
     height: 100%;
+    background-color: transparent;
     border-radius: 20px;  
   }
 
   @media (max-width: 767px){
     #portofolio-container{
-      height: calc(100vh - 160px);
       transition: height 0.3s ease;
     }
   }

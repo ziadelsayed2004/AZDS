@@ -10,33 +10,24 @@
 --nav-hover : rgba(0,0,0, 0.6);
 --content-container : #E7EEEF;
 }
-
-.landing-div{
-  background-color: var(--content-container);
-  border-radius: 20px;
-  height: calc(100vh - 160px);
-  transition: height 0.3s ease;
-}
 .landing{
   height: calc(100vh - 125px);
 }
 .land-fig{
-  height: calc(35vh - 125px);
+  height: 30vh;
   display: flex;
   justify-content: center;
-  padding-top: 2.5vh;
 }
 .land-fig img {
-  min-width: 230px;
-  width: 20vw;
+  min-width: 275px;
+  width: 30vw;
   object-fit: cover;
-  height: 22.5vh;
+  height: 30vh;
 }
 .land-about{
-  height: 40vh;
-  margin-left: 10%;
-  margin-right: 10%;
-  width: 80%;
+  height: 30vh;
+  padding-bottom: 5vh;
+  width: 100%;
   text-align: center;
   align-content: end;
 }
@@ -119,53 +110,47 @@
 }
 
 @media (max-width: 767px){
-  .landing-div{
-    height: calc(100vh - 160px);
-  }
   .landing{
     height: calc(100vh - 125px);
   }
   .land-fig{
-    height: calc(22.5vh - 125px);
+    height: 25vh;
   }
   .land-about{
-    height: 37.5vh;
-  }
-  .land-links{
-    height: 5vh;
+    height: 30vh;
+    position: relative;
+    top: -2.5vh;
+    padding-bottom: 5vh;
   }
   .land-btns{
-    height: calc(15vh + 50px);
+    height: 15vh;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
     position: relative;
-    bottom: -7.5vh;
     gap: 2.5vh;
   }
   .land-btn{
     width: 70%;
     margin-left: 15%;  
   }
-}
-@media (max-width:420px){
   .land-welcome{
-    font-size: 8vw;
+    font-size: clamp(4vw, 5vw, 6vw);
     font-weight: bold;
     color: var(--bg-color);
     text-transform: uppercase;
     font-family: cursive;
   }
   .land-2nd-line{
-    font-size: 7vw;
+    font-size: clamp(3.5vw, 4.5vw, 5.5vw);
     font-family: cursive;
     color: var(--bg-color);
   }
   .A-litter,.Z-litter {
     color: var(--alternate-color);
     font-family: cursive;
-    font-size: 7vw;
+    font-size: clamp(3.5vw, 4.5vw, 6vw);
     -webkit-text-stroke-color: var(--bg-color);
     -webkit-text-stroke-width: 0.2vw;
     transition: 0.5s;
@@ -173,29 +158,29 @@
   .A-litter:hover,.Z-litter:hover {
     color: var(--bg-color);
     font-family: cursive;
-    font-size: 7vw;
+    font-size: clamp(3.5vw, 4.5vw, 6vw);
     -webkit-text-stroke-color: var(--bg-color);
     -webkit-text-stroke-width: 0.2vw;
   }
   .land-qu{
-    font-size: 6vw;
+    font-size: clamp(3vw, 4vw, 5vw);
     font-weight: bold;
     color: var(--bg-color);
     font-family: cursive;
     transition: 0.5s;
   }
   .land-qu:hover{
-    font-size: 6vw;
+    font-size: clamp(3vw, 4vw, 5vw);
     font-weight: bold;
     color: var(--alternate-color);
     font-family: cursive;
   }
   .land-p{
     font-family: cursive;
-    font-size: 3vw;
+    font-size: clamp(1.5vw, 2.5vw, 3.5vw);
   }
 }
-@media (max-width: 230px){
+@media (max-width: 275px){
   .land-fig {
     display: none;
   }

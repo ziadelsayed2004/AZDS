@@ -209,7 +209,7 @@ document.addEventListener("scroll", () => {
   elements.forEach((element) => {
     const rect = element.getBoundingClientRect();
     const isVisible =
-      rect.top < window.innerHeight - 50 && rect.bottom > 175;
+      rect.top < window.innerHeight - 50 && rect.bottom > 165;
     if (isVisible) {
       element.classList.add("active");
     } else {
@@ -221,13 +221,13 @@ document.addEventListener("scroll", () => {
 // Services btn
 document.getElementById('services-btn').addEventListener('click', function() {
   window.scrollBy({
-    top: window.innerHeight*0.995,
+    top: window.innerHeight*0.8,
     behavior: 'smooth'
   });
 });
 document.getElementById('portofolio-btn').addEventListener('click', function() {
   window.scrollBy({
-    top: window.innerHeight*1.995,
+    top: window.innerHeight*1.6,
     behavior: 'smooth'
   });
 });
