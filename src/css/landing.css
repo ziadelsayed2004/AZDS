@@ -71,6 +71,8 @@
 .land-p{
   font-size: 1.25vw;
   line-height: 1.25vw;
+  position: relative;
+  top: -2.5vh;
 }
 .land-links{
   height: 7.5vh;
@@ -174,7 +176,7 @@
   .land-fig {
     height: calc(37.5vh - 60px);
     position: relative;
-    top: -7.5vh;
+    top: -10vh;
   }
   .land-fig img {
     height: 40vh;
@@ -183,7 +185,7 @@
   .land-about {
     height: calc(37.5vh - 60px);
     position: relative;
-    top: -7.5vh;
+    top: -10vh;
     padding-bottom: 0;
   }
   .land-btns {
