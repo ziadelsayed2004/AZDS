@@ -227,7 +227,7 @@ document.getElementById('services-btn').addEventListener('click', function() {
 });
 document.getElementById('portofolio-btn').addEventListener('click', function() {
   window.scrollBy({
-    top: window.innerHeight*1.75,
+    top: window.innerHeight*1.7,
     behavior: 'smooth'
   });
 });

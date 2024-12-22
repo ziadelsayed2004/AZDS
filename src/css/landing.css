@@ -20,7 +20,7 @@
 }
 .land-fig img {
   min-width: 275px;
-  width: 27.5vw;
+  width: 30vw;
   object-fit: cover;
   height: 30vh;
 }
@@ -58,12 +58,13 @@
   -webkit-text-stroke-width: 0.1vw;
 }
 .land-info{
-  font-size: 1.75vw;
+  font-size: 2vw;
   font-weight: bold;
   color: var(--bg-color);
   transition: 0.5s;
 }
 .land-info:hover{
+  font-size: 2vw;
   font-weight: bold;
   color: var(--alternate-color);
 }
@@ -204,68 +205,6 @@
   }
   .land-qu:hover {
     font-size: clamp(3.5vw, 4.5vw, 5.5vw);
-  }
-}
-@media (max-width: 1024px) and (min-height: 1200px){
-  .land-fig {
-    height: 25vh;
-  }
-  .land-fig img {
-    width: 50vh;
-    height: 50vh;
-  }
-  .land-about {
-    height: 40vh;
-    position: relative;
-    top: -2.5vh;
-    padding-bottom: 1vh;
-  }
-  .land-btns {
-    height: 20vh;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    gap: 2.5vh;
-  }
-  .land-btn {
-    width: 70%;
-    margin-left: 15%;    
-  }
-  .land-welcome {
-    font-size: clamp(4vw, 5vw, 6vw);
-    font-weight: bold;
-    color: var(--bg-color);
-    text-transform: uppercase;
-  }
-  .land-2nd-line {
-    font-size: clamp(3.5vw, 4.5vw, 5.5vw);
-    color: var(--bg-color);
-  }
-  .A-litter, .Z-litter {
-    color: var(--alternate-color);
-    font-size: clamp(3.5vw, 4.5vw, 6vw);
-    -webkit-text-stroke-color: var(--bg-color);
-    -webkit-text-stroke-width: 0.2vw;
-    transition: 0.5s;
-  }
-  .A-litter:hover, .Z-litter:hover {
-    color: var(--bg-color);
-    font-size: clamp(3.5vw, 4.5vw, 6vw);
-    -webkit-text-stroke-color: var(--bg-color);
-    -webkit-text-stroke-width: 0.2vw;
-  }
-  .land-info {
-    font-size: clamp(2vw, 3vw, 4vw);
-    font-weight: bold;
-    color: var(--bg-color);
-    transition: 0.5s;
-  }
-  .land-info:hover {
-    font-size: clamp(2vw, 3vw, 4vw);
-    font-weight: bold;
-    color: var(--alternate-color);
   }
 }
 @media (max-width: 275px){
