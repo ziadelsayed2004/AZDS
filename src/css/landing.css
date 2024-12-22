@@ -185,7 +185,7 @@
     height: calc(100vh - 125px);
   }
   .land-fig {
-    height: 30vh;
+    height: 25vh;
     position: relative;
     top: -5vh;
   }
@@ -212,6 +212,9 @@
     font-size: clamp(5vw, 6.5vw, 8vw);
   }
   .land-qu {
+    font-size: clamp(4.5vw, 6vw, 7vw);
+  }
+  .land-qu:hover {
     font-size: clamp(4.5vw, 6vw, 7vw);
   }
   .land-p {
