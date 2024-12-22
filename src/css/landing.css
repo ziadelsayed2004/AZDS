@@ -185,9 +185,13 @@
     height: calc(100vh - 125px);
   }
   .land-fig {
-    height: 25vh;
+    height: 35vh;
     position: relative;
     top: -5vh;
+  }
+  .land-fig img {
+    height: 40vh;
+    width: 40vh;
   }
   .land-about {
     height: 30vh;
@@ -218,7 +222,7 @@
     font-size: clamp(4.5vw, 6vw, 7vw);
   }
   .land-p {
-    font-size: clamp(3vw, 4vw, 5vw);
+    font-size: clamp(3.5vw, 4.5vw, 5.5vw);
   }
 }
 @media (max-width: 275px){
