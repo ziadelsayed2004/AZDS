@@ -577,10 +577,16 @@ footer{
   .divider-container{
     margin-top: 10vh;
   }
+  #portofolio-container, #services{
+    padding-top: 10vh;
+  }
 }
 @media (max-height:467px){
   .divider-container{
     display: none;  
+  }
+  #portofolio-container, #services{
+    padding-top: 20vh;
   }
 }
 @media (min-width:330px) and (max-width:767px) {
