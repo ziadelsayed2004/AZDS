@@ -185,34 +185,37 @@
     height: calc(100vh - 125px);
   }
   .land-fig {
-    height: 25vh;
+    height: 30vh;
     position: relative;
     top: -5vh;
   }
   .land-about {
-    height: 22.5vh;
+    height: 30vh;
     position: relative;
     top: -7.5vh;
     padding-bottom: 0;
   }
   .land-btns {
-    height: 12.5vh;
-    gap: 1vh;
+    height: 15vh;
+    gap: 2vh;
   }
   .land-welcome {
-    font-size: clamp(5vw, 6vw, 7vw);
+    font-size: clamp(6vw, 7vw, 8vw);
   }
   .land-2nd-line {
-    font-size: clamp(4vw, 5.5vw, 6.5vw);
+    font-size: clamp(5vw, 6.5vw, 7.5vw);
   }
   .A-litter, .Z-litter {
-    font-size: clamp(4vw, 5.5vw, 7vw);
+    font-size: clamp(5vw, 6.5vw, 8vw);
+  }
+  .A-litter:hover, .Z-litter:hover {
+    font-size: clamp(5vw, 6.5vw, 8vw);
   }
   .land-qu {
-    font-size: clamp(3.5vw, 5vw, 6vw);
+    font-size: clamp(4.5vw, 6vw, 7vw);
   }
   .land-p {
-    font-size: clamp(2vw, 3vw, 4vw);
+    font-size: clamp(3vw, 4vw, 5vw);
   }
 }
 @media (max-width: 275px){
