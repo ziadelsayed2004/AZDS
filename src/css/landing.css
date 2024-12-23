@@ -114,6 +114,11 @@
   .land-info:hover {
     font-size: 3.5vh;
   }
+  .land-btns{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+  }
   .land-btn {
     width: 70%;
     height: 45px;
