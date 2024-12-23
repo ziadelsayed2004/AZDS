@@ -110,6 +110,9 @@
   .land-info {
     font-size: 3.5vh;
   }
+  .land-info:hover {
+    font-size: 3.5vh;
+  }
   .land-btn {
     width: 70%;
     height: 45px;
@@ -122,7 +125,7 @@
   }
   .land-fig{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
   }
   .land-fig img {
     width: 40vw;
@@ -137,6 +140,9 @@
   .land-info {
     font-size: 3vh;
   }
+  .land-info:hover {
+    font-size: 3vh;
+  }
   .land-btns {
     flex-direction: column;
     gap: 15px;
@@ -147,18 +153,38 @@
   }
 }
 @media (max-width: 480px) {
+  .landing{
+    height: calc(100vh - 170px);
+  }
+  .land-fig{
+    width: 100vw;
+  }
+  .land-fig img{
+    width: 40vh;
+  }
   .land-welcome {
     font-size: 4vh;
   }
   .land-2nd-line {
     font-size: 2.5vh;
   }
+  .A-litter,.Z-litter {
+    font-size: 3.5vh;
+    -webkit-text-stroke-width: 0.15vh;
+  }
+  .A-litter:hover,.Z-litter:hover {
+    font-size: 3.5vh;
+    -webkit-text-stroke-width: 0.15vh;
+  }
   .land-info {
+    font-size: 2.5vh;
+  }
+  .land-info:hover {
     font-size: 2.5vh;
   }
   .land-btn {
     width: 80%;
-    height: 40px;
+    height: 50px;
   }
 }
 @media (max-width: 275px){
