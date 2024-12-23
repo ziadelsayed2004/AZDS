@@ -18,6 +18,7 @@
   height: calc(100vh - 125px);
 }
 .land-fig{
+  display: flex;
   height: calc(35vh - 42.5px);
 }
 .land-fig img {
@@ -117,6 +118,40 @@
     width: 70%;
     height: 45px;
     font-size: large;
+  }
+}
+@media (max-width: 960px) and (max-height: 540px) {
+  .landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+  }
+  .land-about{
+  height: auto;
+  }
+  .land-fig {
+    display: none;
+  }
+  .land-welcome {
+    font-size: 16px;
+  }
+  .land-2nd-line {
+    font-size: 14px;
+  }
+  .land-info {
+    font-size: 12px;
+  }
+  .land-btns {
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+  }
+  .land-btn {
+    width: 30%;
+    height: 50px;
+    font-size: 12px;
   }
 }
 @media (max-width: 768px) {
