@@ -218,15 +218,20 @@ document.addEventListener("scroll", () => {
 });
 
 // Quick Btn
+function getAdjustedScrollOffset(multiplier) {
+  const visualHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+  const headerOffset = window.innerHeight - visualHeight;
+  return (window.innerHeight * multiplier) - headerOffset;
+}
 document.getElementById('services-btn').addEventListener('click', function() {
   window.scrollBy({
-    top: window.innerHeight*0.85,
+    top: getAdjustedScrollOffset(0.85),
     behavior: 'smooth'
   });
 });
 document.getElementById('portofolio-btn').addEventListener('click', function() {
   window.scrollBy({
-    top: window.innerHeight*1.75,
+    top: getAdjustedScrollOffset(1.775),
     behavior: 'smooth'
   });
 });
