@@ -42,7 +42,6 @@
 
 // Navigation - Overlay
 let isNavOpen = false;
-
 function toggleNav() {
     const nav = document.getElementById("myNav");
     const toggleButton = document.getElementById("toggle-button");
@@ -92,7 +91,7 @@ function load() {
     }
     toggleMode();
   }
-// Change the CSS Variables based on the mode
+// Switch Vars
   function toggleMode() {
     const isDarkMode = body.classList.contains('darkmode');
 
@@ -149,7 +148,7 @@ function load() {
     }, 500);
   });
 
-  // Load the mode when the page loads
+// Load the mode when the page loads
   window.onload = function() {
     document.body.style.overflow = 'hidden';
     setTimeout(() => {
@@ -157,10 +156,10 @@ function load() {
         
         document.body.style.overflow = 'auto';
         document.body.style.touchAction = 'auto';
-    }, 2450);
+    }, 2250);
 };
 
-// Animaton for Items
+// Animaton For Items
 document.addEventListener("scroll", () => {
   const elements = document.querySelectorAll(".content-style-preview");
 
@@ -218,7 +217,7 @@ document.addEventListener("scroll", () => {
   });
 });
 
-// Services btn
+// Quick Btn
 document.getElementById('services-btn').addEventListener('click', function() {
   window.scrollBy({
     top: window.innerHeight*0.85,
