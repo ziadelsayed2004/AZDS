@@ -15,7 +15,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: calc(var(--vh, 100vh) - 125px);
+  height: calc(var(--vh, 100vh) - 150px);
 }
 .land-fig{
   display: flex;
@@ -131,7 +131,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: calc(var(--vh, 100vh) - 125px);
+    height: calc(var(--vh, 100vh) - 150px);
   }
   .land-about{
   height: auto;
@@ -161,7 +161,7 @@
 }
 @media (max-width: 768px) {
   .landing {
-    height: calc(var(--vh, 100vh) - 125px);
+    height: calc(var(--vh, 100vh) - 150px);
   }
   .land-fig{
     display: flex;
@@ -194,7 +194,7 @@
 }
 @media (max-width: 480px) {
   .landing{
-    height: calc(var(--vh, 100vh) - 125px);
+    height: calc(var(--vh, 100vh) - 150px);
   }
   .land-fig{
     width: 100vw;
@@ -229,7 +229,7 @@
 }
 @media (max-width: 275px){
   .landing{
-    height: calc(var(--vh, 100vh) - 125px);
+    height: calc(var(--vh, 100vh) - 150px);
   }
   .land-fig {
     display: none;
