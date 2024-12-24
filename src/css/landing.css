@@ -28,7 +28,7 @@
   object-fit: cover;
 }
 .land-about{
-  height: calc(35vh - 42.5px);
+  height: auto;
   width: 100%;
   text-align: center;
 }
