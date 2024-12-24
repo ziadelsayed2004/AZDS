@@ -1,3 +1,26 @@
+<?php 
+   
+    if ($-SERVER['REQUEST_METHOD'] == 'POST'){
+        
+        $user = $POST['username'];
+        $email = $POST['email'];
+        $phone = $POST['phone'];
+        $msg = $POST['message'];
+   
+        //form errors
+        $formErrors = array();
+
+        if (strLen($user) < 3){
+
+            $formErrors[] = 'Username Must be Larger Tham 3 Characters ';
+
+        }
+}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,8 +91,21 @@
     <div class="content-container-upper"></div>
     </div>
 
-    <div class="content-container-frame">
+    <div class="content-container-frame" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+       
         <h2 style="text-align:center;">Contact Us</h2>
+       
+        <div class="errors">
+            <?php
+
+                if(isset($formErrors)){
+
+                foreach($formErrors as $error){
+                    echo $error . '<br/>';
+                }
+            }
+            ?>
+        </div>
         <form class="contact-form">
           <input 
           class="contact-form-control" 
@@ -88,9 +124,11 @@
              name="phone" 
              placeholder="Type Your Phone Number" />
              <i class="fa-solid fa-phone fa-fw"></i>
-             <textarea class="contact-form-control" placeholder="Your Message!">
-      
-          </textarea>
+             <textarea class="contact-form-control" 
+             name="Message"
+             placeholder="Your Message!">
+            </textarea>
+          
       
           <input class="btn1 btn-block"
            type="submit" 
