@@ -16,7 +16,7 @@
   justify-content: space-around;
   align-items: center;
   height: auto;
-  min-height: calc(var(--vh, 1vh) * 100 - 125px);
+  min-height: calc(var(--vh, 100vh) - 125px);
 }
 .land-fig{
   display: flex;
@@ -196,7 +196,7 @@
 @media (max-width: 480px) {
   .landing{
     height: auto;
-    min-height: calc(var(--vh, 1vh) * 100 - 125px);
+    min-height: calc(var(--vh, 100vh) - 125px);
   }
   .land-fig{
     width: 100vw;
