@@ -90,18 +90,8 @@
       transition: height 0.3s ease;
     }
   }
-  @media (max-width: 900px) and (min-height: 700px){
-    #portofolio-container{
-      height: calc(100vh - 125px);
-    }
-  }
   @media screen and (max-width: 480px) {
     .card {
     width: 80vw;
-    }
-  }
-  @media (max-width: 460px) and (min-height: 700px){
-    .landing {
-      height: calc(100vh - 175px);
     }
   }
