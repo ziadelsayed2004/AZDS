@@ -261,8 +261,8 @@ function scrollToSection(multiplier) {
   }
 }
 document.getElementById('services-btn').addEventListener('click', function () {
-  scrollToSection(0.825);
+  scrollToSection(0.82);
 });
 document.getElementById('portofolio-btn').addEventListener('click', function () {
-  scrollToSection(1.775);
+  scrollToSection(1.75);
 });
