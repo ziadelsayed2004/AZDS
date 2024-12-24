@@ -45,13 +45,11 @@
 /* Hover effect */
 .btn1:hover {
     background-color: #0056b3;
-    transform: scale(1.05);
 }
 
 /* Active effect */
 .btn1:active {
     background-color: #003d80;
-    transform: scale(1);
 }
 .container {
     width: 100%;
@@ -86,18 +84,18 @@
     cursor: not-allowed; /* Show not-allowed cursor */
 }
 .contact-form {
-max-width: 450px;
+max-width: 400px;
 margin: 20px auto;
 }
 
 .contact-form input,
 .contact-form textarea{
-    margin-bottom: 5px ;
+    margin-bottom: 8px ;
 }
 .contact-form textarea{
     height: 180px !important;
 }
-.contact-form i{
+.contact-form input:not([type='submit']) +i {
     height: 0;
     float: left;
     position: relative;
@@ -115,6 +113,6 @@ margin: 20px auto;
     color:white !important;
     display: block;
     position: relative;
-    top: -33px !important ;
+    top: -34px !important ;
 
 }
