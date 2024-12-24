@@ -22,6 +22,7 @@
             $formErrors[] = 'Message can\'t be Less Than <strong>10</strong> Characters ';
 
         }
+        $data = " Name :   $user \r\n Phone Number :   $phone  \r\n Message : $msg  ";
 
         $headers = 'From : '. $email . '\r\n';
         $myEmail ='abdozax2004@gmail.com';
@@ -29,7 +30,7 @@
 
 
         if(empty($formErrors)){
-           mail($myEmail , $subject , $msg, $headers); 
+           mail($myEmail , $subject , $data, $headers); 
             $user='';
             $email='';
             $phone='';
