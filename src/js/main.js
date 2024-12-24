@@ -219,20 +219,31 @@ document.addEventListener("scroll", () => {
 
 // Quick Btn
 function getAdjustedScrollOffset(multiplier) {
-  const visualHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
-  const headerOffset = window.innerHeight - visualHeight;
+  const visualViewport = window.visualViewport;
+  const visualHeight = visualViewport ? visualViewport.height : window.innerHeight;
   const topOffset = document.querySelector('header')?.offsetHeight || 0;
-  return (window.innerHeight * multiplier) - headerOffset - topOffset;
+  return (visualHeight * multiplier) - topOffset;
 }
-document.getElementById('services-btn').addEventListener('click', function() {
-  window.scrollBy({
-      top: getAdjustedScrollOffset(0.825),
-      behavior: 'smooth'
-  });
+function scrollToSection(multiplier) {
+  const visualViewport = window.visualViewport;
+  // Scroll adjustment that dynamically tracks viewport changes
+  const scrollHandler = () => {
+    const newOffset = getAdjustedScrollOffset(multiplier);
+    window.scrollTo({
+      top: newOffset,
+      behavior: 'smooth',
+    });
+  };
+  // Trigger the initial scroll
+  scrollHandler();
+  // Listen for changes in the viewport size
+  if (visualViewport) {
+    visualViewport.addEventListener('resize', scrollHandler, { once: true });
+  }
+}
+document.getElementById('services-btn').addEventListener('click', function () {
+  scrollToSection(0.825);
 });
-document.getElementById('portofolio-btn').addEventListener('click', function() {
-  window.scrollBy({
-      top: getAdjustedScrollOffset(1.775),
-      behavior: 'smooth'
-  });
+document.getElementById('portofolio-btn').addEventListener('click', function () {
+  scrollToSection(1.775);
 });

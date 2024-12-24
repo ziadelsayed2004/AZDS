@@ -196,6 +196,7 @@
 @media (max-width: 480px) {
   .landing{
     height: auto;
+    min-height: calc(100vh - 125px);
   }
   .land-fig{
     width: 100vw;
