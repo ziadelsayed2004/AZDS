@@ -127,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         <div class="form-group">
         <input 
-          class="username form-control" 
+          class="username contact-form-control" 
           type="text"  
           name="username" 
           placeholder="Type Your Username"
@@ -142,7 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
             <div class="form-group">
-          <input class="email form-control" 
+          <input class="email contact-form-control" 
           type="email" 
            name="email"
             placeholder="Please Type a Valid Email"
@@ -159,7 +159,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
 
 
-            <input class="form-control"
+            <input class="contact-form-control"
              type="text" 
              name="phone" 
              placeholder="Type Your Phone Number" 
@@ -168,7 +168,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
              <i class="fa-solid fa-phone fa-fw"></i>
              
 
-             <textarea class="message form-control" name="message" placeholder="Your Message!"><?php if (isset($msg)) {echo htmlspecialchars($msg);} ?></textarea>
+             <textarea class="message contact-form-control" name="message" placeholder="Your Message!"><?php if (isset($msg)) {echo htmlspecialchars($msg);} ?></textarea>
 
           
       
