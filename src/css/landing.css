@@ -133,6 +133,7 @@
     justify-content: space-around;
     align-items: center;
     height: auto;
+    min-height: calc(var(--vh, 100vh) - 125px);
   }
   .land-about{
   height: auto;
@@ -163,6 +164,7 @@
 @media (max-width: 768px) {
   .landing {
     height: auto;
+    min-height: calc(var(--vh, 100vh) - 125px);
   }
   .land-fig{
     display: flex;
@@ -231,7 +233,8 @@
 }
 @media (max-width: 275px){
   .landing{
-    height: calc(100vh - 170px);
+    height: auto;
+    min-height: calc(var(--vh, 100vh) - 125px);
   }
   .land-fig {
     display: none;
