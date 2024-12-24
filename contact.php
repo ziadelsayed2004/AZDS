@@ -1,20 +1,28 @@
 <?php 
    
-    if ($-SERVER['REQUEST_METHOD'] == 'POST'){
+    if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         
-        $user = $POST['username'];
-        $email = $POST['email'];
-        $phone = $POST['phone'];
-        $msg = $POST['message'];
+        $user = filter_var($POST['username'],FILTER_SANITIZE_STRING);
+        $email = filter_var($POST['email'],FILTER_SANITIZE_EMAIL);
+        $phone = filter_var($POST['phone'],FILTER_SANITIZE_NUMBER_INT);
+        $msg = filter_var($POST['message'],FILTER_SANITIZE_STRING);
    
         //form errors
         $formErrors = array();
 
-        if (strLen($user) < 3){
+        if (strLen($user) <3){
 
-            $formErrors[] = 'Username Must be Larger Tham 3 Characters ';
+            $formErrors[] = 'Username Must be Larger Tham <strong>3</strong> Characters ';
 
         }
+
+        
+        if (strLen($msg) < 10){
+
+            $formErrors[] = 'Message can\'t be Less Than <strong>10</strong> Characters ';
+
+        }
+
 }
 
 
@@ -94,39 +102,81 @@
        
         <h2 style="text-align:center;">Contact Us</h2>
        
-        <div class="errors">
+        <form class="contact-form">
+        
             <?php
 
-                if(isset($formErrors)){
+                if(! empty($formErrors)){  ?>
+        <div class="alert alert-danger alert-dismissible" role="start">
+                <button type="button" class="close" data-dismiss="alert" aria-Label="Close">
+                    <span aria-hidden="true">$times</span>
+                </button>
 
+                <?php 
                 foreach($formErrors as $error){
                     echo $error . '<br/>';
                 }
-            }
+                ?>
+    </div>    
+    <?php }
             ?>
-        </div>
-        <form class="contact-form">
-          <input 
-          class="contact-form-control" 
+        
+        <div class="form-group">
+        <input 
+          class="username form-control" 
           type="text"  
           name="username" 
-          placeholder="Type Your Username" />
+          placeholder="Type Your Username"
+          value= "<?php if (isset($user)) {echo $user;}  ?>" />
           <i class="fa-solid fa-user fa-fw"></i>
-          <input class="contact-form-control" 
-          type="text" 
+          <span class="astrisx">*</span>
+          <div class="alert alert-danger costom-alert">
+          Username Must be Larger Tham <strong>3</strong> Characters 
+          </div>
+            
+        </div>
+
+
+            <div class="form-group">
+          <input class="email form-control" 
+          type="email" 
            name="email"
-            placeholder="Please Type a Valid Email"/>
-          <i class="fa-solid fa-envelope fa-fw" ></i>
-          
-            <input class="contact-form-control"
+            placeholder="Please Type a Valid Email"
+            value= "<?php if (isset($email)) {echo $email;}  ?>"             />
+        
+            <i class="fa-solid fa-envelope fa-fw" ></i>
+        
+          <span class="astrisx">*</span>    
+        
+        <div class="alert alert-danger costom-alert">
+          Email can't be <strong>Empty</strong>
+          </div>
+    
+        </div>
+
+
+            <input class="form-control"
              type="text" 
              name="phone" 
-             placeholder="Type Your Phone Number" />
+             placeholder="Type Your Phone Number" 
+             value= "<?php if (isset($phone)) {echo $phone;}  ?>" />
+
              <i class="fa-solid fa-phone fa-fw"></i>
-             <textarea class="contact-form-control" 
+             
+
+             <textarea class=" message form-control" 
              name="Message"
              placeholder="Your Message!">
-            </textarea>
+             
+             <?php if (isset($msg)) {echo $msg;}  ?>
+             
+             <span class="astrisx">*</span> 
+             
+             <div class="alert alert-danger costom-alert">
+             Message can\'t be Less Than <strong>10</strong> Characters  
+          </div>
+          
+        </textarea>
           
       
           <input class="submit-btn btn-block"
@@ -159,6 +209,7 @@
     </footer>
 
     <div class="js-script">
+    <script src="src/js/custom.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
         <script src="src/js/main.js"></script>

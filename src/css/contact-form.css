@@ -138,3 +138,80 @@ margin: 20px auto;
     top: -37px !important ;
 
 }
+
+.alert {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    position: relative; /* Required for close button positioning */
+}
+
+/* Danger alert styling */
+.alert-danger {
+    background-color: #f8d7da; /* Light red background */
+    color: #842029; /* Dark red text */
+    border-color: #f5c2c7; /* Matching border */
+}
+
+/* Dismissible alert */
+.alert-dismissible {
+    padding-right: 40px; /* Space for the close button */
+}
+
+/* Close button */
+.alert-dismissible .close-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #842029;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.alert-dismissible .close-btn:hover {
+    color: #5a1e23; /* Darker red on hover */
+}
+
+
+/* Close button styling */
+.close {
+    position: absolute; /* Position inside the alert */
+    top: 10px; /* Space from the top */
+    right: 10px; /* Space from the right */
+    font-size: 20px; /* Font size for the close icon */
+    font-weight: bold; /* Bold icon */
+    color: #842029; /* Match the text color */
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+/* Close button hover effect */
+.close:hover {
+    color: #5a1e23; /* Darker red on hover */
+}
+
+.contact-form .form-group{
+margin-bottom: 0;
+position: relative;
+}
+.contact-form .astrisx{
+    float: right;
+    height: 0;
+    font-size: 22px;
+    color:#5a1e23;
+    position: absolute;
+    right: 15px;
+    top : 10px;
+}
+
+.contact-form .costom-alert{
+    padding: 5px 10px;
+    display: none;
+}
