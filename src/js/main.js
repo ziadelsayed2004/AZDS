@@ -217,6 +217,25 @@ document.addEventListener("scroll", () => {
   });
 });
 
+// Dynamic VH
+function calculateDynamicVH() {
+  const visualViewport = window.visualViewport;
+  if (visualViewport) {
+    return visualViewport.height / window.innerHeight * 100;
+  }
+  return 100; 
+}
+function updateVHUnit() {
+  const dynamicVH = calculateDynamicVH();
+  document.documentElement.style.setProperty('--vh', `${dynamicVH}vh`);
+}
+updateVHUnit();
+if (window.visualViewport) {
+  window.visualViewport.addEventListener('resize', updateVHUnit);
+} else {
+  window.addEventListener('resize', updateVHUnit);
+}
+
 // Quick Btn
 function getAdjustedScrollOffset(multiplier) {
   const visualViewport = window.visualViewport;
