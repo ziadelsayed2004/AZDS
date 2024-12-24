@@ -23,6 +23,15 @@
 
         }
 
+        $headers = 'From : '. $email . '\r\n';
+        $myEmail ='abdozax2004@gmail.com';
+        $subject = 'Contact Form';
+
+
+        if(empty($formErrors)){
+           mail($myEmail , $subject , $msg, $headers); 
+        }
+
 }
 
 
