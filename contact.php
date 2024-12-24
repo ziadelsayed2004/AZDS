@@ -1,3 +1,26 @@
+<?php 
+   
+    if ($-SERVER['REQUEST_METHOD'] == 'POST'){
+        
+        $user = $POST['username'];
+        $email = $POST['email'];
+        $phone = $POST['phone'];
+        $msg = $POST['message'];
+   
+        //form errors
+        $formErrors = array();
+
+        if (strLen($user) < 3){
+
+            $formErrors[] = 'Username Must be Larger Tham 3 Characters ';
+
+        }
+}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +29,7 @@
     <title>AZ Digital Services</title>
     <link rel="icon" href="src/imgs/logo blk bg.png">
     <link rel="stylesheet" href="src/css/main.css">
-    <link rel="stylesheet" href="src/css/contactForm.css">
+    <link rel="stylesheet" href="src/css/contact-form.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' rel='stylesheet' />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -19,9 +42,9 @@
            <img id="logo" src="src/imgs/logo.png" alt="Logo" />
            <p id="tagline">Digital Services</p>
         </div>
-    </div>
+     </div>
      
-    <div id="progress-wrap" class="progress-wrap">
+     <div id="progress-wrap" class="progress-wrap">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
@@ -45,17 +68,17 @@
     <div class="nav-items">
     <ul>
         <li><a href="index.html">Home</a></li>
-        <li style="display: none;"><a href="about.html">About</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="contact.php">Contact Us</a></li>
+        <li style="display: none;"><a href="contact.php">Contact Us</a></li>
     </ul>
     </div>
         <div id="myNav" class="toggel-menu overlay">
             <div class="overlay-content">
                 <a href="index.html">Home</a>
-                <a style="display: none;" href="about.html">About</a>
+                <a href="about.html">About</a>
                 <a href="services.html">Services</a>
-                <a href="contact.php">Contact Us</a>
+                <a style="display: none;" href="contact.php">Contact Us</a>
             </div>
         </div>
         <div id="toggle-button" class="menu-icon" onclick="toggleNav()">
@@ -66,8 +89,51 @@
 
     <div class="content-container-upper"></div>
     </div>
-    
-    <div class="content-container-frame">
+
+    <div class="content-container-frame" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+       
+        <h2 style="text-align:center;">Contact Us</h2>
+       
+        <div class="errors">
+            <?php
+
+                if(isset($formErrors)){
+
+                foreach($formErrors as $error){
+                    echo $error . '<br/>';
+                }
+            }
+            ?>
+        </div>
+        <form class="contact-form">
+          <input 
+          class="contact-form-control" 
+          type="text"  
+          name="username" 
+          placeholder="Type Your Username" />
+          <i class="fa-solid fa-user fa-fw"></i>
+          <input class="contact-form-control" 
+          type="text" 
+           name="email"
+            placeholder="Please Type a Valid Email"/>
+          <i class="fa-solid fa-envelope fa-fw" ></i>
+          
+            <input class="contact-form-control"
+             type="text" 
+             name="phone" 
+             placeholder="Type Your Phone Number" />
+             <i class="fa-solid fa-phone fa-fw"></i>
+             <textarea class="contact-form-control" 
+             name="Message"
+             placeholder="Your Message!">
+            </textarea>
+          
+      
+          <input class="submit-btn btn-block"
+           type="submit" 
+           value="Send Message"/>
+           <i class="fa-solid fa-paper-plane fa-fw send-icon"></i> 
+          
     </div>
 
     <footer class="footer bg-spotted">
