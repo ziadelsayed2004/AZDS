@@ -1,0 +1,99 @@
+.btn1 {
+    display:inline-block;
+    padding: 10px 20px; /* Add padding */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Make the text bold */
+    color: #fff; /* Text color */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    background-color: #007bff; /* Default background color */
+    border: 1px solid transparent; /* Transparent border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+/* Success button styling */
+.btn-success {
+    background-color: #28a745; /* Green background */
+    border-color: #28a745; /* Matching border */
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Slightly darker green */
+}
+
+/* Active effect */
+.btn:active,
+.btn-success:active {
+    background-color: #004085; /* Even darker for active */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Add shadow for pressed effect */
+    transform: translateY(1px); /* Slightly move down */
+}
+
+.btn-block {
+    display: block; /* Makes the button a block element */
+    width: 100%; /* Button spans the full width of its parent */
+    max-width: 400px;
+}
+
+/* Primary button style */
+.btn-primary {
+    background-color: #0056b3;
+}
+
+/* Hover effect */
+.btn1:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Active effect */
+.btn1:active {
+    background-color: #003d80;
+    transform: scale(1);
+}
+.container {
+    width: 100%;
+    max-width: 1200px; /* Set a maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 15px; /* Add some padding */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+.form-control {
+    width: 100%; /* Make the input take the full width of its container */
+    max-width: 400px; /* Optional: Limit the maximum width */
+    padding: 10px; /* Add padding inside the input */
+    font-size: 16px; /* Set font size */
+    color: #333; /* Text color */
+    background-color: #f9f9f9; /* Background color */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in the total width */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effect */
+}
+
+/* Focus state */
+.form-control:focus {
+    border-color: #007bff; /* Highlight border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a shadow effect */
+    outline: none; /* Remove the default outline */
+}
+
+/* Disabled state */
+.form-control:disabled {
+    background-color: #e9ecef; /* Light gray background for disabled inputs */
+    cursor: not-allowed; /* Show not-allowed cursor */
+}
+form {
+max-width: 450px;
+margin: 20px auto;
+}
+
+form input,
+form textarea{
+    margin-bottom: 5px ;
+}
+form textarea{
+    height: 180px !important;
+}
