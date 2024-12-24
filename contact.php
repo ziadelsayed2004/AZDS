@@ -167,9 +167,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
              <i class="fa-solid fa-phone fa-fw"></i>
              
-
+             <div class="form-group">
              <textarea class="message contact-form-control" name="message" placeholder="Your Message!"><?php if (isset($msg)) {echo htmlspecialchars($msg);} ?></textarea>
-
+             <span class="astrisx">*</span>   
+            </div>
           
       
           <input class="submit-btn btn-block"

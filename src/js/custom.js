@@ -22,6 +22,7 @@ $('.username').blur(function(){
     else{
 
         $(this).css('border','1px solid #080').parent().find('.custom-alert').fadeOut(200).end().find('.astrisx').fadeOut(100);
+        $(this).find('.astrisx').fadeOut(100);
         userError=false;
 
     }
