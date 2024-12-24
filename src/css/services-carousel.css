@@ -28,7 +28,9 @@
     --carousel-content : #666;
   }
   #services{
-    height: calc(100vh - 125px);
+    padding-top: 12vh;
+    height: auto;
+    min-height: calc(var(--vh, 100vh) - 150px);
     transition: height 0.3s ease;
   }
   #services-carousel {

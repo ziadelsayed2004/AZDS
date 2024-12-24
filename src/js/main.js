@@ -237,32 +237,32 @@ if (window.visualViewport) {
 }
 
 // Quick Btn
-function getAdjustedScrollOffset(multiplier) {
+function getAdjustedScrollOffset(targetElement) {
   const visualViewport = window.visualViewport;
   const visualHeight = visualViewport ? visualViewport.height : window.innerHeight;
   const topOffset = document.querySelector('header')?.offsetHeight || 0;
-  return (visualHeight * multiplier) - topOffset;
+  const elementTop = targetElement.getBoundingClientRect().top + window.scrollY;
+  return elementTop - topOffset;
 }
-function scrollToSection(multiplier) {
+function scrollToSection(targetId) {
+  const targetElement = document.getElementById(targetId);
+  if (!targetElement) return;
   const visualViewport = window.visualViewport;
-  // Scroll adjustment that dynamically tracks viewport changes
   const scrollHandler = () => {
-    const newOffset = getAdjustedScrollOffset(multiplier);
+    const newOffset = getAdjustedScrollOffset(targetElement);
     window.scrollTo({
       top: newOffset,
       behavior: 'smooth',
     });
   };
-  // Trigger the initial scroll
   scrollHandler();
-  // Listen for changes in the viewport size
   if (visualViewport) {
     visualViewport.addEventListener('resize', scrollHandler, { once: true });
   }
 }
 document.getElementById('services-btn').addEventListener('click', function () {
-  scrollToSection(0.82);
+  scrollToSection('services-target-btn');
 });
 document.getElementById('portofolio-btn').addEventListener('click', function () {
-  scrollToSection(1.75);
+  scrollToSection('portofolio-target-btn');
 });
