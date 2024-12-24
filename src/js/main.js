@@ -226,7 +226,7 @@ function getAdjustedScrollOffset(multiplier) {
 }
 document.getElementById('services-btn').addEventListener('click', function() {
   window.scrollBy({
-      top: getAdjustedScrollOffset(0.85),
+      top: getAdjustedScrollOffset(0.825),
       behavior: 'smooth'
   });
 });
