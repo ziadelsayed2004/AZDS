@@ -221,17 +221,18 @@ document.addEventListener("scroll", () => {
 function getAdjustedScrollOffset(multiplier) {
   const visualHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
   const headerOffset = window.innerHeight - visualHeight;
-  return (window.innerHeight * multiplier) - headerOffset;
+  const topOffset = document.querySelector('header')?.offsetHeight || 0;
+  return (window.innerHeight * multiplier) - headerOffset - topOffset;
 }
 document.getElementById('services-btn').addEventListener('click', function() {
   window.scrollBy({
-    top: getAdjustedScrollOffset(0.85),
-    behavior: 'smooth'
+      top: getAdjustedScrollOffset(0.85),
+      behavior: 'smooth'
   });
 });
 document.getElementById('portofolio-btn').addEventListener('click', function() {
   window.scrollBy({
-    top: getAdjustedScrollOffset(1.775),
-    behavior: 'smooth'
+      top: getAdjustedScrollOffset(1.775),
+      behavior: 'smooth'
   });
 });
