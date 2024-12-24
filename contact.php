@@ -30,6 +30,15 @@
 
         if(empty($formErrors)){
            mail($myEmail , $subject , $msg, $headers); 
+            $user='';
+            $email='';
+            $phone='';
+            $msg='';
+
+            $success ='<div class="alert alert-success">We Have Recieved Your Message</div>';
+
+        
+        
         }
 
 }
@@ -127,8 +136,9 @@
                 }
                 ?>
     </div>    
-    <?php }
-            ?>
+    <?php } ?>
+
+            <?php if (isset($success)) { echo $success;} ?>
         
         <div class="form-group">
         <input 
