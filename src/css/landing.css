@@ -15,11 +15,12 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: calc(var(--vh, 100vh) - 150px);
+  height: auto;
+  min-height: calc(var(--vh, 100vh) - 150px);
 }
 .land-fig{
   display: flex;
-  height: calc(35vh - 42.5px);
+  height: auto;
 }
 .land-fig img {
   min-width: 275px;
@@ -70,7 +71,7 @@
   color: var(--alternate-color);
 }
 .land-btns{
-  height: calc(30vh - 40px);
+  height: auto;
   width: 80vw;
   display: flex;
   justify-content: center;
@@ -97,7 +98,7 @@
   color: #fafafa;  
 }
 
-@media (max-width: 1200px) and (min-height: 700px) {
+@media (max-width: 768px) and (max-width: 1200px) and (min-height: 700px) {
   .land-fig img{
     width: 50vw;
     height: auto;
@@ -131,13 +132,13 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: calc(var(--vh, 100vh) - 150px);
-  }
-  .land-about{
-  height: auto;
+    height: auto;
   }
   .land-fig {
     display: none;
+  }
+  .land-about{
+    height: auto;
   }
   .land-welcome {
     font-size: 16px;
@@ -161,14 +162,18 @@
 }
 @media (max-width: 768px) {
   .landing {
-    height: calc(var(--vh, 100vh) - 150px);
+    height: auto;
   }
   .land-fig{
+    height: auto;
     display: flex;
     justify-content: center;
   }
   .land-fig img {
     width: 40vw;
+    height: auto;
+  }
+  .land-about{
     height: auto;
   }
   .land-welcome {
@@ -184,6 +189,7 @@
     font-size: 3vh;
   }
   .land-btns {
+    height: auto;
     flex-direction: column;
     gap: 15px;
   }
@@ -194,13 +200,19 @@
 }
 @media (max-width: 480px) {
   .landing{
-    height: calc(var(--vh, 100vh) - 150px);
+    height: auto;
   }
   .land-fig{
+    height: auto;
     width: 100vw;
   }
   .land-fig img{
+    height: max-content;
     width: 40vh;
+    height: 30vh;
+  }
+  .land-about{
+    height: auto;
   }
   .land-welcome {
     font-size: 4vh;
@@ -222,6 +234,9 @@
   .land-info:hover {
     font-size: 2.5vh;
   }
+  .land-btns{
+    height: auto;
+  }
   .land-btn {
     width: 80%;
     height: 50px;
@@ -229,7 +244,7 @@
 }
 @media (max-width: 275px){
   .landing{
-    height: calc(var(--vh, 100vh) - 150px);
+    height: auto;
   }
   .land-fig {
     display: none;

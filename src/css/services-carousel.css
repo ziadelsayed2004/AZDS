@@ -161,30 +161,31 @@
   }
   @media (max-width: 480px) {
     .list li input[type="radio"] + label {
-      font-size: 20px;
+      font-size: 26px;
       font-weight: 500;
-      padding: 7.5px;
+      padding: 12.5px;
     }
     .list li .content h3 {
-      font-size: 18px;
+      font-size: 24px;
     }
     .list li .content p {
-      font-size: 16px;
+      font-size: 22px;
     }
     .service-icon {
       height: auto;
-      width: 12.5%;
-      margin-top: 7.5px;
+      width: 25%;
+      margin-top: 12.5px;
       background-color: var(--bg-color);
-      border-radius: 3vw;
-      padding: 0.75vw;
+      border-radius: 6vw;
+      padding: 1.35vw;
     }
     .services-btn{
       width: 50%;
+      font-size: 20px;
     }
   }
   @media (max-width: 900px) and (min-height: 700px){
     #services{
-      height: calc(100vh - 170px);
+      height: calc(var(--vh, 100vh) - 150px);
     }
   }
