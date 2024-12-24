@@ -11,77 +11,71 @@
 --content-container : #E7EEEF;
 }
 .landing{
-  height: calc(100vh - 125px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  min-height: calc(var(--vh, 100vh) - 150px);
 }
 .land-fig{
-  height: 30vh;
   display: flex;
-  justify-content: center;
+  height: auto;
 }
 .land-fig img {
   min-width: 275px;
   width: 30vw;
-  object-fit: cover;
   height: 30vh;
+  object-fit: cover;
 }
 .land-about{
-  height: 30vh;
-  padding-bottom: 5vh;
+  height: auto;
   width: 100%;
   text-align: center;
-  align-content: end;
 }
 .land h3{
   color: var(--bg-color);
 }
 .land-welcome{
-  font-size: 3.5vw;
+  font-size: 6vh;
   font-weight: bold;
   color: var(--bg-color);
   text-transform: uppercase;
 }
 .land-2nd-line{
-  font-size: 2vw;
+  font-size: 4vh;
   color: var(--bg-color);
 }
 .A-litter,.Z-litter {
   color: var(--alternate-color);
-  font-size: 2.5vw;
+  font-size: 5vh;
   -webkit-text-stroke-color: var(--bg-color);
-  -webkit-text-stroke-width: 0.1vw;
+  -webkit-text-stroke-width: 0.25vh;
   transition: 0.5s;
 }
 .A-litter:hover,.Z-litter:hover {
   color: var(--bg-color);
-  font-size: 2.5vw;
+  font-size: 5vh;
   -webkit-text-stroke-color: var(--bg-color);
-  -webkit-text-stroke-width: 0.1vw;
+  -webkit-text-stroke-width: 0.25vh;
 }
-.land-qu{
-  font-size: 2.25vw;
+.land-info{
+  font-size: 4vh;
   font-weight: bold;
   color: var(--bg-color);
   transition: 0.5s;
 }
-.land-qu:hover{
-  font-size: 2.25vw;
+.land-info:hover{
+  font-size: 4vh;
   font-weight: bold;
   color: var(--alternate-color);
 }
-.land-p{
-  font-size: 1.25vw;
-  line-height: 1.25vw;
-  position: relative;
-  top: -2.5vh;
-}
-.land-links{
-  height: 7.5vh;
-  margin-bottom: 1.5vh;
-}
 .land-btns{
-  height: 15vh;
+  height: auto;
+  width: 80vw;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2.5%;
 }
 .land-btn{
@@ -104,132 +98,156 @@
   color: #fafafa;  
 }
 
-@media (max-width: 767px) {
-  .landing {
-    height: calc(100vh - 125px);
+@media (max-width: 768px) and (max-width: 1200px) and (min-height: 700px) {
+  .land-fig img{
+    width: 50vw;
+    height: auto;
   }
-  .land-fig {
-    height: 25vh;
+  .land-welcome {
+    font-size: 5vh;
   }
-  .land-about {
-    height: 30vh;
-    position: relative;
-    top: -2.5vh;
-    padding-bottom: 5vh;
+  .land-2nd-line {
+    font-size: 3.5vh;
   }
-  .land-btns {
-    height: 20vh;
+  .land-info {
+    font-size: 3.5vh;
+  }
+  .land-info:hover {
+    font-size: 3.5vh;
+  }
+  .land-btns{
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
-    justify-content: center;
-    position: relative;
     gap: 2.5vh;
   }
   .land-btn {
     width: 70%;
-    margin-left: 15%;    
-  }
-  .land-welcome {
-    font-size: clamp(4vw, 5vw, 6vw);
-    font-weight: bold;
-    color: var(--bg-color);
-    text-transform: uppercase;
-  }
-  .land-2nd-line {
-    font-size: clamp(3.5vw, 4.5vw, 5.5vw);
-    color: var(--bg-color);
-  }
-  .A-litter, .Z-litter {
-    color: var(--alternate-color);
-    font-size: clamp(3.5vw, 4.5vw, 6vw);
-    -webkit-text-stroke-color: var(--bg-color);
-    -webkit-text-stroke-width: 0.2vw;
-    transition: 0.5s;
-  }
-  .A-litter:hover, .Z-litter:hover {
-    color: var(--bg-color);
-    font-size: clamp(3.5vw, 4.5vw, 6vw);
-    -webkit-text-stroke-color: var(--bg-color);
-    -webkit-text-stroke-width: 0.2vw;
-  }
-  .land-qu {
-    font-size: clamp(3vw, 4vw, 5vw);
-    font-weight: bold;
-    color: var(--bg-color);
-    transition: 0.5s;
-  }
-  .land-qu:hover {
-    font-size: clamp(3vw, 4vw, 5vw);
-    font-weight: bold;
-    color: var(--alternate-color);
-  }
-  .land-p {
-    font-size: clamp(1.5vw, 2.5vw, 3.5vw);
-    line-height: clamp(1.5vw, 2.5vw, 3.5vw)
+    height: 45px;
+    font-size: large;
   }
 }
-@media (max-width: 767px) and (min-height: 700px){
-  .land-btns{
-    position: relative;
-    top: -5vh;
-  }
-}
-@media (max-width: 900px) and (min-height: 700px) {
+@media (max-width: 960px) and (max-height: 540px) {
   .landing {
-    height: calc(100vh - 175px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
   }
-  .land-fig {
-    height: calc(37.5vh - 60px);
-    position: relative;
-    top: -10vh;
-  }
-  .land-fig img {
-    height: 40vh;
-    width: 40vh;
-  }
-  .land-about {
-    height: calc(37.5vh - 60px);
-    position: relative;
-    top: -10vh;
-    padding-bottom: 0;
-  }
-  .land-btns {
-    height: calc(25vh - 60px);
-    gap: 2.5vh;
-  }
-  .land-welcome {
-    font-size: clamp(6vw, 7vw, 8vw);
-  }
-  .land-2nd-line {
-    font-size: clamp(5vw, 6.5vw, 7.5vw);
-  }
-  .A-litter, .Z-litter {
-    font-size: clamp(5vw, 6.5vw, 8vw);
-  }
-  .A-litter:hover, .Z-litter:hover {
-    font-size: clamp(5vw, 6.5vw, 8vw);
-  }
-  .land-qu {
-    font-size: clamp(4.5vw, 6vw, 7vw);
-  }
-  .land-qu:hover {
-    font-size: clamp(4.5vw, 6vw, 7vw);
-  }
-  .land-p {
-    font-size: clamp(4vw, 5vw, 6vw);
-    line-height: clamp(4vw, 5vw, 6vw);
-  }
-}
-@media (max-width: 275px){
   .land-fig {
     display: none;
   }
-  .land-about {
-    height: 42.5vh;
+  .land-about{
+    height: auto;
+  }
+  .land-welcome {
+    font-size: 16px;
+  }
+  .land-2nd-line {
+    font-size: 14px;
+  }
+  .land-info {
+    font-size: 12px;
+  }
+  .land-btns {
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+  }
+  .land-btn {
+    width: 30%;
+    height: 50px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .landing {
+    height: auto;
+  }
+  .land-fig{
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .land-fig img {
+    width: 40vw;
+    height: auto;
+  }
+  .land-about{
+    height: auto;
+  }
+  .land-welcome {
+    font-size: 4.5vh;
+  }
+  .land-2nd-line {
+    font-size: 3vh;
+  }
+  .land-info {
+    font-size: 3vh;
+  }
+  .land-info:hover {
+    font-size: 3vh;
+  }
+  .land-btns {
+    height: auto;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .land-btn {
+    width: 70%;
+    height: 45px;
+  }
+}
+@media (max-width: 480px) {
+  .landing{
+    height: auto;
+    min-height: calc(var(--vh, 100vh) - 175px);
+  }
+  .land-fig{
+    height: auto;
+    width: 100vw;
+  }
+  .land-fig img{
+    height: max-content;
+    width: 40vh;
+    height: 25vh;
+  }
+  .land-about{
+    height: auto;
+  }
+  .land-welcome {
+    font-size: 4vh;
+  }
+  .land-2nd-line {
+    font-size: 2.5vh;
+  }
+  .A-litter,.Z-litter {
+    font-size: 3.5vh;
+    -webkit-text-stroke-width: 0.15vh;
+  }
+  .A-litter:hover,.Z-litter:hover {
+    font-size: 3.5vh;
+    -webkit-text-stroke-width: 0.15vh;
+  }
+  .land-info {
+    font-size: 2.5vh;
+  }
+  .land-info:hover {
+    font-size: 2.5vh;
   }
   .land-btns{
-    height: 32.5vh;
+    height: auto;
   }
-
+  .land-btn {
+    width: 80%;
+    height: 50px;
+  }
+}
+@media (max-width: 275px){
+  .landing{
+    height: auto;
+  }
+  .land-fig {
+    display: none;
+  }
 }

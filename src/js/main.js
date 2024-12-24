@@ -42,7 +42,6 @@
 
 // Navigation - Overlay
 let isNavOpen = false;
-
 function toggleNav() {
     const nav = document.getElementById("myNav");
     const toggleButton = document.getElementById("toggle-button");
@@ -92,7 +91,7 @@ function load() {
     }
     toggleMode();
   }
-// Change the CSS Variables based on the mode
+// Switch Vars
   function toggleMode() {
     const isDarkMode = body.classList.contains('darkmode');
 
@@ -149,7 +148,7 @@ function load() {
     }, 500);
   });
 
-  // Load the mode when the page loads
+// Load the mode when the page loads
   window.onload = function() {
     document.body.style.overflow = 'hidden';
     setTimeout(() => {
@@ -157,10 +156,10 @@ function load() {
         
         document.body.style.overflow = 'auto';
         document.body.style.touchAction = 'auto';
-    }, 2450);
+    }, 2250);
 };
 
-// Animaton for Items
+// Animaton For Items
 document.addEventListener("scroll", () => {
   const elements = document.querySelectorAll(".content-style-preview");
 
@@ -218,16 +217,52 @@ document.addEventListener("scroll", () => {
   });
 });
 
-// Services btn
-document.getElementById('services-btn').addEventListener('click', function() {
-  window.scrollBy({
-    top: window.innerHeight*0.825,
-    behavior: 'smooth'
-  });
+// Dynamic VH
+function calculateDynamicVH() {
+  const visualViewport = window.visualViewport;
+  if (visualViewport) {
+    return visualViewport.height / window.innerHeight * 100;
+  }
+  return 100; 
+}
+function updateVHUnit() {
+  const dynamicVH = calculateDynamicVH();
+  document.documentElement.style.setProperty('--vh', `${dynamicVH}vh`);
+}
+updateVHUnit();
+if (window.visualViewport) {
+  window.visualViewport.addEventListener('resize', updateVHUnit);
+} else {
+  window.addEventListener('resize', updateVHUnit);
+}
+
+// Quick Btn
+function getAdjustedScrollOffset(multiplier) {
+  const visualViewport = window.visualViewport;
+  const visualHeight = visualViewport ? visualViewport.height : window.innerHeight;
+  const topOffset = document.querySelector('header')?.offsetHeight || 0;
+  return (visualHeight * multiplier) - topOffset;
+}
+function scrollToSection(multiplier) {
+  const visualViewport = window.visualViewport;
+  // Scroll adjustment that dynamically tracks viewport changes
+  const scrollHandler = () => {
+    const newOffset = getAdjustedScrollOffset(multiplier);
+    window.scrollTo({
+      top: newOffset,
+      behavior: 'smooth',
+    });
+  };
+  // Trigger the initial scroll
+  scrollHandler();
+  // Listen for changes in the viewport size
+  if (visualViewport) {
+    visualViewport.addEventListener('resize', scrollHandler, { once: true });
+  }
+}
+document.getElementById('services-btn').addEventListener('click', function () {
+  scrollToSection(0.82);
 });
-document.getElementById('portofolio-btn').addEventListener('click', function() {
-  window.scrollBy({
-    top: window.innerHeight*1.75,
-    behavior: 'smooth'
-  });
+document.getElementById('portofolio-btn').addEventListener('click', function () {
+  scrollToSection(1.75);
 });
