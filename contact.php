@@ -1,52 +1,36 @@
 <?php 
-   
-    if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-        
-        $user = filter_var($POST['username'],FILTER_SANITIZE_STRING);
-        $email = filter_var($POST['email'],FILTER_SANITIZE_EMAIL);
-        $phone = filter_var($POST['phone'],FILTER_SANITIZE_NUMBER_INT);
-        $msg = filter_var($POST['message'],FILTER_SANITIZE_STRING);
-   
-        //form errors
-        $formErrors = array();
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $user = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+    $phone = filter_var($_POST['phone'], FILTER_SANITIZE_NUMBER_INT);
+    $msg = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
 
-        if (strLen($user) <3){
+    $formErrors = array();
 
-            $formErrors[] = 'Username Must be Larger Tham <strong>3</strong> Characters ';
+    if (strlen($user) < 3) {
+        $formErrors[] = 'Username must be larger than <strong>3</strong> characters.';
+    }
 
+    if (strlen($msg) < 10) {
+        $formErrors[] = 'Message can\'t be less than <strong>10</strong> characters.';
+    }
+
+    $data = "Name: $user\r\nPhone Number: $phone\r\nMessage: $msg";
+    $headers = "From: $email\r\n";
+    $myEmail = 'abdozax2004@gmail.com';
+    $subject = 'Contact Form';
+
+    if (empty($formErrors)) {
+        if (mail($myEmail, $subject, $data, $headers)) {
+            $user = $email = $phone = $msg = '';
+            $success = '<div class="alert alert-success">We have received your message.</div>';
+        } else {
+            $formErrors[] = 'Failed to send your message. Please try again later.';
         }
-
-        
-        if (strLen($msg) < 10){
-
-            $formErrors[] = 'Message can\'t be Less Than <strong>10</strong> Characters ';
-
-        }
-        $data = " Name :   $user \r\n Phone Number :   $phone  \r\n Message : $msg  ";
-
-        $headers = 'From : '. $email . '\r\n';
-        $myEmail ='abdozax2004@gmail.com';
-        $subject = 'Contact Form';
-
-
-        if(empty($formErrors)){
-           mail($myEmail , $subject , $data, $headers); 
-            $user='';
-            $email='';
-            $phone='';
-            $msg='';
-
-            $success ='<div class="alert alert-success">We Have Recieved Your Message</div>';
-
-        
-        
-        }
-
+    }
 }
-
-
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -184,19 +168,8 @@
              <i class="fa-solid fa-phone fa-fw"></i>
              
 
-             <textarea class=" message form-control" 
-             name="Message"
-             placeholder="Your Message!">
-             
-             <?php if (isset($msg)) {echo $msg;}  ?>
-             
-             <span class="astrisx">*</span> 
-             
-             <div class="alert alert-danger costom-alert">
-             Message can\'t be Less Than <strong>10</strong> Characters  
-          </div>
-          
-        </textarea>
+             <textarea class="message form-control" name="message" placeholder="Your Message!"><?php if (isset($msg)) {echo htmlspecialchars($msg);} ?></textarea>
+
           
       
           <input class="submit-btn btn-block"
