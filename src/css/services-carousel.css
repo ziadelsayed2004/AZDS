@@ -188,6 +188,7 @@
   }
   @media (max-width: 900px) and (min-height: 700px){
     #services{
+      transition: height 0.3s ease;
       height: calc(var(--vh, 100vh) - 150px);
     }
   }
