@@ -17,6 +17,7 @@
   align-items: center;
   height: auto;
   min-height: calc(var(--vh, 100vh) - 150px);
+  transition: height 0.3s ease;
 }
 .land-fig{
   display: flex;
@@ -133,6 +134,7 @@
     justify-content: space-around;
     align-items: center;
     height: auto;
+    transition: height 0.3s ease;
   }
   .land-fig {
     display: none;
@@ -162,6 +164,7 @@
 }
 @media (max-width: 768px) {
   .landing {
+    transition: height 0.3s ease;
     height: auto;
   }
   .land-fig{
@@ -201,6 +204,7 @@
 @media (max-width: 480px) {
   .landing{
     height: auto;
+    transition: height 0.3s ease;
     min-height: calc(var(--vh, 100vh) - 175px);
   }
   .land-fig{
@@ -245,6 +249,7 @@
 }
 @media (max-width: 275px){
   .landing{
+    transition: height 0.3s ease;
     height: auto;
   }
   .land-fig {
