@@ -15,7 +15,8 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: calc(100vh - 125px);
+  height: auto;
+  min-height: calc(100vh - 125px);
 }
 .land-fig{
   display: flex;
