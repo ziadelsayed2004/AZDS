@@ -174,6 +174,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       
           <input class="submit-btn btn-block"
            type="submit" 
+           name="message";
            value="Send Message"/>
            <i class="fa-solid fa-paper-plane fa-fw send-icon"></i> 
           
