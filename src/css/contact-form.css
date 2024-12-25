@@ -16,105 +16,50 @@
     background-image:url('../imgs/texture.jpg');
     background-color: var(--bg-color);
     background-blend-mode:overlay;
-  }
-
-.submit-btn {
-    display:inline-block;
-    padding: 10px 20px; /* Add padding */
-    font-size: 16px; /* Font size */
-    font-weight: bold; /* Make the text bold */
-    background-image:url('../imgs/texture.jpg');
-    background-color: var(--bg-color);
-    background-blend-mode:overlay;
-    color: #fff; /* Text color */
-    text-align: center; /* Center the text */
-    text-decoration: none; /* Remove underline */
-    border: 1px solid transparent; /* Transparent border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Change cursor on hover */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
-}
-
-/* Success button styling */
-.btn-success {
-    background-color: #28a745; /* Green background */
-    border-color: #28a745; /* Matching border */
-}
-
-.btn-success:hover {
-    background-color: #218838; /* Slightly darker green */
-}
-
-/* Active effect */
-.btn:active,
-.btn-success:active {
-    background-color: #004085; /* Even darker for active */
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Add shadow for pressed effect */
-    transform: translateY(1px); /* Slightly move down */
-}
-
-.btn-block {
-    display: block; /* Makes the button a block element */
-    width: 100%; /* Button spans the full width of its parent */
-    max-width: 400px;
-}
-
-/* Primary button style */
-.btn-primary {
-    background-color: #0056b3;
-}
-
-/* Hover effect */
-.btn1:hover {
-    background-color: #09242d;
-}
-
-/* Active effect */
-.btn1:active {
-    background-color: #003d80;
 }
 .container {
     width: 100%;
-    max-width: 1200px; /* Set a maximum width */
-    margin: 0 auto; /* Center the container */
-    padding: 15px; /* Add some padding */
-    box-sizing: border-box; /* Include padding in width calculation */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
 }
 .contact-form-control {
-    width: 100%; /* Make the input take the full width of its container */
-    max-width: 400px; /* Optional: Limit the maximum width */
-    padding: 10px; /* Add padding inside the input */
-    font-size: 16px; /* Set font size */
-    color: #333; /* Text color */
-    background-color: #cfeef7; /* Background color */
-    border: 1px solid #b7cf81; /* Border style */
-    border-radius: 5px; /* Rounded corners */
-    box-sizing: border-box; /* Include padding and border in the total width */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effect */
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    background-color: #cfeef7;
+    border: 2px solid #b7cf81;
+    border-radius: 15px;
+    box-sizing: border-box;
+    transition: border-color 0.5s, box-shadow 0.5s;
 }
-
-/* Focus state */
 .contact-form-control:focus {
-    border-color: #007bff; /* Highlight border color on focus */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a shadow effect */
-    outline: none; /* Remove the default outline */
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
 }
-
-/* Disabled state */
 .contact-form-control:disabled {
-    background-color: #e9ecef; /* Light gray background for disabled inputs */
-    cursor: not-allowed; /* Show not-allowed cursor */
+    background-color: #e9ecef;
+    cursor: not-allowed;
 }
 .contact-form {
-max-width: 400px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: 50%;
 margin: 20px auto;
 }
-
 .contact-form input,
 .contact-form textarea{
+    border: 2px solid #ccc;
+    transition: border-color 0.5s ease; 
     margin-bottom: 8px ;
+    width: 100%;
 }
 .contact-form textarea{
+    resize: none;
     height: 180px !important;
 }
 .contact-form input:not([type='submit']) +i {
@@ -128,90 +73,71 @@ margin: 20px auto;
 .contact-form input{
     padding-left: 36px;
 }
-.send-icon{
-    float: none;
-    height: 14px;
-    left: 7px;
-    color:white !important;
-    display: block;
+
+.contact-form .alert-box {
+    display: none;
     position: relative;
-    top: -37px !important ;
-
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    margin-top: 7.5px;
+    margin-bottom: 5px;
+    border-radius: 15px;
 }
-
-.alert {
-    padding: 15px;
-    font-size: 16px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    position: relative; /* Required for close button positioning */
+.contact-form .alert-box .alert-text {
+    display: inline-block;
 }
-
-/* Danger alert styling */
-.alert-danger {
-    background-color: #f8d7da; /* Light red background */
-    color: #842029; /* Dark red text */
-    border-color: #f5c2c7; /* Matching border */
-}
-
-/* Dismissible alert */
-.alert-dismissible {
-    padding-right: 40px; /* Space for the close button */
-}
-
-/* Close button */
-.alert-dismissible .close-btn {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
+.contact-form .alert-box .close-alert {
+    background: transparent;
+    border: none;
     font-size: 20px;
     font-weight: bold;
-    color: #842029;
-    background: none;
-    border: none;
-    cursor: pointer;
-    outline: none;
-}
-
-.alert-dismissible .close-btn:hover {
-    color: #5a1e23; /* Darker red on hover */
-}
-
-
-/* Close button styling */
-.close {
-    position: absolute; /* Position inside the alert */
-    top: 10px; /* Space from the top */
-    right: 10px; /* Space from the right */
-    font-size: 20px; /* Font size for the close icon */
-    font-weight: bold; /* Bold icon */
-    color: #842029; /* Match the text color */
-    background: none; /* Remove default button background */
-    border: none; /* Remove default button border */
-    cursor: pointer; /* Pointer cursor on hover */
-}
-/* Close button hover effect */
-.close:hover {
-    color: #5a1e23; /* Darker red on hover */
-}
-
-.contact-form .form-group{
-margin-bottom: 0;
-position: relative;
-}
-.contact-form .astrisx{
-    float: right;
-    height: 0;
-    font-size: 22px;
-    color:#5a1e23;
+    color: #721c24;
     position: absolute;
-    right: 15px;
-    top : 10px;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
 }
 
-.contact-form .costom-alert{
-    padding: 5px 10px;
-    display: none;
+.submit-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    color: var(--bg-color);
+    text-align: center;
+    border: 2px solid var(--bg-color) !important;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s, border-radius 0.5s, border-color 0.5s !important;
 }
+.submit-btn:hover {
+    border-radius: 20px;
+    background-color: var(--bg-color);
+    color: white;
+    border-color: var(--bg-color);
+}
+
+
+/* .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.btn-success:hover {
+    background-color: #218838;
+}
+.btn:active,
+.btn-success:active {
+    background-color: #004085;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+}
+.btn-block {
+    display: block;
+    width: 100%;
+}
+.btn-primary {
+    background-color: #0056b3;
+} */
