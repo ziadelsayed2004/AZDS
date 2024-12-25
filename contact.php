@@ -1,37 +1,3 @@
-<?php 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $user = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
-    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-    $phone = filter_var($_POST['phone'], FILTER_SANITIZE_NUMBER_INT);
-    $msg = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
-
-    $formErrors = array();
-
-    if (strlen($user) < 3) {
-        $formErrors[] = 'Username must be larger than <strong>3</strong> characters.';
-    }
-
-    if (strlen($msg) < 10) {
-        $formErrors[] = 'Message can\'t be less than <strong>10</strong> characters.';
-    }
-
-    $data = "Name: $user\r\nPhone Number: $phone\r\nMessage: $msg";
-    $headers = "From: $email\r\n";
-    $myEmail = 'abdozax2004@gmail.com';
-    $subject = 'Contact Form';
-
-    if (empty($formErrors)) {
-        if (mail($myEmail, $subject, $data, $headers)) {
-            $user = $email = $phone = $msg = '';
-            $success = '<div class="alert alert-success">We have received your message.</div>';
-        } else {
-            $formErrors[] = 'Failed to send your message. Please try again later.';
-        }
-    }
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
-        <li style="display: none;"><a href="contact.php">Contact Us</a></li>
+        <li style="display: none;"><a href="contact.html">Contact Us</a></li>
     </ul>
     </div>
         <div id="myNav" class="toggel-menu overlay">
@@ -89,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
-                <a style="display: none;" href="contact.php">Contact Us</a>
+                <a style="display: none;" href="contact.html">Contact Us</a>
             </div>
         </div>
         <div id="toggle-button" class="menu-icon" onclick="toggleNav()">
@@ -101,84 +67,47 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="content-container-upper"></div>
     </div>
 
-    <div class="content-container-frame" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
-       
+    <div class="content-container-frame"> 
         <h2 style="text-align:center;">Contact Us</h2>
-       
         <form class="contact-form">
-        
-            <?php
-
-                if(! empty($formErrors)){  ?>
-        <div class="alert alert-danger alert-dismissible" role="start">
-                <button type="button" class="close" data-dismiss="alert" aria-Label="Close">
-                    <span aria-hidden="true">$times</span>
-                </button>
-
-                <?php 
-                foreach($formErrors as $error){
-                    echo $error . '<br/>';
-                }
-                ?>
-    </div>    
-    <?php } ?>
-
-            <?php if (isset($success)) { echo $success;} ?>
-        
-        <div class="form-group">
-        <input 
-          class="username contact-form-control" 
-          type="text"  
-          name="username" 
-          placeholder="Type Your Username"
-          value= "<?php if (isset($user)) {echo $user;}  ?>" />
-          <i class="fa-solid fa-user fa-fw"></i>
-          <span class="astrisx">*</span>
-          <div class="alert alert-danger costom-alert">
-          Username Must be Larger Tham <strong>3</strong> Characters 
-          </div>
-            
-        </div>
-
-
             <div class="form-group">
-          <input class="email contact-form-control" 
-          type="email" 
-           name="email"
-            placeholder="Please Type a Valid Email"
-            value= "<?php if (isset($email)) {echo $email;}  ?>"             />
-        
-            <i class="fa-solid fa-envelope fa-fw" ></i>
-        
-          <span class="astrisx">*</span>    
-        
-        <div class="alert alert-danger costom-alert">
-          Email can't be <strong>Empty</strong>
-          </div>
-    
-        </div>
-
-
-            <input class="contact-form-control"
-             type="text" 
-             name="phone" 
-             placeholder="Type Your Phone Number" 
-             value= "<?php if (isset($phone)) {echo $phone;}  ?>" />
-
-             <i class="fa-solid fa-phone fa-fw"></i>
+              <div class="alert-box">
+                <span class="alert-text">Name must be at least 3 characters.</span>
+                <button type="button" class="close-alert">x</button>
+              </div>
+              <input class="contact-form-control" type="text" name="username" placeholder="Type Your Name">
+              <i class="fa-solid fa-user fa-fw"></i>
+              </input>
+            </div>    
+            <div class="form-group">
+              <div class="alert-box">
+                <span class="alert-text">Email must be a valid format (e.g., name@example.com).</span>
+                <button type="button" class="close-alert">x</button>
+              </div>
+              <input class="contact-form-control" type="text" name="email" placeholder="Please Type a Valid Email">
+              <i class="fa-solid fa-envelope fa-fw" ></i>
+              </input>
              
-             <div class="form-group">
-             <textarea class="message contact-form-control" name="message" placeholder="Your Message!"><?php if (isset($msg)) {echo htmlspecialchars($msg);} ?></textarea>
-             <span class="astrisx">*</span>   
             </div>
-          
-      
-          <input class="submit-btn btn-block"
-           type="submit" 
-           name="message";
-           value="Send Message"/>
-           <i class="fa-solid fa-paper-plane fa-fw send-icon"></i> 
-          
+            <div class="form-group">
+              <div class="alert-box">
+                <span class="alert-text">Phone number must be 10–15 digits.</span>
+                <button type="button" class="close-alert">x</button>
+              </div>                
+              <input class="contact-form-control" type="text" name="phone" placeholder="Type Your Phone Number">             
+              <i class="fa-solid fa-phone fa-fw"></i>
+              </input>
+            </div>
+            <div class="form-group">
+              <div class="alert-box">
+                <span class="alert-text">Message must be at least 10 characters.</span>
+                <button type="button" class="close-alert">x</button>
+              </div>
+              <textarea class="contact-form-control" name="Message" placeholder="Your Message!"></textarea>
+            </div>
+            <input class="submit-btn btn-block" type="submit" value="Send Message">             
+            </input>
+        </form>          
     </div>
 
     <footer class="footer bg-spotted">
@@ -203,98 +132,91 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </footer>
 
-    <div class="js-script">  
-       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-       <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-       <script src="src/js/main.js"></script>
-       <script>
-            $(function (){
+    <div class="js-script">
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+        <script src="src/js/main.js"></script>
+        <script>
+            $(function () {
+                "use strict";
 
-            'use strict';
+                // Validation flags
+                var userError = true;
+                var emailError = true;
+                var phoneError = true;
+                var messageError = true;
 
-            var userError = true;
-
-            var emailError = true;
-
-            var messageError= true;
-
-
-
-
-            $('.username').blur(function(){ 
-                
-                if ($(this).val().length <3) {
-
-                    $(this).css('border','1px solid #F00').parent().find('.custom-alert').fadeIn(200).end().find('.astrisx').fadeIn(100);
-                    userError=true;
-
-                }
-                else{
-
-                    $(this).css('border','1px solid #080').parent().find('.custom-alert').fadeOut(200).end().find('.astrisx').fadeOut(100);
-                    $(this).find('.astrisx').fadeOut(100);
-                    userError=false;
-
-                }
-                
-
-            }); 
-
-
-
-            $('.email').blur(function(){ 
-                
-                if ($(this).val().length < 1) {
-
-                    $(this).css('border','1px solid #F00').parent().find('.custom-alert').fadeIn(200).end().find('.astrisx').fadeIn(100);
-                    emailError=true;
-
-                }
-                else{
-
-                    $(this).css('border','1px solid #080').parent().find('.custom-alert').fadeOut(200).end().find('.astrisx').fadeOut(100);
-                    emailError=false;
-
+                // Show alert box and add red border to the input field
+                function showAlert(element) {
+                    element.siblings(".alert-box").fadeIn(200); // Show alert
+                    element.css("border", "2px solid #f00"); // Add red border to the input field
                 }
 
-                
-
-            }); 
-
-
-
-            $('.message').blur(function(){ 
-                
-                if ($(this).val().length < 10) {
-
-                    $(this).css('border','1px solid #F00').parent().find('.custom-alert').fadeIn(200).end().find('.astrisx').fadeIn(100);
-                    messageError=true;
-
-                }
-                else{
-
-                    $(this).css('border','1px solid #080').parent().find('.custom-alert').fadeOut(200).end().find('.astrisx').fadeOut(100);
-                    messageError=false;
-
+                // Hide alert box and reset border of the input field
+                function hideAlert(element) {
+                    element.siblings(".alert-box").fadeOut(200); // Hide alert
+                    element.css("border", "2px solid #080"); // Add green border to the input field
                 }
 
-                
+                // Username validation
+                $('input[name="username"]').blur(function () {
+                    if ($(this).val().length < 3) {
+                        showAlert($(this));
+                        userError = true;
+                    } else {
+                        hideAlert($(this));
+                        userError = false;
+                    }
+                });
 
-            }); 
+                // Email validation
+                $('input[name="email"]').blur(function () {
+                    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailPattern.test($(this).val())) {
+                        showAlert($(this));
+                        emailError = true;
+                    } else {
+                        hideAlert($(this));
+                        emailError = false;
+                    }
+                });
 
+                // Phone validation
+                $('input[name="phone"]').blur(function () {
+                    var phonePattern = /^[0-9]{10,15}$/;
+                    if (!phonePattern.test($(this).val())) {
+                        showAlert($(this));
+                        phoneError = true;
+                    } else {
+                        hideAlert($(this));
+                        phoneError = false;
+                    }
+                });
 
-            $('.contact-form').submit(function(e) {
+                // Message validation
+                $('textarea[name="Message"]').blur(function () {
+                    if ($(this).val().length < 10) {
+                        showAlert($(this));
+                        messageError = true;
+                    } else {
+                        hideAlert($(this));
+                        messageError = false;
+                    }
+                });
 
-                if (userError===true||emailError===true||messageError===true){
+                // Close alert on "X" click
+                $(".close-alert").click(function () {
+                    $(this).parent(".alert-box").fadeOut(200);
+                    $(this).closest(".alert-box").siblings("input, textarea").css("border", "1px solid #ccc"); // Reset border to default
+                });
 
-                    e.preventDefault();
-
-                    $('.username , .email, .message').blur();
-
-                }
-            
-            });
-
+                // Form submission validation
+                $(".contact-form").submit(function (e) {
+                    if (userError || emailError || phoneError || messageError) {
+                        e.preventDefault();
+                        $('input, textarea').blur(); // Trigger blur events for validation
+                    }
+                });
             });
         </script>
     </div>
