@@ -1,3 +1,33 @@
+<?php
+
+//check if user coming from a recuest
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+// variables
+
+$name =  filter_var ($_POST['name'], FILTER_SANITIZE_STRING);
+$email = filter_var ($_POST['email'], FILTER_SANITIZE_EMAIL);
+$phone = filter_var ($_POST['phone'], FILTER_SANITIZE_NUMBER_INT);
+$message = filter_var ($_POST['Message'], FILTER_SANITIZE_STRING);
+
+	$data = " Name :   $name \r\n Phone Number :   $phone  \r\n Message :   $message";
+
+
+$headers = 'From: '. $email .'\n';
+$myEMail = 'abdozax2004@gmail.com';
+$subject = 'Contact Form';
+mail( $myEMail,$subject , $data , $headers );
+
+$success = '<div class="alert alert-success">We have recieve your message</div>';
+
+}
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,13 +99,13 @@
 
     <div class="content-container-frame"> 
         <h2 style="text-align:center;">Contact Us</h2>
-        <form class="contact-form">
+        <form class="contact-form" method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>">
             <div class="form-group">
               <div class="alert-box">
                 <span class="alert-text">Name must be at least 3 characters.</span>
                 <button type="button" class="close-alert">x</button>
               </div>
-              <input class="contact-form-control" type="text" name="username" placeholder="Type Your Name">
+              <input class="contact-form-control" type="text" name="name" placeholder="Type Your Name" required>
               <i class="fa-solid fa-user fa-fw"></i>
               </input>
             </div>    
@@ -84,7 +114,7 @@
                 <span class="alert-text">Email must be a valid format (e.g., name@example.com).</span>
                 <button type="button" class="close-alert">x</button>
               </div>
-              <input class="contact-form-control" type="text" name="email" placeholder="Please Type a Valid Email">
+              <input class="contact-form-control" type="text" name="email" placeholder="Please Type a Valid Email" required>
               <i class="fa-solid fa-envelope fa-fw" ></i>
               </input>
              
@@ -94,7 +124,7 @@
                 <span class="alert-text">Phone number must be 10–15 digits.</span>
                 <button type="button" class="close-alert">x</button>
               </div>                
-              <input class="contact-form-control" type="text" name="phone" placeholder="Type Your Phone Number">             
+              <input class="contact-form-control" type="text" name="phone" placeholder="Type Your Phone Number" required>             
               <i class="fa-solid fa-phone fa-fw"></i>
               </input>
             </div>
@@ -103,9 +133,9 @@
                 <span class="alert-text">Message must be at least 10 characters.</span>
                 <button type="button" class="close-alert">x</button>
               </div>
-              <textarea class="contact-form-control" name="Message" placeholder="Your Message!"></textarea>
+              <textarea class="contact-form-control" name="Message" placeholder="Your Message!" required></textarea>
             </div>
-            <input class="submit-btn btn-block" type="submit" value="Send Message">             
+            <input class="submit-btn btn-block" type="submit" name="bbtn" value="Send Message">             
             </input>
         </form>          
     </div>
