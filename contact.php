@@ -2,15 +2,22 @@
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $name = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $phone = filter_var($_POST['phone'], FILTER_SANITIZE_NUMBER_INT);
-    $message = filter_var($_POST['Message'], FILTER_SANITIZE_STRING);
+    $name = trim($_POST['username']);
+    $email = trim($_POST['email']);
+    $phone = trim($_POST['phone']);
+    $message = trim($_POST['Message']);
 
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $error = '<div class="alert alert-danger">Invalid email address.</div>';
-    } elseif (empty($name) || empty($phone) || empty($message)) {
-        $error = '<div class="alert alert-danger">Please fill all fields.</div>';
+    $error = '';
+    $success = '';
+
+    if (empty($name) || empty($email) || empty($phone) || empty($message)) {
+        $error = 'Please fill all fields.';
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error = 'Invalid email address.';
+    } elseif (!preg_match('/^\d{10,15}$/', $phone)) {
+        $error = 'Phone number must be 10–15 digits.';
+    } elseif (strlen($message) < 10) {
+        $error = 'Message must be at least 10 characters.';
     } else {
         $data = "Name: $name \r\nPhone Number: $phone \r\nMessage: $message";
         
@@ -18,17 +25,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $headers .= "Reply-To: $email\r\n";
         $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
         
-        $myEmail = 'abdozax2004@gmail.com';
+        $myEmail = 'contact@az-digital-services.com';
         $subject = 'Contact Form';
 
         if (mail($myEmail, $subject, $data, $headers)) {
-            $success = '<div class="alert alert-success">We have received your message.</div>';
+            $success = 'We have received your message.';
         } else {
-            $error = '<div class="alert alert-danger">There was an error sending your message. Please try again later.</div>';
+            $error = 'There was an error sending your message. Please try again later.';
+            error_log("Mail error: Unable to send email to $myEmail from $email");
         }
     }
-    
-    header("Location: contact.html?status=" . urlencode($success ?? $error));
+
+    $response = $success ?: $error;
+    echo "<script>
+        alert('$response');
+        window.location.href = 'contact.html';
+    </script>";
     exit;
 }
 ?>
