@@ -25,7 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $myEmail = 'abdozax2004@gmail.com';
         $subject = 'Contact Form';
 
-        // Send the email
         if (mail($myEmail, $subject, $data, $headers)) {
             $success = '<div class="alert alert-success">We have received your message.</div>';
         } else {
