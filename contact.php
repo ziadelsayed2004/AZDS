@@ -2,18 +2,22 @@
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $name = filter_var($_POST['username'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $phone = filter_var($_POST['phone'], FILTER_SANITIZE_NUMBER_INT);
-    $message = filter_var($_POST['Message'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $name = trim($_POST['username']);
+    $email = trim($_POST['email']);
+    $phone = trim($_POST['phone']);
+    $message = trim($_POST['Message']);
 
     $error = '';
     $success = '';
 
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $error = 'Invalid email address.';
-    } elseif (empty($name) || empty($phone) || empty($message)) {
+    if (empty($name) || empty($email) || empty($phone) || empty($message)) {
         $error = 'Please fill all fields.';
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error = 'Invalid email address.';
+    } elseif (!preg_match('/^\d{10,15}$/', $phone)) {
+        $error = 'Phone number must be 10–15 digits.';
+    } elseif (strlen($message) < 10) {
+        $error = 'Message must be at least 10 characters.';
     } else {
         $data = "Name: $name \r\nPhone Number: $phone \r\nMessage: $message";
         
@@ -28,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $success = 'We have received your message.';
         } else {
             $error = 'There was an error sending your message. Please try again later.';
+            error_log("Mail error: Unable to send email to $myEmail from $email");
         }
     }
 
