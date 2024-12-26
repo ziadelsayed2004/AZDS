@@ -2,7 +2,6 @@
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    // Sanitize inputs (updated for the deprecation)
     $name = filter_var($_POST['username'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $phone = filter_var($_POST['phone'], FILTER_SANITIZE_NUMBER_INT);
