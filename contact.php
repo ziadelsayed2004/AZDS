@@ -36,7 +36,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
-    header("Location: contact.html?status=" . urlencode($success ?: $error));
+    $response = $success ?: $error;
+    echo "<script>
+        alert('$response');
+        window.location.href = 'contact.html';
+    </script>";
     exit;
 }
 ?>
