@@ -2,10 +2,14 @@
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $name = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
+    // Sanitize inputs (updated for the deprecation)
+    $name = filter_var($_POST['username'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $phone = filter_var($_POST['phone'], FILTER_SANITIZE_NUMBER_INT);
-    $message = filter_var($_POST['Message'], FILTER_SANITIZE_STRING);
+    $message = filter_var($_POST['Message'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+    $error = '';
+    $success = '';
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = '<div class="alert alert-danger">Invalid email address.</div>';
@@ -21,14 +25,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $myEmail = 'abdozax2004@gmail.com';
         $subject = 'Contact Form';
 
+        // Send the email
         if (mail($myEmail, $subject, $data, $headers)) {
             $success = '<div class="alert alert-success">We have received your message.</div>';
         } else {
             $error = '<div class="alert alert-danger">There was an error sending your message. Please try again later.</div>';
         }
     }
-    
-    header("Location: contact.html?status=" . urlencode($success ?? $error));
+
+    header("Location: contact.html?status=" . urlencode($success ?: $error));
     exit;
 }
 ?>
