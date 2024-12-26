@@ -17,5 +17,6 @@ mail( $myEMail,$subject , $data , $headers );
 $success = '<div class="alert alert-success">We have recieve your message</div>';
 
 }
-
+header("Location: contact.html");
+exit;
 ?>
