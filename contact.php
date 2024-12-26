@@ -34,4 +34,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header("Location: contact.html?status=" . urlencode($success ?: $error));
     exit;
 }
-?>
+?> 
