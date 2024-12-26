@@ -2,7 +2,7 @@
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    $name = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $phone = filter_var($_POST['phone'], FILTER_SANITIZE_NUMBER_INT);
     $message = filter_var($_POST['Message'], FILTER_SANITIZE_STRING);
