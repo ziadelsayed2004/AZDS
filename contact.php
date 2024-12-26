@@ -11,9 +11,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $success = '';
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $error = '<div class="alert alert-danger">Invalid email address.</div>';
+        $error = 'Invalid email address.';
     } elseif (empty($name) || empty($phone) || empty($message)) {
-        $error = '<div class="alert alert-danger">Please fill all fields.</div>';
+        $error = 'Please fill all fields.';
     } else {
         $data = "Name: $name \r\nPhone Number: $phone \r\nMessage: $message";
         
@@ -25,9 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $subject = 'Contact Form';
 
         if (mail($myEmail, $subject, $data, $headers)) {
-            $success = '<div class="alert alert-success">We have received your message.</div>';
+            $success = 'We have received your message.';
         } else {
-            $error = '<div class="alert alert-danger">There was an error sending your message. Please try again later.</div>';
+            $error = 'There was an error sending your message. Please try again later.';
         }
     }
 
