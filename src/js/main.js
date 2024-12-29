@@ -156,7 +156,7 @@ function load() {
         
         document.body.style.overflow = 'auto';
         document.body.style.touchAction = 'auto';
-    }, 2250);
+    }, 2500);
 };
 
 // Animaton For Items
