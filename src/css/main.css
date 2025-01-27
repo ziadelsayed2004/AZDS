@@ -481,6 +481,18 @@ footer{
   margin: 0;
   width: 100%;
 }
+.signture-l{
+position: absolute;
+left: 10%;
+width: 17.5% !important;
+height: auto !important;
+}
+.signture-r{
+  position: absolute;
+  right: 10%;
+  width: 17.5% !important;
+  height: auto !important;
+}
 .footer-brand{
   display: flex;
   justify-content: center;
