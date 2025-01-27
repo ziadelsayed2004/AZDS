@@ -659,27 +659,27 @@ height: auto !important;
   .sign-link-l{
     position: absolute;
     left: 5%;
-    width: 25vw;
-    height: 12.5vw;
-    margin-top: -1vh;
+    width: 28vw;
+    height: 15vw;
+    margin-top: 1vh;
     cursor: pointer;
-    }
-    .signture-l{
-    width: 25vw !important;
+  }
+  .signture-l{
+    width: 28vw !important;
     height: auto !important;
-    }
-    .sign-link-r{
+  }
+  .sign-link-r{
       position: absolute;
       right: 5%;
-      width: 25vw;
-      height: 12.5vw;
-      margin-top: -1vh;
+      width: 28vw;
+      height: 15vw;
+      margin-top: 1vh;
       cursor: pointer;
-      }
-    .signture-r{
-      width: 25vw !important;
+  }
+  .signture-r{
+      width: 28vw !important;
       height: auto !important;
-    }
+  }
   .footer-brand img{
     width: 55px;
     height: 55px;
