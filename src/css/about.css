@@ -2,9 +2,9 @@
 
 .about-wrapper{
     display: grid;
-    width: 88%;
-    margin-left:6%;
-    margin-right: 6%;
+    width: 95%;
+    margin-left:2.5%;
+    margin-right: 2.5%;
     padding: 0;
     justify-content: center;
 }
