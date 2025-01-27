@@ -15,11 +15,25 @@
     align-items: center;
     justify-content: center;
     padding: 0;
-    height: 12vh;
+    height: 10vh;
+    margin-bottom: 2.5vh;
     text-align: center;
 }
+.about-hi-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    width: 90vw;
+}
+.divider-about{
+    height: 1vh;
+    width: 35vw;
+    background-color: #0d3642;
+    transition: 0.5s;
+}
 .about-top h1{
-    font-size: clamp(4rem, 8vmin, 12vh);
+    font-size: clamp(10vh, 6vmin, 10vh);
     color: #0d3642;
     text-transform: uppercase;
 }
