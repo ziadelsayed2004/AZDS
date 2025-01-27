@@ -486,7 +486,7 @@ position: absolute;
 left: 5%;
 width: 20vw;
 height: 10.615vw;
-margin-top: -2.5vh;
+margin-top: -1vh;
 cursor: pointer;
 }
 .signture-l{
@@ -500,7 +500,7 @@ height: auto !important;
   right: 5%;
   width: 20vw;
   height: 10.615vw;
-  margin-top: -2.5vh;
+  margin-top: -1vh;
   cursor: pointer;
   }
 .signture-r{
