@@ -481,16 +481,30 @@ footer{
   margin: 0;
   width: 100%;
 }
+.sign-link-l{
+position: absolute;
+left: 5%;
+width: 20vw;
+height: 10.615vw;
+margin-top: -2.5vh;
+cursor: pointer;
+}
 .signture-l{
 position: absolute;
-left: 10%;
-width: 17.5% !important;
+left: 5%;
+width: 20vw !important;
 height: auto !important;
 }
-.signture-r{
+.sign-link-r{
   position: absolute;
-  right: 10%;
-  width: 17.5% !important;
+  right: 5%;
+  width: 20vw;
+  height: 10.615vw;
+  margin-top: -2.5vh;
+  cursor: pointer;
+  }
+.signture-r{
+  width: 20vw !important;
   height: auto !important;
 }
 .footer-brand{
