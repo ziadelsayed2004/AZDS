@@ -490,8 +490,6 @@ margin-top: -1vh;
 cursor: pointer;
 }
 .signture-l{
-position: absolute;
-left: 5%;
 width: 20vw !important;
 height: auto !important;
 }
@@ -658,6 +656,30 @@ height: auto !important;
     padding-left: 2%;
     padding-right: 2%;
   }
+  .sign-link-l{
+    position: absolute;
+    left: 5%;
+    width: 25vw;
+    height: 12.5vw;
+    margin-top: -1vh;
+    cursor: pointer;
+    }
+    .signture-l{
+    width: 25vw !important;
+    height: auto !important;
+    }
+    .sign-link-r{
+      position: absolute;
+      right: 5%;
+      width: 25vw;
+      height: 12.5vw;
+      margin-top: -1vh;
+      cursor: pointer;
+      }
+    .signture-r{
+      width: 25vw !important;
+      height: auto !important;
+    }
   .footer-brand img{
     width: 55px;
     height: 55px;
