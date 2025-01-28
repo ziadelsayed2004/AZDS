@@ -498,9 +498,10 @@ height: auto !important;
   right: 5%;
   width: 20vw;
   height: 10vw;
+  scale: 115%;
   margin-top: -1vh;
   cursor: pointer;
-  }
+}
 .signture-r{
   width: 20vw !important;
   height: auto !important;
