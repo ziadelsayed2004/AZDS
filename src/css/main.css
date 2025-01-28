@@ -510,7 +510,7 @@ height: auto !important;
   display: flex;
   justify-content: center;
 }
-.footer-brand img {
+.footer-brand .brand-logo {
   display: block;
   width: 75px;
   height: 75px;
