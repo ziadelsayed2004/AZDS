@@ -217,6 +217,54 @@ document.addEventListener("scroll", () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const elements = document.querySelectorAll(".about-l-style-preview");
+  elements.forEach((element) => {
+    const rect = element.getBoundingClientRect();
+    const isVisible =
+      rect.top < window.innerHeight - 25 && rect.bottom > 150;
+    if (isVisible) {
+      element.classList.add("active");
+    } else {
+      element.classList.remove("active");
+    }
+  });
+  }, 2750);
+});
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const elements = document.querySelectorAll(".about-r-style-preview");
+    elements.forEach((element) => {
+      const rect = element.getBoundingClientRect();
+      const isVisible =
+        rect.top < window.innerHeight - 25 && rect.bottom > 150;
+      if (isVisible) {
+        element.classList.add("active");
+      } else {
+        element.classList.remove("active");
+      }
+    });
+  }, 2750);
+});
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const elements = document.querySelectorAll(".about-title");
+
+    elements.forEach((element) => {
+      const rect = element.getBoundingClientRect();
+      const isVisible =
+        rect.top < window.innerHeight - 50 && rect.bottom > 165;
+      if (isVisible) {
+        element.classList.add("active");
+      } else {
+        element.classList.remove("active");
+      }
+    });
+  }, 2750);
+});
+
+
 // Dynamic VH
 function calculateDynamicVH() {
   const visualViewport = window.visualViewport;

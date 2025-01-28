@@ -293,6 +293,7 @@ color: var(--dark-bg);
   overflow: hidden;
   white-space: nowrap;
   width: 0;
+  margin-left: -11px;
   animation: typing 2s steps(50, end) 0.5s forwards;
   margin-top: -5px;
 }
@@ -480,6 +481,31 @@ footer{
   margin: 0;
   width: 100%;
 }
+.sign-link-l{
+position: absolute;
+left: 5%;
+width: 20vw;
+height: 10vw;
+margin-top: -1vh;
+cursor: pointer;
+}
+.signture-l{
+width: 20vw !important;
+height: auto !important;
+}
+.sign-link-r{
+  position: absolute;
+  right: 5%;
+  width: 20vw;
+  height: 10vw;
+  scale: 115%;
+  margin-top: -1vh;
+  cursor: pointer;
+}
+.signture-r{
+  width: 20vw !important;
+  height: auto !important;
+}
 .footer-brand{
   display: flex;
   justify-content: center;
@@ -631,6 +657,30 @@ footer{
     padding-left: 2%;
     padding-right: 2%;
   }
+  .sign-link-l{
+    position: absolute;
+    left: 2.5%;
+    width: 25vw;
+    height: 12.5vw;
+    margin-top: 1.5vh;
+    cursor: pointer;
+  }
+  .signture-l{
+    width: 25vw !important;
+    height: auto !important;
+  }
+  .sign-link-r{
+      position: absolute;
+      right: 2.5%;
+      width: 25vw;
+      height: 12.5vw;
+      margin-top: 1.5vh;
+      cursor: pointer;
+  }
+  .signture-r{
+      width: 25vw !important;
+      height: auto !important;
+  }
   .footer-brand img{
     width: 55px;
     height: 55px;
@@ -649,7 +699,7 @@ footer{
     margin-top: 12px;
   }
   .footer-copyright {
-    font-size: 10px;
+    font-size: 12.5px;
   }
 }
 @media (max-width:1024px) and (min-width:767px) {

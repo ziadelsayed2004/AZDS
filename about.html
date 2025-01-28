@@ -6,7 +6,7 @@
     <title>AZ Digital Services</title>
     <link rel="icon" href="src/imgs/logo-bg.png">
     <link rel="stylesheet" href="src/css/main.css">
-    <link rel="stylesheet" href="src/css/contactForm.css">
+    <link rel="stylesheet" href="src/css/about.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' rel='stylesheet' />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -68,12 +68,47 @@
     </div>
     
     <div class="content-container-frame">
+
+        <div class = "about-top">
+            <div class="about-hi-container">
+                <div class="divider-about about-l-style-preview div-l-style-preview"></div>
+                <h1 class="section-title about-title">hi<span>!</span></h1>
+                <div class="divider-about about-r-style-preview div-r-style-preview"></div>
+            </div>
+        </div>
+        <div class = "about-wrapper">       
+            <div class = "about-bottom">
+                <div class = "about-bottom-content">
+                  <div>       
+                    <div class = "about-img">
+                        <img src = "src/imgs/logo.png" alt = "about image">
+                    </div>
+                    <h2>Digital Services</h2>
+                    <h3>All digital services avilable here</h3>
+                    <h4>Here's who we are & what we do</h4>
+                    <div class = "about-para">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, aspernatur possimus ullam quaerat, laboriosam ex voluptate aliquid laborum, obcaecati ratione accusamus! Ea nisi modi dolor nam numquam? Temporibus, molestias amet.</p>
+                    </div>
+                  </div>
+                  <ul class = "icons">
+                    <li><i class = "fab fa-facebook-f"></i></li>
+                    <li><i class = "fab fa-tiktok"></i></li>
+                    <li><i class = "fab fa-whatsapp"></i></li>
+                    <li><i class = "fab fa-linkedin"></i></li>
+                    <li><i class = "fab fa-instagram"></i></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <footer class="footer bg-spotted">
         <div class="footer">
             <div class="footer-head">
                     <div class="footer-brand">
+                        <a id="mostafa-sign" class="sign-link-l"><img  class="signture-l" src="src/imgs/sign-mostafa.png" alt="MOSTAFA-SIGN" /></a>
+                        <a id="ziad-sign" class="sign-link-r"><img  class="signture-r" src="src/imgs/sign-ziad.png" alt="ZIAD-SIGN" /></a>
                         <a href="index.html"><img src="src/imgs/logo.png" width="110px" height="110px" alt=""></a>
                         <div class="footer-lable">Digital Services</div> 
                     </div>
@@ -96,6 +131,14 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
         <script src="src/js/main.js"></script>
+        <script>
+        document.getElementById('ziad-sign').addEventListener("click", () => {
+            window.location.href = "mailto:ziadelsayed@az-digital-services.com";
+          });
+        document.getElementById('mostafa-sign').addEventListener("click", () => {
+            window.location.href = "mailto:abdelrahmanmustapha@az-digital-services.com";
+          });
+        </script>
     </div>
 
 </body>
