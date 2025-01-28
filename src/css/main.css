@@ -659,7 +659,7 @@ height: auto !important;
   }
   .sign-link-l{
     position: absolute;
-    left: 5%;
+    left: 2.5%;
     width: 25vw;
     height: 12.5vw;
     margin-top: 1.5vh;
@@ -671,7 +671,7 @@ height: auto !important;
   }
   .sign-link-r{
       position: absolute;
-      right: 5%;
+      right: 2.5%;
       width: 25vw;
       height: 12.5vw;
       margin-top: 1.5vh;
@@ -699,7 +699,7 @@ height: auto !important;
     margin-top: 12px;
   }
   .footer-copyright {
-    font-size: 15px;
+    font-size: 12.5px;
   }
 }
 @media (max-width:1024px) and (min-width:767px) {
