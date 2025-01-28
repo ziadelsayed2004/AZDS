@@ -485,7 +485,7 @@ footer{
 position: absolute;
 left: 5%;
 width: 20vw;
-height: 10.615vw;
+height: 10vw;
 margin-top: -1vh;
 cursor: pointer;
 }
@@ -497,7 +497,7 @@ height: auto !important;
   position: absolute;
   right: 5%;
   width: 20vw;
-  height: 10.615vw;
+  height: 10vw;
   margin-top: -1vh;
   cursor: pointer;
   }
@@ -659,25 +659,25 @@ height: auto !important;
   .sign-link-l{
     position: absolute;
     left: 5%;
-    width: 28vw;
-    height: 15vw;
+    width: 25vw;
+    height: 12.5vw;
     margin-top: 1.5vh;
     cursor: pointer;
   }
   .signture-l{
-    width: 28vw !important;
+    width: 25vw !important;
     height: auto !important;
   }
   .sign-link-r{
       position: absolute;
       right: 5%;
-      width: 28vw;
-      height: 15vw;
+      width: 25vw;
+      height: 12.5vw;
       margin-top: 1.5vh;
       cursor: pointer;
   }
   .signture-r{
-      width: 28vw !important;
+      width: 25vw !important;
       height: auto !important;
   }
   .footer-brand img{
@@ -698,7 +698,7 @@ height: auto !important;
     margin-top: 12px;
   }
   .footer-copyright {
-    font-size: 10px;
+    font-size: 15px;
   }
 }
 @media (max-width:1024px) and (min-width:767px) {
