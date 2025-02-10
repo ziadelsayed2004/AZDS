@@ -38,9 +38,9 @@ background-image: conic-gradient(#381D6A 80%, #E0D1FF 88%, #E0D1FF 92%, #381D6A 
   }
 }
 
-.media-object:hover::before {
+/* .media-object:hover::before {
   animation-play-state: paused;
-}
+} */
 
 @property --angle {
   syntax: "<angle>";
@@ -128,8 +128,8 @@ mark {
 }
 
 .cardd__button:hover{
-  box-shadow: 1px 1px 10px #555;
-  background-color: var(--bg-color);
+  box-shadow: 1px 1px 10px #a2a2a2;
+  background-color: #092831;
   border-radius: 25px;
   color: #fafafa;  
 }
@@ -163,6 +163,10 @@ mark {
   font-weight: 600;
   line-height: 16px;
   text-align: center;
+}
+.media-object__button:hover {
+  background: linear-gradient(270deg, #b7cf81 0%, #1d5e6d 100%);
+  color: #000000;
 }
 
 .media-object__thumbnail {
