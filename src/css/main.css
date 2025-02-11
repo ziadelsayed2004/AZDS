@@ -321,7 +321,7 @@ color: var(--dark-bg);
 }
 @keyframes typing {
   to {
-     width: calc(100% + 22px);
+    width: calc(100% + 22px);
   }
 }
 
@@ -549,8 +549,8 @@ height: auto !important;
   margin-top: -40px;
 }
 .social-icon {
- fill: var(--light-bg);
- transition-duration: 0.5s;
+  fill: var(--light-bg);
+  transition-duration: 0.5s;
 }
 .social-icon:hover {
   fill: var(--alternate-color);

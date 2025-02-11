@@ -115,6 +115,7 @@ mark {
     font-weight: 600;
     cursor: pointer;
     transition: 0.25s;
+
   display: block;
   padding: 16px 32px;
   border: 1px solid var(--border-color);
@@ -123,7 +124,6 @@ mark {
   color: inherit;
   flex-grow: 1;
   text-align: center;
-  font-weight: 600;
   line-height: 16px;
 }
 
@@ -152,7 +152,9 @@ mark {
 .media-object__button {
   display: flex;
   align-items: center;
-  width: fit-content;
+  width: 22.5%;
+  height: 15px;
+  min-width: 140px;
   gap: 8px;
   padding: 16px 38px 14px;
   border-radius: 28px;
@@ -163,6 +165,7 @@ mark {
   font-weight: 600;
   line-height: 16px;
   text-align: center;
+  transition: 0.5s;
 }
 .media-object__button:hover {
   background: linear-gradient(270deg, #b7cf81 0%, #1d5e6d 100%);
