@@ -134,6 +134,33 @@ mark {
   color: #fafafa;  
 }
 
+.cart__button {
+  
+  background-color: #0d364200;
+  border-style: solid ;
+  color: var(--bg-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.5s;
+
+display: block;
+padding: 16px 32px;
+border: 1px solid var(--bg-color);
+border-radius: 15px;
+text-decoration: none;
+color: var(--bg-color);
+flex-grow: 1;
+text-align: center;
+line-height: 16px;
+}
+
+.cart__button:hover{
+box-shadow: 1px 1px 10px #a2a2a2;
+background-color: #092831;
+border-radius: 25px;
+color: #fafafa;  
+}
+
 .media-object {
   display: flex;
   justify-content: space-between;
