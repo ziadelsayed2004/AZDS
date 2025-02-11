@@ -55,7 +55,19 @@ background-image: conic-gradient(#381D6A 80%, #E0D1FF 88%, #E0D1FF 92%, #381D6A 
 }
 
 
-
+.clicks{
+  
+  padding: 1px 50px 50px 50px;
+  margin-top: 0.5px;
+  height: auto;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  border-radius: 24px;
+  font: 100%/1.6 'Open Sans', sans-serif;
+}
 
 .cardd {
   --text-color: #fff;
@@ -75,7 +87,7 @@ background-image: conic-gradient(#381D6A 80%, #E0D1FF 88%, #E0D1FF 92%, #381D6A 
   color: var(--text-color);
   background: var(--bg-color);
   border: 1px solid var(--border-color);
-  font: 100%/1.6 'Open Sans', sans-serif;
+  
   
 }
 
@@ -102,8 +114,8 @@ mark {
 }
 
 .cardd__actions {
-  display: flex;
   gap: 24px;
+  margin-bottom: 5px;
 }
 
 .cardd__button {
@@ -142,7 +154,6 @@ mark {
   font-weight: 800;
   cursor: pointer;
   transition: 0.5s;
-
 display: block;
 padding: 16px 32px;
 border: 1px solid var(--bg-color);
@@ -152,6 +163,7 @@ color: var(--bg-color);
 flex-grow: 1;
 text-align: center;
 line-height: 16px;
+margin: 15px;
 }
 
 .cart__button:hover{
