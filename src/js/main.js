@@ -323,5 +323,3 @@ document.getElementById('web-card').addEventListener('click', function () {
 document.getElementById('gra-card').addEventListener('click', function () {
   scrollToSection('graphics-target');
 });
-
-
