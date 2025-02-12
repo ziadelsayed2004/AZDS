@@ -332,10 +332,16 @@
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
         <script src="src/js/main.js"></script>
         <script>
-        document.getElementById('ziad-sign').addEventListener("click", () => {
-            window.location.href = "mailto:ziadelsayed@az-digital-services.com";
+          document.getElementById('services-btn').addEventListener('click', function () {
+            scrollToSection('services-target-btn');
           });
-        document.getElementById('mostafa-sign').addEventListener("click", () => {
+          document.getElementById('portofolio-btn').addEventListener('click', function () {
+            scrollToSection('portofolio-target-btn');
+          });
+          document.getElementById('ziad-sign').addEventListener("click", () => {
+              window.location.href = "mailto:ziadelsayed@az-digital-services.com";
+            });
+          document.getElementById('mostafa-sign').addEventListener("click", () => {
             window.location.href = "mailto:abdelrahmanmustapha@az-digital-services.com";
           });
         </script>

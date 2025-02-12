@@ -325,9 +325,3 @@ document.getElementById('gra-card').addEventListener('click', function () {
 });
 
 
-document.getElementById('services-btn').addEventListener('click', function () {
-  scrollToSection('services-target-btn');
-});
-document.getElementById('portofolio-btn').addEventListener('click', function () {
-  scrollToSection('portofolio-target-btn');
-});
