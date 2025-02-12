@@ -253,3 +253,6 @@ color: #fafafa;
   left: 32px;
 }
 
+.hidden {
+  display: none;
+}

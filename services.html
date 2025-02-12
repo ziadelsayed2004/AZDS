@@ -102,14 +102,14 @@
                         <div class="media-object__thumbnail"></div>
                     </div>
                     <div class="cardd__actions">
-                        <a href="#portofolio-website" class="cardd__button" >Portofolio</a>
+                        <a id="toggleButton" class="cardd__button" >Portofolio</a>
                         <a href="#" class="cardd__button">Paid & free Plans</a>
                     </div>
                 </div>
                 
             </div>
             
-            <div id="portofolio-website">
+            <div id="cardsContainer" class="hidden">
                 <div>
                     <br>
                     <div class="divider-container">
@@ -206,12 +206,12 @@
                 <div class="media-object__thumbnail"></div>
             </div>
             <div class="cardd__actions">
-                <a href="#" class="cardd__button" target="_blank">Example Audit</a>
+                <a id="toggleBtn" class="cardd__button">Portofolio</a>
                 <a target="_blank" href="#" class="cardd__button">Paid & free Plans</a>
             </div>
         </div>
     
-        <div id="portofolio-container">
+        <div  id="cartsContainer" class="hidden">
             <div>
                 <br>
                 <div class="divider-container">
@@ -328,6 +328,30 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
         <script src="src/js/main.js"></script>
+        <script>document.getElementById("toggleButton").addEventListener("click", function() {
+            let cardsContainer = document.getElementById("cardsContainer");
+            
+            if (cardsContainer.classList.contains("hidden")) {
+                cardsContainer.classList.remove("hidden");
+                this.textContent = "Hide Portofolio";
+            } else {
+                cardsContainer.classList.add("hidden");
+                this.textContent = " Portofolio";
+            }
+            });</script>
+
+<script>document.getElementById("toggleBtn").addEventListener("click", function() {
+    let cardsContainer = document.getElementById("cartsContainer");
+    
+    if (cardsContainer.classList.contains("hidden")) {
+        cardsContainer.classList.remove("hidden");
+        this.textContent = "Hide Portofolio";
+    } else {
+        cardsContainer.classList.add("hidden");
+        this.textContent = " Portofolio";
+    }
+    });</script>
+
         <script>
         document.getElementById('ziad-sign').addEventListener("click", () => {
             window.location.href = "mailto:ziadelsayed@az-digital-services.com";
