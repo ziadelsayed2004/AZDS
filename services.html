@@ -123,7 +123,7 @@
                         <div class="media-object-thumbnail"></div>
                     </div>
                     <div class="card-action">
-                        <a id="toggleButton" class="card-button" href="#wcardContainer" >Portofolio</a>
+                        <a id="webButton" class="card-button" >Portofolio</a>
                     </div>
             </div>
             <div id="wcardContainer" class="hidden">
@@ -234,7 +234,7 @@
                     <div class="media-object-thumbnail"></div>
                 </div>
                 <div class="card-action">
-                    <a id="toggleBtn" class="card-button" href="#gcardContainer">Portofolio</a>
+                    <a id="graphicButton" class="card-button">Portofolio</a>
                     <!-- <a href="#" class="card-button">Paid & free Plans</a> -->
                 </div>
             </div>
@@ -355,27 +355,31 @@
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
         <script src="src/js/main.js"></script>
         <script>
-          document.getElementById('web-card').addEventListener('click', function () {
+            document.getElementById('web-card').addEventListener('click', function () {
             scrollToSection('website-target');
           });
-          document.getElementById('gra-card').addEventListener('click', function () {
+            document.getElementById('gra-card').addEventListener('click', function () {
             scrollToSection('graphics-target');
           });
-            document.getElementById("toggleButton").addEventListener("click", function() {
+            document.getElementById("webButton").addEventListener("click", function(event) {
             let cardsContainer = document.getElementById("wcardContainer");
             if (cardsContainer.classList.contains("hidden")) {
                 cardsContainer.classList.remove("hidden");
                 this.textContent = "Hide Portofolio";
+                event.preventDefault();
+                document.getElementById("wcardContainer").scrollIntoView({ behavior: 'smooth' });
             } else {
                 cardsContainer.classList.add("hidden");
                 this.textContent = "Portofolio";
             }
             });
-            document.getElementById("toggleBtn").addEventListener("click", function() {
+            document.getElementById("graphicButton").addEventListener("click", function(event) {
             let cardsContainer = document.getElementById("gcardContainer");  
             if (cardsContainer.classList.contains("hidden")) {
                 cardsContainer.classList.remove("hidden");
                 this.textContent = "Hide Portofolio";
+                event.preventDefault();
+                document.getElementById("gcardContainer").scrollIntoView({ behavior: 'smooth' });
             } else {
                 cardsContainer.classList.add("hidden");
                 this.textContent = "Portofolio";
