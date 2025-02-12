@@ -454,7 +454,7 @@ nav div li a {
   margin-top: -0.5px;
   border-radius: 0px 0px 25px 25px;
   height: auto;
-  min-height: calc(var(--vh, 75vh) - 25vh - 165px);;
+  min-height: calc(50vh - 165px);;
   transition: height 0.3s ease;
   display: flex;
   flex-direction: column;

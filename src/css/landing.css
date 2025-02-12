@@ -16,7 +16,7 @@
   justify-content: space-around;
   align-items: center;
   height: auto;
-  min-height: calc(var(--vh, 100vh) - 150px);
+  min-height: calc(100vh - 150px);
   transition: height 0.5s ease;
 }
 .land-fig{
@@ -205,7 +205,7 @@
   .landing{
     height: auto;
     transition: height 0.3s ease;
-    min-height: calc(var(--vh, 100vh) - 175px);
+    min-height: calc (100vh - 175px);
   }
   .land-fig{
     height: auto;
