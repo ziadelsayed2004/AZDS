@@ -75,7 +75,6 @@ function toggleNav() {
 function load() {
   const darkmode = localStorage.getItem('darkmode');
   if (darkmode === null) {
-    // فحص إعدادات الجهاز
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (prefersDark) {
       body.classList.add('darkmode');
