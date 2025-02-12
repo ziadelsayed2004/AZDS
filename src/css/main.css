@@ -771,3 +771,22 @@ height: auto !important;
     display: none;
   }
 }
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 80px; /* أعلى زر الـ progress-wrap */
+  right: 15px; /* محاذاة مع زر الـ progress-wrap */
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 50px; /* حجم أيقونة الواتساب */
+  height: 50px;
+  
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-float img:hover {
+  transform: scale(1.1);
+}
