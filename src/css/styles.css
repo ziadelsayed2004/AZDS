@@ -127,7 +127,7 @@ mark {
     font-weight: 600;
     cursor: pointer;
     transition: 0.25s;
-
+  margin-bottom: 15px;
   display: block;
   padding: 16px 32px;
   border: 1px solid var(--border-color);
