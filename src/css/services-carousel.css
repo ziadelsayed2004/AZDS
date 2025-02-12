@@ -31,7 +31,7 @@
     padding-top: 12vh;
     height: auto;
     min-height: calc(var(--vh, 100vh) - 150px);
-    transition: height 0.3s ease;
+    transition: height 0.5s ease;
   }
   #services-carousel {
     display: flex;
