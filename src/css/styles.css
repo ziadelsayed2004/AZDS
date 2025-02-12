@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .cardd {
   isolation: isolate;
 }
@@ -173,6 +177,61 @@ border-radius: 25px;
 color: #fafafa;  
 }
 
+/* زرار الخدمات */
+.cart1__button { 
+  position: relative;
+  background-color: #0d364200;
+  border-style: solid;
+  color: var(--bg-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.5s;
+  display: block;
+  padding: 16px 32px;
+  border: 1px solid var(--bg-color);
+  border-radius: 15px;
+  text-decoration: none;
+  flex-grow: 1;
+  text-align: center;
+  line-height: 16px;
+  margin: 15px;
+  overflow: hidden; /* يمنع خروج التأثير خارج الزر */
+}
+
+/* شريط التحميل مع النص */
+.cart1__button::before {
+  content: "Coming Soon";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%; /* يبدأ بدون عرض */
+  height: 100%;
+  border-radius: 25px;
+  background: #092831; /* لون تأثير التحميل */
+  transition: width 0.75s ease-in-out, opacity 0.75s ease-in-out;
+  box-shadow: 1px 1px 10px #a2a2a2;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* إخفاء النص */
+}
+
+/* إظهار الشريط مع النص عند الـ hover */
+.cart1__button:hover::before {
+  width: 100%; /* يملأ الزرار بالكامل */
+  opacity: 1; /* ظهور النص */
+}
+
+/* التأثير النهائي عند الـ hover */
+.cart1__button:hover { 
+  box-shadow: 1px 1px 10px #a2a2a2;
+  background-color: #0d364200;
+  border-radius: 25px;
+  color: #0d364200;
+}
+
+
 .media-object {
   display: flex;
   justify-content: space-between;
@@ -255,4 +314,17 @@ color: #fafafa;
 
 .hidden {
   display: none;
+}
+
+#G1 {
+  scroll-margin-top: 110px; 
+}
+#ww {
+  scroll-margin-top: 110px; 
+}
+#cardsContainer{
+  scroll-margin-top: 130px;
+}
+#cartsContainer{
+  scroll-margin-top: 130px;
 }
