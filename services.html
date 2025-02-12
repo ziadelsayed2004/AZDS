@@ -355,6 +355,12 @@
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
         <script src="src/js/main.js"></script>
         <script>
+          document.getElementById('web-card').addEventListener('click', function () {
+            scrollToSection('website-target');
+          });
+          document.getElementById('gra-card').addEventListener('click', function () {
+            scrollToSection('graphics-target');
+          });
             document.getElementById("toggleButton").addEventListener("click", function() {
             let cardsContainer = document.getElementById("wcardContainer");
             if (cardsContainer.classList.contains("hidden")) {

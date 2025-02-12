@@ -316,9 +316,85 @@ function scrollToSection(targetId) {
   }
 }
 
-document.getElementById('web-card').addEventListener('click', function () {
-  scrollToSection('website-target');
-});
-document.getElementById('gra-card').addEventListener('click', function () {
-  scrollToSection('graphics-target');
+// Contact Form
+$(function () {
+  "use strict";
+
+  // Validation flags
+  var userError = true;
+  var emailError = true;
+  var phoneError = true;
+  var messageError = true;
+
+  // Show alert box and add red border to the input field
+  function showAlert(element) {
+      element.siblings(".alert-box").fadeIn(200); // Show alert
+      element.css("border", "2px solid #f00"); // Add red border to the input field
+  }
+
+  // Hide alert box and reset border of the input field
+  function hideAlert(element) {
+      element.siblings(".alert-box").fadeOut(200); // Hide alert
+      element.css("border", "2px solid #080"); // Add green border to the input field
+  }
+
+  // Username validation
+  $('input[name="username"]').blur(function () {
+      if ($(this).val().length < 3) {
+          showAlert($(this));
+          userError = true;
+      } else {
+          hideAlert($(this));
+          userError = false;
+      }
+  });
+
+  // Email validation
+  $('input[name="email"]').blur(function () {
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test($(this).val())) {
+          showAlert($(this));
+          emailError = true;
+      } else {
+          hideAlert($(this));
+          emailError = false;
+      }
+  });
+
+  // Phone validation
+  $('input[name="phone"]').blur(function () {
+      var phonePattern = /^[0-9]{10,15}$/;
+      if (!phonePattern.test($(this).val())) {
+          showAlert($(this));
+          phoneError = true;
+      } else {
+          hideAlert($(this));
+          phoneError = false;
+      }
+  });
+
+  // Message validation
+  $('textarea[name="Message"]').blur(function () {
+      if ($(this).val().length < 10) {
+          showAlert($(this));
+          messageError = true;
+      } else {
+          hideAlert($(this));
+          messageError = false;
+      }
+  });
+
+  // Close alert on "X" click
+  $(".close-alert").click(function () {
+      $(this).parent(".alert-box").fadeOut(200);
+      $(this).closest(".alert-box").siblings("input, textarea").css("border", "1px solid #ccc"); // Reset border to default
+  });
+
+  // Form submission validation
+  $(".contact-form").submit(function (e) {
+      if (userError || emailError || phoneError || messageError) {
+          e.preventDefault();
+          $('input, textarea').blur(); // Trigger blur events for validation
+      }
+  });
 });
