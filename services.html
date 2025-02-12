@@ -6,12 +6,12 @@
     <title>AZ Digital Services</title>
     <link rel="icon" href="src/imgs/logo-bg.png">
     <link rel="stylesheet" href="src/css/main.css">
-    <link rel="stylesheet" href="src/css/contactForm.css">
+    <link rel="stylesheet" href="src/css/about.css">
     <link rel="stylesheet" href="src/css/portofolio.css">
+    <link rel="stylesheet" href="src/css/services.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' rel='stylesheet' />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="src/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -21,11 +21,11 @@
             <img id="logo" src="src/imgs/logo.png" alt="Logo" />
             <p id="tagline">Digital Services</p>
         </div>
-    </div>
-      
+    </div>   
     <a href="https://wa.me/201063222896" class="whatsapp-float" target="_blank">
       <img src="src/imgs/whatsapp-icon.png" alt="WhatsApp">
-  </a>
+    </a>
+
     <div id="progress-wrap" class="progress-wrap">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
@@ -74,23 +74,28 @@
     
     <div class="content-container-frame">
 
-        <h1 style="text-align:center;">Our Services</h1>
-        <br>
-        <div   class="clicks">
-        <div class="cardd__actions ">
-            <a href="#ww" class="cart__button">Website Services</a>
-            <a href="#G1" class="cart__button">Graphic Services</a>
-            <a class="cart1__button">Marketing Services</a>
+      <div class = "about-top">
+        <div class="about-hi-container">
+            <div class="divider-about about-l-style-preview div-l-style-preview"></div>
+            <h1 class="section-title about-title">Our<span>Services</span></h1>
+            <div class="divider-about about-r-style-preview div-r-style-preview"></div>
         </div>
-    </div>
-            
-            <div id="ww">
-                <br>
-            </div>
+      </div>
 
-                <div class="cardd">
-                    <h1 class="cardd__title " style="text-align: center"><mark>Website</mark> Services</h1><br>
-                    <p class="cardd__description " ><strong>At AZ for Digital Services, we provide cutting-edge web solutions tailored to your business needs. Whether you need a stunning website, a robust application, or secure hosting, we’ve got you covered.</strong>
+        <br>
+        <div class="clicks">
+          <div class="card-action">
+              <a id="web-card" class="services-btn">Website Services</a>
+              <a id="gra-card" class="services-btn">Graphic Services</a>
+              <a class="soon-btn">Marketing Services</a>
+              <a class="soon-btn">Other Services</a>
+          </div>
+        </div>
+            
+            <br id="website-target">
+            <div class="card-ser">
+                    <h1 class="card-title" style="text-align: center;"><mark>Website</mark> Services</h1><br>
+                    <p class="card-description " ><strong>At AZ for Digital Services, we provide cutting-edge web solutions tailored to your business needs. Whether you need a stunning website, a robust application, or secure hosting, we’ve got you covered.</strong>
                       <br>
                       <br><b>Frontend Websites :</b> We design and develop responsive, fast, and visually appealing websites using the latest technologies like HTML, CSS, JavaScript, and React.js to ensure a seamless user experience.
                       <br>
@@ -106,8 +111,8 @@
                     </p>
                     <div class="media-object">
                         <div>
-                            <h2 class="media-object__title">🌐 Turn Your Idea into Reality ! <br />💻 Your Next Big Project Starts Here .</h2>
-                            <a href="contact.html"  class="media-object__button">
+                            <h2 class="media-object-title">🌐 Turn Your Idea into Reality ! <br />💻 Your Next Big Project Starts Here .</h2>
+                            <a href="contact.html"  class="media-object-button">
                               Get in Touch !
                                 <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9.54461 12.3572L10.7229 13.5355L14.2596 9.9997L10.7238 6.46387L9.54544 7.64303L11.0679 9.16637H4.78711V10.833H11.0679L9.54461 12.3572Z" fill="#F8F8F8"/>
@@ -115,17 +120,13 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="media-object__thumbnail"></div>
+                        <div class="media-object-thumbnail"></div>
                     </div>
-                    <div class="cardd__actions">
-                        <a id="toggleButton" class="cardd__button " href="#cardsContainer" >Portofolio</a>
-                        <!-- <a href="#" class="cardd__button">Paid & free Plans</a> -->
+                    <div class="card-action">
+                        <a id="toggleButton" class="card-button" href="#wcardContainer" >Portofolio</a>
                     </div>
-                </div>
-                
-            
-            
-            <div id="cardsContainer" class="hidden">
+            </div>
+            <div id="wcardContainer" class="hidden">
                 <div>
                     <br>
                     <div class="divider-container">
@@ -200,136 +201,130 @@
                 </div>
             </div>
 
-    <div id="G1">
-        <br>
-    </div>
-
-
-        <div class="cardd">
-            <h1 class="cardd__title" style="text-align:center ;"><mark>Graphics & Media</mark> Services</h1>
-            <p class="cardd__description"><strong>AZ for Digital Services, we bring creativity to life with professional media and graphic design solutions. Whether you need a stunning logo, engaging animations, or high-quality translations, we’ve got you covered!</strong>
-                <br> <br>
-              <b>Product Design :</b> We create modern, visually appealing, and functional product designs that enhance your brand identity and market presence.
-                <br><br>
-              <b>Logo Design : </b> A logo is the face of your brand! We craft unique, memorable, and impactful logos that reflect your brand’s identity and vision.
-                <br><br>
-              <b>Posters & Promotional Materials : </b>We design eye-catching posters, banners, and promotional materials that grab attention and communicate your message effectively.
-                <br><br>
-              <b>Video Intro & Outro :</b> Make a lasting impression with professional video intros & outros for your brand, YouTube channel, or business presentations.
-                <br><br>
-              <b>Animation : </b>We create engaging 2D and 3D animations that bring ideas to life, perfect for advertisements, explainer videos, and social media.
-                <br><br>
-              <b>Character Design : </b>We design unique and expressive characters for branding, storytelling, animation, and games, making your content stand out.
-                <br><br>
-              <b>Translation Services :</b> Expand your reach with professional translation services in multiple languages, ensuring accurate and culturally appropriate communication.</p>
-            <br>
-              <div class="media-object">
+            <br id="graphics-target">
+            <div class="card-ser">
+                <h1 class="card-title" style="text-align:center;"><mark>Graphics & Media</mark> Services</h1>
+                <p class="card-description"><strong>AZ for Digital Services, we bring creativity to life with professional media and graphic design solutions. Whether you need a stunning logo, engaging animations, or high-quality translations, we’ve got you covered!</strong>
+                    <br> <br>
+                  <b>Product Design :</b> We create modern, visually appealing, and functional product designs that enhance your brand identity and market presence.
+                    <br><br>
+                  <b>Logo Design : </b> A logo is the face of your brand! We craft unique, memorable, and impactful logos that reflect your brand’s identity and vision.
+                    <br><br>
+                  <b>Posters & Promotional Materials : </b>We design eye-catching posters, banners, and promotional materials that grab attention and communicate your message effectively.
+                    <br><br>
+                  <b>Video Intro & Outro :</b> Make a lasting impression with professional video intros & outros for your brand, YouTube channel, or business presentations.
+                    <br><br>
+                  <b>Animation : </b>We create engaging 2D and 3D animations that bring ideas to life, perfect for advertisements, explainer videos, and social media.
+                    <br><br>
+                  <b>Character Design : </b>We design unique and expressive characters for branding, storytelling, animation, and games, making your content stand out.
+                    <br><br>
+                  <b>Translation Services :</b> Expand your reach with professional translation services in multiple languages, ensuring accurate and culturally appropriate communication.</p>
+                <br>
+                  <div class="media-object">
+                    <div>
+                    <h2 class="media-object-title">🎨 Creativity is the bridge between imagination and reality ! <br />🖌️ We can make anything you can think of.</h2>
+                    <a href="contact.html" class="media-object-button">
+                      Get in Touch !
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.54461 12.3572L10.7229 13.5355L14.2596 9.9997L10.7238 6.46387L9.54544 7.64303L11.0679 9.16637H4.78711V10.833H11.0679L9.54461 12.3572Z" fill="#F8F8F8"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9823 16.4813C19.5623 12.9013 19.5623 7.09801 15.9823 3.51801C12.4023 -0.061992 6.59898 -0.061992 3.01898 3.51801C-0.561015 7.09801 -0.561015 12.9013 3.01898 16.4813C6.59898 20.0613 12.4023 20.0613 15.9823 16.4813ZM14.804 15.303C15.5004 14.6066 16.0529 13.7798 16.4298 12.8698C16.8067 11.9599 17.0007 10.9846 17.0007 9.99967C17.0007 9.01475 16.8067 8.03948 16.4298 7.12953C16.0529 6.21958 15.5004 5.39278 14.804 4.69634C14.1075 3.9999 13.2807 3.44745 12.3708 3.07053C11.4608 2.69362 10.4856 2.49963 9.50065 2.49963C8.51573 2.49963 7.54045 2.69362 6.63051 3.07054C5.72056 3.44745 4.89376 3.9999 4.19732 4.69634C2.79079 6.10287 2.0006 8.01054 2.0006 9.99967C2.0006 11.9888 2.79079 13.8965 4.19732 15.303C5.60385 16.7095 7.51151 17.4997 9.50065 17.4997C11.4898 17.4997 13.3975 16.7095 14.804 15.303Z" fill="#F8F8F8"/>
+                        </svg>
+                    </a>
+                    </div>
+                    <div class="media-object-thumbnail"></div>
+                </div>
+                <div class="card-action">
+                    <a id="toggleBtn" class="card-button" href="#gcardContainer">Portofolio</a>
+                    <!-- <a href="#" class="card-button">Paid & free Plans</a> -->
+                </div>
+            </div>
+            <div id="gcardContainer" class="hidden">
                 <div>
-                <h2 class="media-object__title">🎨 Creativity is the bridge between imagination and reality ! <br />🖌️ We can make anything you can think of.</h2>
-                <a href="contact.html" class="media-object__button">
-                  Get in Touch !
-                    <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.54461 12.3572L10.7229 13.5355L14.2596 9.9997L10.7238 6.46387L9.54544 7.64303L11.0679 9.16637H4.78711V10.833H11.0679L9.54461 12.3572Z" fill="#F8F8F8"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9823 16.4813C19.5623 12.9013 19.5623 7.09801 15.9823 3.51801C12.4023 -0.061992 6.59898 -0.061992 3.01898 3.51801C-0.561015 7.09801 -0.561015 12.9013 3.01898 16.4813C6.59898 20.0613 12.4023 20.0613 15.9823 16.4813ZM14.804 15.303C15.5004 14.6066 16.0529 13.7798 16.4298 12.8698C16.8067 11.9599 17.0007 10.9846 17.0007 9.99967C17.0007 9.01475 16.8067 8.03948 16.4298 7.12953C16.0529 6.21958 15.5004 5.39278 14.804 4.69634C14.1075 3.9999 13.2807 3.44745 12.3708 3.07053C11.4608 2.69362 10.4856 2.49963 9.50065 2.49963C8.51573 2.49963 7.54045 2.69362 6.63051 3.07054C5.72056 3.44745 4.89376 3.9999 4.19732 4.69634C2.79079 6.10287 2.0006 8.01054 2.0006 9.99967C2.0006 11.9888 2.79079 13.8965 4.19732 15.303C5.60385 16.7095 7.51151 17.4997 9.50065 17.4997C11.4898 17.4997 13.3975 16.7095 14.804 15.303Z" fill="#F8F8F8"/>
-                    </svg>
-                </a>
-                </div>
-                <div class="media-object__thumbnail"></div>
-            </div>
-            <div class="cardd__actions">
-                <a id="toggleBtn" class="cardd__button" href="#cartsContainer">Portofolio</a>
-                <!-- <a href="#" class="cardd__button">Paid & free Plans</a> -->
-            </div>
-        </div>
-    
-        <div  id="cartsContainer" class="hidden">
-            <div>
-                <br>
-                <div class="divider-container">
-                    <div class="divider div-l-style-preview"></div>
-                    <div class="section-title">Media</div>
-                    <div class="divider div-r-style-preview"></div>
-                </div>
-                <br>
-                <div class="portofolio-content">
-                  
-                
-                      <a class="portofolio content-style-preview card">
-                        <div class="content">
-                          <span class="title">Products</span>
-                          <span class="category">Design / Creative</span>
-                        </div>
-                        <div class="image">
-                          <img src="src/imgs/services/prod.png" alt="" />
-                        </div>
-                      </a>
+                    <br>
+                    <div class="divider-container">
+                        <div class="divider div-l-style-preview"></div>
+                        <div class="section-title">Media</div>
+                        <div class="divider div-r-style-preview"></div>
+                    </div>
+                    <br>
+                    <div class="portofolio-content">
+                      
                     
-                      <a class="portofolio content-style-preview card">
-                        <div class="content">
-                          <span class="title">Logo</span>
-                          <span class="category">Design / Logo / Clothing</span>
-                        </div>
-                        <div class="image">
-                          <img src="src/imgs/services/tshire.png" alt="" />
-                        </div>
-                      </a>
-                    
-                      <a class="portofolio content-style-preview card">
-                        <div class="content">
-                          <span class="title">Intro & OUTRO</span>
-                          <span class="category">Animation / Montage / Creation</span>
-                        </div>
-                        <div class="image">
-                          <img src="src/imgs/services/intro.png" alt="" />
-                        </div>
-                      </a>
-
-                      <a class="portofolio content-style-preview card">
-                        <div class="content">
-                          <span class="title">Publish projects</span>
-                          <span class="category"> Publish your project</span>
-                        </div>
-                        <div class="image">
-                          <img src="src/imgs/services/pro.jpg" alt="" />
-                        </div>
-                      </a>
-                    
-                      <a class="portofolio content-style-preview card">
-                        <div class="content">
-                          <span class="title">Animation</span>
-                          <span class="category">Animation / Charcters / Sketch </span>
-                        </div>
-                        <div class="image">
-                          <img src="src/imgs/services/animation.png" alt="" />
-                        </div>
-                      </a>
-                    
-                      <!-- <a class="portofolio content-style-preview card">
-                        <div class="content">
-                          <span class="title">CCTV & Securety systems</span>
-                          <span class="category">installation /sale</span>
-                        </div>
-                        <div class="image">
-                          <img src="src/imgs/services/camera.png" alt="" />
-                        </div>
-                      </a>-->
-                    
-                      <a class="portofolio content-style-preview card">
-                        <div class="content">
-                          <span class="title">translation</span>
-                          <span class="category">Translation </span>
-                        </div>
-                        <div class="image">
-                            <img src="src/imgs/services/trans.jpg" alt="" />
-                        </div>
-                      </a> 
+                          <a class="portofolio content-style-preview card">
+                            <div class="content">
+                              <span class="title">Products</span>
+                              <span class="category">Design / Creative</span>
+                            </div>
+                            <div class="image">
+                              <img src="src/imgs/services/prod.png" alt="" />
+                            </div>
+                          </a>
                         
+                          <a class="portofolio content-style-preview card">
+                            <div class="content">
+                              <span class="title">Logo</span>
+                              <span class="category">Design / Logo / Clothing</span>
+                            </div>
+                            <div class="image">
+                              <img src="src/imgs/services/tshire.png" alt="" />
+                            </div>
+                          </a>
+                        
+                          <a class="portofolio content-style-preview card">
+                            <div class="content">
+                              <span class="title">Intro & OUTRO</span>
+                              <span class="category">Animation / Montage / Creation</span>
+                            </div>
+                            <div class="image">
+                              <img src="src/imgs/services/intro.png" alt="" />
+                            </div>
+                          </a>
+
+                          <a class="portofolio content-style-preview card">
+                            <div class="content">
+                              <span class="title">Publish projects</span>
+                              <span class="category"> Publish your project</span>
+                            </div>
+                            <div class="image">
+                              <img src="src/imgs/services/pro.jpg" alt="" />
+                            </div>
+                          </a>
+                        
+                          <a class="portofolio content-style-preview card">
+                            <div class="content">
+                              <span class="title">Animation</span>
+                              <span class="category">Animation / Charcters / Sketch </span>
+                            </div>
+                            <div class="image">
+                              <img src="src/imgs/services/animation.png" alt="" />
+                            </div>
+                          </a>
+                        
+                          <!-- <a class="portofolio content-style-preview card">
+                            <div class="content">
+                              <span class="title">CCTV & Securety systems</span>
+                              <span class="category">installation /sale</span>
+                            </div>
+                            <div class="image">
+                              <img src="src/imgs/services/camera.png" alt="" />
+                            </div>
+                          </a>-->
+                        
+                          <a class="portofolio content-style-preview card">
+                            <div class="content">
+                              <span class="title">translation</span>
+                              <span class="category">Translation </span>
+                            </div>
+                            <div class="image">
+                                <img src="src/imgs/services/trans.jpg" alt="" />
+                            </div>
+                          </a> 
+                            
+                    </div>
                 </div>
             </div>
-        </div>
 
     </div>
-
 
     <footer class="footer bg-spotted">
         <div class="footer">
@@ -359,38 +354,33 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
         <script src="src/js/main.js"></script>
-        <script>document.getElementById("toggleButton").addEventListener("click", function() {
-            let cardsContainer = document.getElementById("cardsContainer");
-            
+        <script>
+            document.getElementById("toggleButton").addEventListener("click", function() {
+            let cardsContainer = document.getElementById("wcardContainer");
             if (cardsContainer.classList.contains("hidden")) {
                 cardsContainer.classList.remove("hidden");
                 this.textContent = "Hide Portofolio";
             } else {
                 cardsContainer.classList.add("hidden");
-                this.textContent = " Portofolio";
+                this.textContent = "Portofolio";
             }
-            });</script>
-
-<script>document.getElementById("toggleBtn").addEventListener("click", function() {
-    let cardsContainer = document.getElementById("cartsContainer");
-    
-    if (cardsContainer.classList.contains("hidden")) {
-        cardsContainer.classList.remove("hidden");
-        this.textContent = "Hide Portofolio";
-    } else {
-        cardsContainer.classList.add("hidden");
-        this.textContent = " Portofolio";
-    }
-    });</script>
-    
-
-        <script>
-        document.getElementById('ziad-sign').addEventListener("click", () => {
-            window.location.href = "mailto:ziadelsayed@az-digital-services.com";
             });
-        document.getElementById('mostafa-sign').addEventListener("click", () => {
-            window.location.href = "mailto:abdelrahmanmustapha@az-digital-services.com";
+            document.getElementById("toggleBtn").addEventListener("click", function() {
+            let cardsContainer = document.getElementById("gcardContainer");  
+            if (cardsContainer.classList.contains("hidden")) {
+                cardsContainer.classList.remove("hidden");
+                this.textContent = "Hide Portofolio";
+            } else {
+                cardsContainer.classList.add("hidden");
+                this.textContent = "Portofolio";
+            }
             });
+            document.getElementById('ziad-sign').addEventListener("click", () => {
+                window.location.href = "mailto:ziadelsayed@az-digital-services.com";
+                });
+            document.getElementById('mostafa-sign').addEventListener("click", () => {
+                window.location.href = "mailto:abdelrahmanmustapha@az-digital-services.com";
+                });
         </script>
     </div>
 

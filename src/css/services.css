@@ -1,20 +1,16 @@
 html {
   scroll-behavior: smooth;
 }
-
-.cardd {
+.card {
   isolation: isolate;
 }
-
 .media-object {
   --border-width: 2px;
   --radius: 24px;
-
   position: relative;
   border-radius: var(--radius);
   border: var(--border-width) solid transparent;
 }
-
 .media-object::before {
   content: " ";
   position: absolute;
@@ -35,34 +31,25 @@ html {
   mask-composite: exclude;
   animation: spin 3s linear infinite;
 }
-
 @supports not (background: paint(something)) {
   .media-object::before {
 background-image: conic-gradient(#381D6A 80%, #E0D1FF 88%, #E0D1FF 92%, #381D6A 100%);    
   }
 }
-
-/* .media-object:hover::before {
-  animation-play-state: paused;
-} */
-
 @property --angle {
   syntax: "<angle>";
   inherits: true;
   initial-value: 0turn;
 }
-
 @keyframes spin {
   to {
     --angle: 1turn;
   }
 }
-
-
-.clicks{
-  
+.clicks{  
   padding: 1px 50px 50px 50px;
-  margin-top: 0.5px;
+  margin-top: 10px;
+  margin-bottom: 10vh;
   height: auto;
   justify-content: space-between;
   display: flex;
@@ -72,15 +59,14 @@ background-image: conic-gradient(#381D6A 80%, #E0D1FF 88%, #E0D1FF 92%, #381D6A 
   border-radius: 24px;
   font: 100%/1.6 'Open Sans', sans-serif;
 }
-
-.cardd {
+.card-ser {
   --text-color: #fff;
   --text-color-2: #F3F8FA;
   --bg-color: #0d3642;
   --border-color: #145564;
 
   padding: 1px 50px 50px 50px;
-  margin-top: 0.5px;
+  margin-top: 20vh;
   height: auto;
   justify-content: space-between;
   display: flex;
@@ -94,15 +80,13 @@ background-image: conic-gradient(#381D6A 80%, #E0D1FF 88%, #E0D1FF 92%, #381D6A 
   
   
 }
-
-.cardd__title {
+.card-title {
   margin-block: 0;
   font-family: 'Sora', sans-serif;
   font-size: 33px;
   font-weight: 700;
   line-height: 44px;
 }
-
 mark {
   background: linear-gradient(270deg, #b7cf81 0%, #1d5e6d 100%);
   -webkit-background-clip: text;
@@ -110,19 +94,18 @@ mark {
   -webkit-text-fill-color: #0000;
   --webkit-box-decoration-break: clone;
 }
-
-.cardd__description {
+.card-description {
   color: var(--text-color-2);
   line-height: 24px;
   margin-block: 0;
 }
-
-.cardd__actions {
-  gap: 24px;
+.card-action {
+  display: flex;
+  gap: 0.5vh;
   margin-bottom: 5px;
+  flex-direction: column;  margin-bottom: 5px;
 }
-
-.cardd__button {
+.card-button {
   
     background-color: #0d364200;
     border-color: var(--bg-color);
@@ -131,26 +114,24 @@ mark {
     font-weight: 800;
     cursor: pointer;
     transition: 0.25s;
-  margin-bottom: 15px;
-  display: block;
-  padding: 16px 32px;
-  border: 1px solid var(--border-color);
-  border-radius: 15px;
-  text-decoration: none;
-  color: inherit;
-  flex-grow: 1;
-  text-align: center;
-  line-height: 16px;
+    margin-bottom: 15px;
+    display: block;
+    padding: 16px 32px;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    text-decoration: none;
+    color: inherit;
+    flex-grow: 1;
+    text-align: center;
+    line-height: 16px;
 }
-
-.cardd__button:hover{
+.card-button:hover{
   box-shadow: 1px 1px 10px #a2a2a2;
   background-color: #092831;
   border-radius: 25px;
   color: #fafafa;  
 }
-
-.cart__button {
+.services-btn {
   
   background-color: #0d364200;
   border-style: solid ;
@@ -169,23 +150,21 @@ text-align: center;
 line-height: 16px;
 margin: 15px;
 }
-
-.cart__button:hover{
+.services-btn:hover{
 box-shadow: 1px 1px 10px #a2a2a2;
 background-color: #092831;
 border-radius: 25px;
 color: #fafafa;  
 }
 
-/* زرار الخدمات */
-.cart1__button { 
+.soon-btn { 
   position: relative;
   background-color: #0d364200;
   border-style: solid;
   color: var(--bg-color);
   font-weight: 800;
   cursor: pointer;
-  transition: 0.25s;
+  transition: 0.5s;
   display: block;
   padding: 16px 32px;
   border: 1px solid var(--bg-color);
@@ -195,44 +174,35 @@ color: #fafafa;
   text-align: center;
   line-height: 16px;
   margin: 15px;
-  overflow: hidden; /* يمنع خروج التأثير خارج الزر */
 }
-
-/* شريط التحميل مع النص */
-.cart1__button::before {
+.soon-btn::before {
   content: "Coming Soon";
   position: absolute;
   top: 0;
   left: 0;
-  width: 0%; /* يبدأ بدون عرض */
+  width: 0%;
   height: 100%;
   border-radius: 25px;
-  background: #092831; /* لون تأثير التحميل */
-  transition: width 1.5s ease-in-out, opacity 1s ease-in-out;
+  background: #092831;
+  transition: width 0.75s ease-in-out, opacity 0.75s ease-in-out;
   box-shadow: 1px 1px 10px #a2a2a2;
   color: #fafafa;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0; /* إخفاء النص */
+  opacity: 0;
   white-space: nowrap;
 }
-
-/* إظهار الشريط مع النص عند الـ hover */
-.cart1__button:hover::before {
-  width: 100%; /* يملأ الزرار بالكامل */
-  opacity: 1; /* ظهور النص */
+.soon-btn:hover::before {
+  width: 100%;
+  opacity: 1;
 }
-
-/* التأثير النهائي عند الـ hover */
-.cart1__button:hover { 
+.soon-btn:hover { 
   box-shadow: 1px 1px 10px #a2a2a2;
   background-color: #0d364200;
   border-radius: 25px;
   color: #0d364200;
 }
-
-
 .media-object {
   display: flex;
   justify-content: space-between;
@@ -240,15 +210,13 @@ color: #fafafa;
   padding: 24px;
   gap: 24px;
 }
-
-.media-object__title {
+.media-object-title {
   font-size: 18px;
   font-weight: 600;
   line-height: 27px;
   margin: 0 0 16px;
 }
-
-.media-object__button {
+.media-object-button {
   display: flex;
   align-items: center;
   width: 22.5%;
@@ -266,19 +234,15 @@ color: #fafafa;
   text-align: center;
   transition: 0.5s;
 }
-.media-object__button:hover {
+.media-object-button:hover {
   background: linear-gradient(270deg, #b7cf81 0%, #1d5e6d 100%);
   color: #000000;
 }
-
-.media-object__thumbnail {
+.media-object-thumbnail {
   width: 280px;
   height: 160px;
-  border-radius: 16px;
-  
+  border-radius: 16px; 
 }
-
-
 .source-link {
   position: fixed;
   right: 32px;
@@ -300,32 +264,19 @@ color: #fafafa;
   line-height: 150%;
   text-decoration: none;
 }
-
 .source-link svg {
   display: block;
   width: 1.5em;
   height: 1.5em;
   border-radius: 0.25em;
 }
-
 .source-link.source-link--second {
   right: auto;
   left: 32px;
 }
-
 .hidden {
   display: none;
 }
-
-#G1 {
-  scroll-margin-top: 110px; 
-}
-#ww {
-  scroll-margin-top: 110px; 
-}
-#cardsContainer{
-  scroll-margin-top: 130px;
-}
-#cartsContainer{
-  scroll-margin-top: 130px;
+#wcardContainer,#gcardContainer{
+  scroll-margin-top: 120px;
 }

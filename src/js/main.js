@@ -316,6 +316,15 @@ function scrollToSection(targetId) {
     visualViewport.addEventListener('resize', scrollHandler, { once: true });
   }
 }
+
+document.getElementById('web-card').addEventListener('click', function () {
+  scrollToSection('website-target');
+});
+document.getElementById('gra-card').addEventListener('click', function () {
+  scrollToSection('graphics-target');
+});
+
+
 document.getElementById('services-btn').addEventListener('click', function () {
   scrollToSection('services-target-btn');
 });

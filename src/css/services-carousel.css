@@ -89,6 +89,48 @@
     border-radius: 42px;
     color: #fafafa;
   }
+
+  .soon-btn { 
+    position: relative;
+    background-color: #0d364200;
+    color: var(--bg-color);    
+    border-radius: 10px;
+    border-color: var(--bg-color);
+    border-style: solid;
+    width: 15%;
+    min-width: 75px;
+    min-height: 40px;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .soon-btn::before {
+    content: "Coming Soon";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 15px;
+    background: var(--bg-color);
+    transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    white-space: nowrap;
+  }
+  .soon-btn:hover::before {
+    width: 100%;
+    opacity: 1;
+  }
+  .soon-btn:hover { 
+    border-radius: 40px;
+    color: #fafafa;
+  }
+
   .list li input[type="radio"] {
     display: none;
   }
@@ -157,7 +199,7 @@
       border-radius: 2.75vw;
       padding: 0.5vw;
     }
-    .services-btn{
+    .services-btn , .soon-btn{
       width: 30%;
     }
   }
@@ -181,7 +223,7 @@
       border-radius: 5vw;
       padding: 1vw;
     }
-    .services-btn{
+    .services-btn , .soon-btn {
       width: 50%;
       font-size: 18px;
     }
