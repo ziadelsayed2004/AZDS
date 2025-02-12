@@ -85,7 +85,7 @@
         </div>
       </div>
 
-        <form class="contact-form" method="POST" action="contact.php">
+        <form id="myForm" class="contact-form" method="POST" action="contact.php">
             <div class="form-group">
               <div class="alert-box">
                 <span class="alert-text">Name must be at least 3 characters.</span>
@@ -156,6 +156,15 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
         <script src="src/js/main.js"></script>
+        <script>
+          document.getElementById("myForm").addEventListener("submit", function(event) {
+              var response = grecaptcha.getResponse();
+              if (response.length === 0) {
+                  event.preventDefault(); // منع الإرسال
+                  alert("يرجى تأكيد أنك لست روبوتًا! 🤖");
+              }
+          });
+      </script>
         <script>
           document.getElementById('ziad-sign').addEventListener("click", () => {
               window.location.href = "mailto:ziadelsayed@az-digital-services.com";
