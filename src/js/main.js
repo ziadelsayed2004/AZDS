@@ -217,6 +217,14 @@ document.addEventListener("scroll", () => {
   });
 });
 
+document.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    document.querySelector(".whatsapp-float").classList.add("show");
+  } else {
+    document.querySelector(".whatsapp-float").classList.remove("show");
+  }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     const elements = document.querySelectorAll(".about-l-style-preview");
