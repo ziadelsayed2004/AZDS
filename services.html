@@ -126,15 +126,15 @@
                     </div>
                     <div class="card-action">
                         <a id="webButton" class="card-button" >Portofolio</a>
-                        <a onclick="showPopupAlt()" class="card-button" >Show plans</a>
+                        <a onclick="showPopupWeb()" class="card-button" >Show plans</a>
                     </div>
             </div>
 
-            <div class="overlayer" id="popupOverlayAlt" onclick="hidePopupAlt(event)">
+            <div class="overlayer" id="popupOverlayAlt" onclick="hidePopupWeb(event)">
               <div class="popup" onclick="event.stopPropagation()">
-                <button class="close-btn" onclick="hidePopupAlt(event)">✖</button>
+                <button class="close-btn" onclick="hidePopupWeb(event)">✖</button>
                 <div class="popup-content">  
-                    <div class="carousel">
+                    <div class="carousel" id="carousel1">
                       <ul class="carousel-list">
                         
                         <li class="carousel-item" data-pos="-2">
@@ -225,8 +225,8 @@
                       </ul>
 
                     </div>
-                    <button id="prevButton" class="prev-btn">&#8249;</button>
-                    <button id="nextButton" class="next-btn">&#8250;</button>
+                    <button id="prevButton1" class="prev-btn">&#8249;</button>
+                    <button id="nextButton1" class="next-btn">&#8250;</button>
                 </div>
               </div>
             </div>
@@ -342,16 +342,108 @@
                 </div>
                 <div class="card-action">
                     <a id="graphicButton" class="card-button">Portofolio</a>
-                    <a onclick="showPopup()" class="card-button" >Show plans</a>
+                    <a onclick="showPopupGraph()" class="card-button" >Show plans</a>
                     
                 </div>
             </div>
 
-            <div class="overlayer" id="popupOverlay" onclick="hidePopup(event)">
+            <div class="overlayer" id="popupOverlay" onclick="hidePopupGraph(event)">
               <div class="popup" onclick="event.stopPropagation()">
-                  <button class="close-btn" onclick="hidePopup(event)">✖</button>
+                  <button class="close-btn" onclick="hidePopupGraph(event)">✖</button>
                   <div class="popup-content">
-                   
+                    <div class="carousel" id="carousel2">
+                      <ul class="carousel-list">
+                        
+                        <li class="carousel-item" data-pos="-2">
+                          <div class="carousel-item-container">
+                            <img class='carousel-img' src="src/imgs/services/host.png" alt="Hosting Service" />
+                            <h2>Hosting & Domain</h2>
+                            <ul class="service-features">
+                              <li>Sequre Hosting</li>
+                              <li>SSL certificate</li>
+                              <li>All Type Of Domain</li>
+                              <li>24/7 Support</li>
+                            </ul>
+                            <div class="service-price">
+                              <span>$999</span>
+                            </div>
+                            <button class="learn-more-btn">Learn More</button>
+                          </div>
+                        </li>
+                        
+                        <li class="carousel-item" data-pos="-1">
+                          <div class="carousel-item-container">
+                            <img class='carousel-img' src="src/imgs/services/uiux.png" alt="UI/UX Service" />
+                            <h2>UI/UX</h2>
+                            <ul class="service-features">
+                              <li>UI Design</li>
+                              <li>Exclusive Design</li>
+                              <li>UX Optimization</li>
+                              <li>24/7 Support</li>
+                            </ul>
+                            <div class="service-price">
+                              <span>$999</span>
+                            </div>
+                            <button class="learn-more-btn">Learn More</button>
+                          </div>
+                        </li>
+
+                        <li class="carousel-item" data-pos="0">
+                          <div class="carousel-item-container">
+                            <img class='carousel-img' src="src/imgs/services/full.png" alt="Full Stack Service" />
+                            <h2>Full Stack Website</h2>
+                            <ul class="service-features">
+                              <li>Responsive Design</li>
+                              <li>Secure Backend</li>
+                              <li>SEO Optimization</li>
+                              <li>24/7 Support</li>
+                            </ul>
+                            <div class="service-price">
+                              <span>$999</span>
+                            </div>
+                            <button class="learn-more-btn">Learn More</button>
+                          </div>
+                        </li>                     
+
+                        <li class="carousel-item" data-pos="1">
+                          <div class="carousel-item-container">
+                            <img class='carousel-img' src="src/imgs/services/frontend.png" alt="Frontend Website Service" />
+                            <h2>Frontend Website</h2>
+                            <ul class="service-features">
+                              <li>Responsive Design</li>
+                              <li>Secure Backend</li>
+                              <li>SEO Optimization</li>
+                              <li>24/7 Support</li>
+                            </ul>
+                            <div class="service-price">
+                              <span>$999</span>
+                            </div>
+                            <button class="learn-more-btn">Learn More</button>
+                          </div>
+                        </li>
+
+                        <li class="carousel-item" data-pos="2">
+                          <div class="carousel-item-container">
+                            <img class='carousel-img' src="src/imgs/services/database.png" alt="DataBase Service" />
+                            <h2>Databases</h2>
+                            <ul class="service-features">
+                              <li>ERD Design</li>
+                              <li>MySQL</li>
+                              <li>Databases Optimization</li>
+                              <li>24/7 Support</li>
+                            </ul>
+                            <div class="service-price">
+                              <span>$999</span>
+                            </div>
+                            <button class="learn-more-btn">Learn More</button>
+                          </div>
+                        </li>
+
+                      </ul>
+
+                    </div>
+                    <button id="prevButton2" class="prev-btn">&#8249;</button>
+                    <button id="nextButton2" class="next-btn">&#8250;</button>
                   </div>
               </div>
             </div>
@@ -511,104 +603,112 @@
                 });
         </script>
         <script>
-          function showPopup() {
-              const overlayer = document.getElementById('popupOverlay');
+          function showPopupWeb() {
+              const overlayer = document.getElementById('popupOverlayAlt');
               overlayer.classList.add('show');
               document.body.style.overflow = 'hidden';
               history.pushState(null, null, location.href);
           }
-          function hidePopup(event) {
-              const overlayer = document.getElementById('popupOverlay');
+          function hidePopupWeb(event) {
+              const overlayer = document.getElementById('popupOverlayAlt');
               overlayer.classList.remove('show');
               document.body.style.overflow = 'auto';
-          }
-          function showPopupAlt() {
-              const overlayer = document.getElementById('popupOverlayAlt');
+          }        
+          function showPopupGraph() {
+              const overlayer = document.getElementById('popupOverlay');
               overlayer.classList.add('show');
               document.body.style.overflow = 'hidden';
               history.pushState(null, null, location.href);
           }
-          function hidePopupAlt(event) {
-              const overlayer = document.getElementById('popupOverlayAlt');
+          function hidePopupGraph(event) {
+              const overlayer = document.getElementById('popupOverlay');
               overlayer.classList.remove('show');
               document.body.style.overflow = 'auto';
           }
           document.addEventListener('keydown', function(event) {
               if (event.key === 'Escape') {
-                  hidePopup();
-                  hidePopupAlt();
+                  hidePopupWeb();
+                  hidePopupGraph();
               }
           });
           window.addEventListener('popstate', function() {
-              hidePopup();
-              hidePopupAlt();
+              hidePopupWeb();
+              hidePopupGraph();
           });
         </script>
         <script>
-          const state = {};
-          const carouselList = document.querySelector('.carousel-list');
-          const carouselItems = document.querySelectorAll('.carousel-item');
-          const elems = Array.from(carouselItems);
-          carouselList.addEventListener('click', function (event) {
-            var newActive = event.target.closest('.carousel-item');
+            const createCarousel = (carouselId, prevButtonId, nextButtonId) => {
+            const state = {};
+            const carousel = document.querySelector(`#${carouselId}`);
+            const carouselList = carousel.querySelector('.carousel-list');
+            const carouselItems = carousel.querySelectorAll('.carousel-item');
+            const elems = Array.from(carouselItems);
 
-            if (!newActive || newActive.classList.contains('carousel-item-active')) {
-              return;
-            };
-
-            update(newActive);
-          });
-          const update = function(newActive) {
-            const newActivePos = parseInt(newActive.dataset.pos);
-
-            const current = elems.find((elem) => elem.dataset.pos == 0);
-            const prev = elems.find((elem) => elem.dataset.pos == -1);
-            const next = elems.find((elem) => elem.dataset.pos == 1);
-            const first = elems.find((elem) => elem.dataset.pos == -2);
-            const last = elems.find((elem) => elem.dataset.pos == 2);
-
-            current.classList.remove('carousel-item-active');
-
-            [current, prev, next, first, last].forEach(item => {
-              var itemPos = parseInt(item.dataset.pos);
-
-              item.dataset.pos = getPos(itemPos, newActivePos);
+            carouselList.addEventListener('click', function (event) {
+              var newActive = event.target.closest('.carousel-item');
+              if (!newActive || newActive.classList.contains('carousel-item-active')) {
+                return;
+              }
+              update(newActive, elems);
             });
 
-            newActive.classList.add('carousel-item-active');
+            const update = function(newActive, elems) {
+              const newActivePos = parseInt(newActive.dataset.pos);
+
+              const current = elems.find((elem) => elem.dataset.pos == 0);
+              const prev = elems.find((elem) => elem.dataset.pos == -1);
+              const next = elems.find((elem) => elem.dataset.pos == 1);
+              const first = elems.find((elem) => elem.dataset.pos == -2);
+              const last = elems.find((elem) => elem.dataset.pos == 2);
+
+              current.classList.remove('carousel-item-active');
+
+              [current, prev, next, first, last].forEach(item => {
+                var itemPos = parseInt(item.dataset.pos);
+                item.dataset.pos = getPos(itemPos, newActivePos);
+              });
+
+              newActive.classList.add('carousel-item-active');
+            };
+
+            const getPos = function (current, active) {
+              const diff = current - active;
+              if (Math.abs(current - active) > 2) {
+                return -current;
+              }
+              return diff;
+            }
+
+            const prevButton = document.getElementById(prevButtonId);
+            const nextButton = document.getElementById(nextButtonId);
+            const hammer = new Hammer(carouselList);
+
+            prevButton.addEventListener('click', () => {
+              update(elems.find(elem => elem.dataset.pos == -1), elems);
+            });
+
+            nextButton.addEventListener('click', () => {
+              update(elems.find(elem => elem.dataset.pos == 1), elems);
+            });
+
+            hammer.on('swipeleft', () => {
+              update(elems.find(elem => elem.dataset.pos == 1), elems);
+            });
+
+            hammer.on('swiperight', () => {
+              update(elems.find(elem => elem.dataset.pos == -1), elems);
+            });
+
+            document.addEventListener('keydown', (event) => {
+              if (event.key === 'ArrowLeft') {
+                update(elems.find(elem => elem.dataset.pos == -1), elems);
+              } else if (event.key === 'ArrowRight') {
+                update(elems.find(elem => elem.dataset.pos == 1), elems);
+              }
+            });
           };
-          const getPos = function (current, active) {
-            const diff = current - active;
-
-            if (Math.abs(current - active) > 2) {
-              return -current;
-            }
-
-            return diff;
-          }
-
-          const prevButton = document.getElementById('prevButton');
-          const nextButton = document.getElementById('nextButton');
-          const hammer = new Hammer(carouselList);
-          prevButton.addEventListener('click', () => {
-            update(elems.find(elem => elem.dataset.pos == -1));
-          });
-          nextButton.addEventListener('click', () => {
-            update(elems.find(elem => elem.dataset.pos == 1));
-          });
-          hammer.on('swipeleft', () => {
-            update(elems.find(elem => elem.dataset.pos == 1));
-          });
-          hammer.on('swiperight', () => {
-            update(elems.find(elem => elem.dataset.pos == -1));
-          });
-          document.addEventListener('keydown', (event) => {
-            if (event.key === 'ArrowLeft') {
-              update(elems.find(elem => elem.dataset.pos == -1));
-            } else if (event.key === 'ArrowRight') {
-              update(elems.find(elem => elem.dataset.pos == 1));
-            }
-          });
+            createCarousel('carousel1', 'prevButton1', 'nextButton1');
+            createCarousel('carousel2', 'prevButton2', 'nextButton2');
         </script>
     </div>
 
