@@ -52,6 +52,7 @@
     cursor: pointer;
     border-radius: 50%;
     font-weight: bold;
+    padding: 0;
     font-size: 100%;
     text-align: center;
     transition: background 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -238,10 +239,12 @@
         height: 45vh;
     }
     .close-btn {
-        width: 25px;
-        height: 25px;
-        margin-right: 5px;
+        width: 7.5vw;
+        height: 7.5vw;
+        margin-right: 2.5vw;
         border-radius: 50%;
+        text-align: center;
+        padding: 0;
         font-size: 100%;
     }
     .next-btn , .prev-btn{
