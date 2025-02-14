@@ -61,8 +61,7 @@ body {
 
 .close-btn {
 
-    position:sticky; left :100%;
-
+    position:sticky; left :100%;z-index:999999;
     top: 20px;
     right: 15px;
     background: rgba(255, 0, 0, 0.4);
