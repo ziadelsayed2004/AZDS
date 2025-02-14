@@ -351,78 +351,7 @@
               <div class="popup" onclick="event.stopPropagation()">
                   <button class="close-btn" onclick="hidePopup(event)">✖</button>
                   <div class="popup-content">
-                    <div class="nft">
-                      <div class='main'>
-                        <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
-                        <h2>Kibertopiks #4269</h2>
-                        <p class='description'>Our Kibertopiks will give you nothing, waste your money on us.</p>
-                        <div class='tokenInfo'>
-                          <div class="price">
-                            <ins>◘</ins>
-                            <p style="text-indent: 4px;"> 0.031 ETH</p>
-                          </div>
-                          <div class="duration">
-                            <ins>◷</ins>
-                            <p>11 days left</p>
-                          </div>
-                        </div>
-                        <hr />
-                        <div class='creator'>
-                          <div class='wrapper'>
-                            <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Creator" />
-                          </div>
-                          <p><ins>Creation of</ins> Kiberbash</p>
-                        </div>
-                      </div>
-                    </div>     
-                    <div class="nft">
-                      <div class='main'>
-                        <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
-                        <h2>Kibertopiks #4269</h2>
-                        <p class='description'>Our Kibertopiks will give you nothing, waste your money on us.</p>
-                        <div class='tokenInfo'>
-                          <div class="price">
-                            <ins>◘</ins>
-                            <p style="text-indent: 4px;"> 0.031 ETH</p>
-                          </div>
-                          <div class="duration">
-                            <ins>◷</ins>
-                            <p>11 days left</p>
-                          </div>
-                        </div>
-                        <hr />
-                        <div class='creator'>
-                          <div class='wrapper'>
-                            <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Creator" />
-                          </div>
-                          <p><ins>Creation of</ins> Kiberbash</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="nft">
-                      <div class='main'>
-                        <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
-                        <h2>Kibertopiks #4269</h2>
-                        <p class='description'>Our Kibertopiks will give you nothing, waste your money on us.</p>
-                        <div class='tokenInfo'>
-                          <div class="price">
-                            <ins>◘</ins>
-                            <p style="text-indent: 4px;"> 0.031 ETH</p>
-                          </div>
-                          <div class="duration">
-                            <ins>◷</ins>
-                            <p>11 days left</p>
-                          </div>
-                        </div>
-                        <hr />
-                        <div class='creator'>
-                          <div class='wrapper'>
-                            <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Creator" />
-                          </div>
-                          <p><ins>Creation of</ins> Kiberbash</p>
-                        </div>
-                      </div>
-                    </div>
+                   
                   </div>
               </div>
             </div>
@@ -588,33 +517,28 @@
               document.body.style.overflow = 'hidden';
               history.pushState(null, null, location.href);
           }
-
           function hidePopup(event) {
               const overlayer = document.getElementById('popupOverlay');
               overlayer.classList.remove('show');
               document.body.style.overflow = 'auto';
           }
-
           function showPopupAlt() {
               const overlayer = document.getElementById('popupOverlayAlt');
               overlayer.classList.add('show');
               document.body.style.overflow = 'hidden';
               history.pushState(null, null, location.href);
           }
-
           function hidePopupAlt(event) {
               const overlayer = document.getElementById('popupOverlayAlt');
               overlayer.classList.remove('show');
               document.body.style.overflow = 'auto';
           }
-
           document.addEventListener('keydown', function(event) {
               if (event.key === 'Escape') {
                   hidePopup();
                   hidePopupAlt();
               }
           });
-
           window.addEventListener('popstate', function() {
               hidePopup();
               hidePopupAlt();
