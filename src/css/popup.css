@@ -96,7 +96,7 @@
     border-radius: 25px;
     box-shadow: 0 10px 20px rgb(183, 207, 129, 0.75);
     background-color: var(--bg-color);
-    border: var(--alternate-color) solid 2.5px;
+    border: rgb(183, 207, 129, 0.75) solid 2.5px;
     position: absolute;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
 }
@@ -109,7 +109,7 @@
 .carousel-item[data-pos="-1"], .carousel-item[data-pos="1"] {
     transform: translateX(calc(-40% + 5px)) scale(0.9);
     opacity: 0.7;
-    filter: blur(1px) grayscale(10%);
+    filter: blur(12.5px) grayscale(10%);
     z-index: 4;
 }
 .carousel-item[data-pos="-1"] {
@@ -121,7 +121,7 @@
 .carousel-item[data-pos="-2"], .carousel-item[data-pos="2"] {
     transform: translateX(calc(-70% + 10px)) scale(0.8);
     opacity: 0.4;
-    filter: blur(3px) grayscale(20%);
+    filter: blur(25px) grayscale(20%);
     z-index: 3;
 }
 .carousel-item[data-pos="-2"] {
@@ -138,14 +138,16 @@
     width: 40px;
     height: 40px;
     padding: 0;
-    font-size: 30px;
+    font-size: 27.5px;
     font-weight: bold;
     color: var(--bg-color);
+    border: 2.5px var(--alternate-color) solid;
     background-color: var(--alternate-color);
     justify-content: center;
-    transition: 0.5sease-in-out;
+    transition: 0.5s ease-in-out;
 }
 .next-btn:hover, .prev-btn:hover{
+    border: 2.5px var(--alternate-color) solid;
     color: var(--alternate-color);
     background-color: var(--bg-color);
 }
@@ -174,17 +176,17 @@
 }
 .carousel-item-container .carousel-img {
     position: relative;
-    top: -30%;
-    border: solid 2.5px var(--alternate-color);
+    top: -27.5%;
     height: 60%;
     width: auto;
+    box-shadow: 0 5px 25px rgb(183, 207, 129, 0.75);
     border-radius: 25px;
 }
 .carousel-item-container h2 {
     margin: 0;
     padding: 0;
     position: relative;
-    top: -25%;
+    top: -22.5%;
     height: 15%;
     font-size: 1.5rem;
     font-weight: bold;
@@ -195,7 +197,7 @@
     padding: 0;
     margin: 0;
     position: relative;
-    top: -20%;
+    top: -17.5%;
     height: 60%;
     width: 100%;
     text-align: center;
@@ -220,12 +222,13 @@
     background: var(--bg-color);
     border-radius: 25px;
     color: var(--alternate-color);
-    border: 2.5px var(--alternate-color) solid;
+    border: 2.5px rgb(183, 207, 129, 0.75) solid;
     cursor: pointer;
     font-size: 1rem;
     transition: 0.5s ease-in-out;
 }  
 .learn-more-btn:hover {
+    box-shadow: 0 5px 10px rgb(183, 207, 129, 0.75);
     background: var(--alternate-color);
     color: var(--bg-color);
 }
