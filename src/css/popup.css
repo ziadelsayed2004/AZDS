@@ -208,7 +208,7 @@ body {
     object-fit: cover;
 }
 
-@media (hover: hover) {
+@media (max-width:1024px) {
     .popup-content .nft:hover {
         border: 1px solid #ffffff44;
         box-shadow: 0 7px 50px 10px #000000aa;
