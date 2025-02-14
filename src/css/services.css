@@ -138,6 +138,7 @@ mark {
 }
 .card-action {
   display: flex;
+  align-items: center;
   width: 100%;
   flex-direction: column;  
   margin-bottom: 5px;
@@ -316,21 +317,23 @@ color: #fafafa;
 #wcardContainer,#gcardContainer{
   scroll-margin-top: 115px;
 }
+
 .services-fig img {
   min-width: 275px;
   width: 30vw;
-  height: 30vh;
+  aspect-ratio: 3 / 1.5;
+  margin-top: -5vh;
+  margin-bottom: 5vh;
   object-fit: cover;
   border-radius: 25px;
 }
-
 .arrows {
   scale: 0.6;
 	width: 60px;
 	height: auto;
 	position: absolute;
 	left: 50%;
-  bottom: -5vh;
+  bottom: -4vh;
 	margin-left: -30px;
 }
 .arrows path {
@@ -380,10 +383,15 @@ color: #fafafa;
   .card-div-flex a{
     width: auto;
   }
+  .arrows {
+    bottom: -2.5vh;
+  }
 }
-
 @media (max-width: 300px) {
   .services-fig{
+    display: none;
+  }
+  .arrows{
     display: none;
   }
 }
