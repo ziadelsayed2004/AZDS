@@ -19,8 +19,8 @@
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 .popup {
-    width: calc(70% - 15px) !important;
-    height: 70vh;
+    width: calc(75% - 15px) !important;
+    height: 75vh;
     background: #0d36428d;
     backdrop-filter: blur(25px);
     border-radius: 25px;
@@ -32,12 +32,6 @@
     opacity: 0;
     overflow: auto;
     text-align: center;
-}
-.popup img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    margin: 10px;
 }
 .popup-content {
     display: flex;
@@ -76,8 +70,6 @@
     transform: scale(1);
     opacity: 1;
 }
-
-
 
 .carousel {
   display: flex;
@@ -166,95 +158,83 @@
     left: 2.5%;
 }
 
-
 .carousel-item-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background: hsla(0, 0%, 100%, 0.5);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: hsla(0, 0%, 100%, 0.25);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     text-align: center;
     height: 90%;
     width: 90%;
     box-sizing: border-box;
-  }
-  
-  .carousel-item-container img {
-    width: 100%;
-    max-width: 150px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-
-  
-  .carousel-item-container h2 {
-    font-size: 1.2rem;
+}
+.carousel-item-container .carousel-img {
+    position: relative;
+    top: -30%;
+    border: solid 2.5px var(--alternate-color);
+    height: 60%;
+    width: auto;
+    border-radius: 25px;
+}
+.carousel-item-container h2 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -25%;
+    height: 15%;
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
-  }
-  
-  .service-description {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 10px;
-  }
-  
-  .service-features {
+    color: #ddd;
+}  
+.service-features {
     list-style-type: none;
     padding: 0;
-    margin-bottom: 5px;
+    margin: 0;
+    position: relative;
+    top: -20%;
+    height: 60%;
     width: 100%;
     text-align: center;
     box-sizing: border-box;
-  }
-  
-  .service-features li {
-    font-size: 0.9rem;
-    color: #444;
-    margin-bottom: 5px;
-  }
-  
-  .service-price {
+}
+.service-features li {
     font-size: 1.1rem;
-    color: #2d35eb;
+    color: #ccc;
+} 
+.service-price {
+    height: 15%;
+    position: relative;
+    top: -5%;
+    font-size: 1.5rem;
+    color: var(--alternate-color);
     font-weight: bold;
-    margin-bottom: 7.5px;
-  }
-  
-  .learn-more-btn {
-    padding: 10px 20px;
-    background: var(--alternate-color);
+}
+.learn-more-btn {
+    position: absolute;
+    bottom: -20px;
+    padding: 7.5px 15px;
+    background: var(--bg-color);
     border-radius: 25px;
-    color: #fff;
+    color: var(--alternate-color);
     border: 2.5px var(--alternate-color) solid;
     cursor: pointer;
     font-size: 1rem;
-    transition: background 0.3s ease-in-out;
-  }
+    transition: 0.5s ease-in-out;
+}  
+.learn-more-btn:hover {
+    background: var(--alternate-color);
+    color: var(--bg-color);
+}
   
-  .learn-more-btn:hover {
-    background: var(--bg-color);
-  }
   
-  
-
-
-
-
-
-
-
-
-
-
 
 
 /* OLD STYLE */
-.popup-content .nft {
+/* .popup-content .nft {
     user-select: none;
     max-width: 300px;
     margin: 5rem auto;
@@ -346,4 +326,4 @@
     width: 2rem;
     height: 2rem;
     object-fit: cover;
-}
+} */
