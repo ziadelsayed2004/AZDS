@@ -679,7 +679,6 @@ height: auto !important;
     left: 2.5%;
     width: 25vw;
     height: 12.5vw;
-    margin-top: 1.5vh;
     cursor: pointer;
   }
   .signture-l{
@@ -691,7 +690,6 @@ height: auto !important;
       right: 2.5%;
       width: 25vw;
       height: 12.5vw;
-      margin-top: 1.5vh;
       cursor: pointer;
   }
   .signture-r{
