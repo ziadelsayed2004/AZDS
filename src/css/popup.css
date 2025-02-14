@@ -126,8 +126,9 @@ body {
 
 
 
-.popup-content .nft{
-    ::before{
+.popup-content .nft:hover,
+.popup-content .nft:active {
+    
     position: fixed;
     content: "";
     box-shadow: 0 0 100px 40px #ffffff08;
@@ -136,19 +137,16 @@ body {
     transform: rotate(-45deg);
     height: 60rem;
     transition: .7s all;
-            }
-    &:hover{
     border: 1px solid #ffffff44;
     box-shadow: 0 7px 50px 10px #000000aa;
     transform: scale(1.015);
     filter: brightness(1.2);
-    ::before{
         filter: brightness(.5);
         top: -100%;
         left: 200%;
             }
-    }
-}
+
+
 
 .popup-content .nft .main {
     display: flex;
