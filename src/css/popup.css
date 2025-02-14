@@ -60,7 +60,9 @@ body {
 }
 
 .close-btn {
-    position: absolute;
+
+    position:sticky; left :100%;
+
     top: 30px;
     right: 15px;
     background: rgba(255, 0, 0, 0.4);
