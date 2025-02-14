@@ -323,7 +323,7 @@ color: #fafafa;
   width: 30vw;
   aspect-ratio: 3 / 1.5;
   margin-top: -5vh;
-  margin-bottom: 5vh;
+  margin-bottom: 2.5vh;
   object-fit: cover;
   border-radius: 25px;
 }
@@ -382,9 +382,6 @@ color: #fafafa;
   }
   .card-div-flex a{
     width: auto;
-  }
-  .arrows {
-    bottom: -2.5vh;
   }
 }
 @media (max-width: 300px) {
