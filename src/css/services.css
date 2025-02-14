@@ -114,8 +114,6 @@ background-image: conic-gradient(#381D6A 80%, #E0D1FF 88%, #E0D1FF 92%, #381D6A 
   color: var(--text-color);
   background: var(--bg-color);
   border: 1px solid var(--border-color);
-  
-  
 }
 .card-title {
   margin-block: 0;
@@ -144,6 +142,7 @@ mark {
   margin-bottom: 5px;
 }
 .card-button {
+    width: 70%;
     background-color: #0d364200;
     border-color: var(--bg-color);
     border-style: solid;
@@ -169,23 +168,23 @@ mark {
   color: #fafafa;  
 }
 .services-btn {
-  
+  width: 70%;
   background-color: #0d364200;
   border-style: solid ;
   color: var(--bg-color);
   font-weight: 800;
   cursor: pointer;
   transition: 0.5s;
-display: block;
-padding: 16px 32px;
-border: 1px solid var(--bg-color);
-border-radius: 15px;
-text-decoration: none;
-color: var(--bg-color);
-flex-grow: 1;
-text-align: center;
-line-height: 16px;
-margin: 15px;
+  display: block;
+  padding: 16px 32px;
+  border: 1px solid var(--bg-color);
+  border-radius: 15px;
+  text-decoration: none;
+  color: var(--bg-color);
+  flex-grow: 1;
+  text-align: center;
+  line-height: 16px;
+  margin: 15px;
 }
 .services-btn:hover{
 box-shadow: 1px 1px 10px #a2a2a2;
@@ -195,6 +194,7 @@ color: #fafafa;
 }
 
 .soon-btn { 
+  width: 70%;
   position: relative;
   background-color: #0d364200;
   border-style: solid;
