@@ -82,3 +82,101 @@ body {
     transform: scale(1);
     opacity: 1;
 }
+.popup-content .nft {
+    user-select: none;
+    max-width: 300px;
+    margin: 5rem auto;
+    border: 1px solid #ffffff22;
+    background-color: #282c34;
+    background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
+    box-shadow: 0 7px 20px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 0.7rem;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    overflow: hidden;
+    transition: 0.5s all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-content .nft:hover {
+    transform: scale(1.015);
+    box-shadow: 0 7px 50px 10px rgba(0, 0, 0, 0.6);
+    filter: brightness(1.3);
+}
+
+.popup-content .nft .main {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 1rem;
+    align-items: center;
+}
+
+.popup-content .nft .tokenImage {
+    border-radius: 0.5rem;
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.popup-content .nft:hover .tokenImage {
+    transform: scale(1.1);
+}
+
+.popup-content .nft .description {
+    margin: 0.5rem 0;
+    color: #a89ec9;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.popup-content .nft .tokenInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.popup-content .nft .price,
+.popup-content .nft .duration {
+    display: flex;
+    align-items: center;
+}
+
+.popup-content .nft .price {
+    color: #ee83e5;
+    font-weight: 700;
+}
+
+.popup-content .nft .duration {
+    color: #a89ec9;
+}
+
+.popup-content .nft .creator {
+    display: flex;
+    align-items: center;
+    margin-top: 0.2rem;
+    margin-bottom: -0.3rem;
+    justify-content: center;
+}
+
+.popup-content .nft .creator .wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ffffff22;
+    padding: 0.3rem;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 3px #00000066;
+    margin-right: 0.5rem;
+}
+
+.popup-content .nft .creator img {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+}
