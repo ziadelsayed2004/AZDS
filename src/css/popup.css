@@ -110,13 +110,13 @@ body {
 }
 
 
-.popup-content .nft:hover,
+/* .popup-content .nft:hover,
 .popup-content .nft:active {
     border: 1px solid #ffffff44;
     box-shadow: 0 7px 50px 10px #000000aa;
     transform: scale(1.015);
     filter: brightness(1.2);
-}
+} */
 
 .popup-content .nft:active::before {
     filter: brightness(.5);
@@ -141,9 +141,6 @@ body {
     box-shadow: 0 7px 50px 10px #000000aa;
     transform: scale(1.015);
     filter: brightness(1.2);
-        filter: brightness(.5);
-        top: -100%;
-        left: 200%;
             }
 
 
