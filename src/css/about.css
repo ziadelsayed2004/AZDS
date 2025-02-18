@@ -128,7 +128,7 @@
     justify-content: center;
     padding: 0;
 }
-.icons li{
+.icons li a{
     list-style-type: none;
     background: #b7cf81;
     color: #0d3642;
@@ -144,13 +144,15 @@
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
-.icons li i{
+.icons li a i{
     font-weight: bold;
 }
-.icons li:hover{
+.icons li a:hover{
     background: #0d3642;
     color: #b7cf81;
     border: #b7cf81 1px solid;
 }
 
-
+li::marker {
+    content: none;
+  }
