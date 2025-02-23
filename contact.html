@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AZ Digital Services</title>
     <link rel="icon" href="src/imgs/logo-bg.png">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/contact-form.css">
     <link rel="stylesheet" href="src/css/services.css">
@@ -119,7 +119,7 @@
               </div>
               <textarea class="contact-form-control" name="Message" placeholder="Your Message!"></textarea>
             </div>
-            <div class="cf-turnstile" data-sitekey="0x4AAAAAAA-UCup-QzrgLric"></div>
+            <div id="example-container"></div>
             <br>
             <input class="submit-btn btn-block" type="submit" value="Send Message">             
             </input>
@@ -163,6 +163,28 @@
               window.location.href = "mailto:abdelrahmanmustapha@az-digital-services.com";
             });
         </script>
+        
+  <script>
+    let captchaToken = null;
+
+    window.onloadTurnstileCallback = function () {
+      turnstile.render("#example-container", {
+        sitekey: "0x4AAAAAAA-UCup-QzrgLric",
+        callback: function (token) {
+          captchaToken = token; // خزن التوكن هنا
+          console.log(`Challenge Success ${token}`);
+        },
+      });
+    };
+
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      if (!captchaToken) {
+        e.preventDefault(); // يمنع الإرسال
+        alert("Please complete the CAPTCHA before submitting.");
+      }
+    });
+  </script>
+
     </div>
 
 </body>
