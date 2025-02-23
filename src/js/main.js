@@ -2,9 +2,9 @@
 (function($) { "use strict";
 
     $(document).ready(function(){"use strict";
-    
+
             //Scroll back to top
-    
+
             var progressPath = document.querySelector('.progress-wrap path');
             var pathLength = progressPath.getTotalLength();
             progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
@@ -34,10 +34,9 @@
                 jQuery('html, body').animate({scrollTop: 0}, duration);
                 return false;
             })
-    
-    
+
         });
-    
+
     })(jQuery);
 
 // Navigation - Overlay
@@ -67,10 +66,12 @@ function toggleNav() {
   const body = document.querySelector('body');
   const btn = document.querySelector('.btn');
   const icon = document.querySelector('.btn__icon');
+
 // Store the mode in local storage
   function store(value) {
     localStorage.setItem('darkmode', value);
   }
+
 // Load the stored mode or fallback to system preference
 function load() {
   const darkmode = localStorage.getItem('darkmode');
@@ -90,6 +91,7 @@ function load() {
     }
     toggleMode();
   }
+
 // Switch Vars
   function toggleMode() {
     const isDarkMode = body.classList.contains('darkmode');
@@ -122,6 +124,7 @@ function load() {
       document.documentElement.style.setProperty('--carousel-content', '#666');
     }
   }
+  
   load();
   btn.addEventListener('click', () => {
     body.classList.toggle('darkmode');
