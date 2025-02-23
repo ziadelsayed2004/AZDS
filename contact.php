@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $headers .= "Reply-To: $email\r\n";
         $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
         
-        $myEmail = 'azdigital2025@gmail.com';
+        $myEmail = 'contact@az-digital-services.com';
         $subject = 'Contact Form';
 
         if (mail($myEmail, $subject, $data, $headers)) {
