@@ -383,7 +383,7 @@ $(function () {
 });
 window.onloadTurnstileCallback = function () {
   turnstile.render("#example-container", {
-    sitekey: "<YOUR_SITE_KEY>",
+    sitekey: "0x4AAAAAAA-UCup-QzrgLric",
     callback: function (token) {
       console.log(`Challenge Success ${token}`);
     },
