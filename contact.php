@@ -44,17 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit;
 }
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $secretKey = "6LeFWtUqAAAAANvUKwdbdzyNiCh5QJhKBW7THfN6";
-    $response = $_POST["g-recaptcha-response"];
-    $verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secretKey}&response={$response}");
-    $captchaSuccess = json_decode($verify);
-    
-    if ($captchaSuccess->success) {
-        echo "تم التحقق بنجاح!";
-    } else {
-        echo "فشل التحقق!";
-    }
-}
+
 
 ?>

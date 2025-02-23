@@ -155,15 +155,6 @@
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
         <script src="src/js/main.js"></script>
         <script>
-          document.getElementById("myForm").addEventListener("submit", function(event) {
-              var response = grecaptcha.getResponse();
-              if (response.length === 0) {
-                  event.preventDefault(); // منع الإرسال
-                  alert("Please confirm you are not a robot! 🤖");
-              }
-          });
-      </script>
-        <script>
           document.getElementById('ziad-sign').addEventListener("click", () => {
               window.location.href = "mailto:ziadelsayed@az-digital-services.com";
             });
