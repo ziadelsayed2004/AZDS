@@ -378,3 +378,11 @@ $(function () {
       }
   });
 });
+window.onloadTurnstileCallback = function () {
+  turnstile.render("#example-container", {
+    sitekey: "<YOUR_SITE_KEY>",
+    callback: function (token) {
+      console.log(`Challenge Success ${token}`);
+    },
+  });
+};

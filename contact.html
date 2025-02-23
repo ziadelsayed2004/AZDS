@@ -119,8 +119,7 @@
               </div>
               <textarea class="contact-form-control" name="Message" placeholder="Your Message!"></textarea>
             </div>
-            <div class="g-recaptcha" data-sitekey="6LeFWtUqAAAAABLsGqm6azKEb3ZvnVICRxVJ6igq">
-            </div><br>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAA-UCup-QzrgLric"></div><br>
             <input class="submit-btn btn-block" type="submit" value="Send Message">             
             </input>
         </form>          
@@ -151,6 +150,7 @@
     </footer>
 
     <div class="js-script">
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
         <script src="src/js/main.js"></script>
