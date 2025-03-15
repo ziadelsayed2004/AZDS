@@ -56,9 +56,11 @@ body:focus{
 }
 .bg-spotted{
   align-items: center;
-  background-image:url('../imgs/texture.jpg');
-  background-color: var(--bg-color);
-  background-blend-mode:overlay;
+  background-color:#104754;
+  background-image:url('../imgs/texture.png' );
+  background-size: contain;
+  width: 100%;
+  background-blend-mode:overlay ;
 }
 .content-style-preview{
   transform: scale(0.8);
