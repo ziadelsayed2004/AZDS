@@ -97,11 +97,11 @@ background-image: conic-gradient(#381D6A 80%, #E0D1FF 88%, #E0D1FF 92%, #381D6A 
   width: 50%;
 }
 .card-ser {
-  --text-color: #fff;
-  --text-color-2: #F3F8FA;
+  --text-color: #145565;
+  --text-color-2: #092831;
   --bg-color: #0d3642;
   --border-color: #145564;
-
+  font-weight: 500;
   padding: 1px 50px 50px 50px;
   margin-top: 20vh;
   height: auto;
@@ -112,7 +112,7 @@ background-image: conic-gradient(#381D6A 80%, #E0D1FF 88%, #E0D1FF 92%, #381D6A 
   padding: 32px;
   border-radius: 24px;
   color: var(--text-color);
-  background: var(--bg-color);
+  background: #b2c6cc;
   border: 1px solid var(--border-color);
 }
 .card-title {
@@ -123,7 +123,7 @@ background-image: conic-gradient(#381D6A 80%, #E0D1FF 88%, #E0D1FF 92%, #381D6A 
   line-height: 44px;
 }
 mark {
-  background: linear-gradient(270deg, #b7cf81 0%, #1d5e6d 100%);
+  background: linear-gradient(270deg, #1d5e6d 0%, #1d5e6d 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: #0000;
